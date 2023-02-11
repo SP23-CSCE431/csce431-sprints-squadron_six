@@ -62,3 +62,4 @@ jobs:
         with:
           name: brakeman-report.txt
           path: brakeman.txt
+
