@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :alumnis
   resources :exams
   resources :performances
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -9,6 +8,7 @@ Rails.application.routes.draw do
   root "main#index"
 
   resources :users
+  resources :alumnis
   get 'main', to: 'main#index'
   
 end
