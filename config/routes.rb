@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  devise_for :authusers, controllers: {
+    omniauth_callbacks: 'authusers/omniauth_callbacks',
+    sessions: 'authusers/sessions',
+    registrations: 'authusers/registrations'
+  }
   resources :exams
   resources :performances
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
