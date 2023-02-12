@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+<center>
+<h1>Alumnis Tracker</h1>
+</center>
+<div id="alumnis">
+  <% @alumnis.each do |alumni| %>
+    <%= render alumni %>
+    <p>
+      <%= link_to "Show this alumni", alumni %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "Add an alumni", new_alumni_path %>

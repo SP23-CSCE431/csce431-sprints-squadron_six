@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/csce431/squadron_six/spec/helpers/exams_helper_spec.rb": {
+      "/Team_project/squadron_six/spec/helpers/alumnis_helper_spec.rb": {
         "lines": [
           1,
           null,
@@ -20,7 +20,7 @@
           null
         ]
       },
-      "/csce431/squadron_six/spec/rails_helper.rb": {
+      "/Team_project/squadron_six/spec/rails_helper.rb": {
         "lines": [
           null,
           1,
@@ -87,7 +87,7 @@
           null
         ]
       },
-      "/csce431/squadron_six/config/environment.rb": {
+      "/Team_project/squadron_six/config/environment.rb": {
         "lines": [
           null,
           1,
@@ -96,7 +96,7 @@
           1
         ]
       },
-      "/csce431/squadron_six/config/application.rb": {
+      "/Team_project/squadron_six/config/application.rb": {
         "lines": [
           1,
           null,
@@ -122,7 +122,7 @@
           null
         ]
       },
-      "/csce431/squadron_six/config/boot.rb": {
+      "/Team_project/squadron_six/config/boot.rb": {
         "lines": [
           1,
           null,
@@ -130,7 +130,7 @@
           1
         ]
       },
-      "/csce431/squadron_six/config/environments/test.rb": {
+      "/Team_project/squadron_six/config/environments/test.rb": {
         "lines": [
           1,
           null,
@@ -194,7 +194,7 @@
           null
         ]
       },
-      "/csce431/squadron_six/config/initializers/assets.rb": {
+      "/Team_project/squadron_six/config/initializers/assets.rb": {
         "lines": [
           null,
           null,
@@ -210,7 +210,7 @@
           null
         ]
       },
-      "/csce431/squadron_six/config/initializers/content_security_policy.rb": {
+      "/Team_project/squadron_six/config/initializers/content_security_policy.rb": {
         "lines": [
           null,
           null,
@@ -221,38 +221,6 @@
           null,
           null,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/csce431/squadron_six/config/initializers/filter_parameter_logging.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null
-        ]
-      },
-      "/csce431/squadron_six/config/initializers/inflections.rb": {
-        "lines": [
           null,
           null,
           null,
@@ -271,7 +239,39 @@
           null
         ]
       },
-      "/csce431/squadron_six/config/initializers/permissions_policy.rb": {
+      "/Team_project/squadron_six/config/initializers/filter_parameter_logging.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Team_project/squadron_six/config/initializers/inflections.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Team_project/squadron_six/config/initializers/permissions_policy.rb": {
         "lines": [
           null,
           null,
@@ -286,7 +286,7 @@
           null
         ]
       },
-      "/csce431/squadron_six/config/routes.rb": {
+      "/Team_project/squadron_six/config/routes.rb": {
         "lines": [
           1,
           1,
@@ -299,60 +299,48 @@
           null,
           1,
           1,
+          1,
           null,
           null
         ]
       },
-      "/csce431/squadron_six/app/helpers/application_helper.rb": {
+      "/Team_project/squadron_six/app/helpers/alumnis_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/csce431/squadron_six/app/helpers/exams_helper.rb": {
+      "/Team_project/squadron_six/app/helpers/application_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/csce431/squadron_six/app/helpers/main_helper.rb": {
+      "/Team_project/squadron_six/app/helpers/exams_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/csce431/squadron_six/app/helpers/performances_helper.rb": {
+      "/Team_project/squadron_six/app/helpers/main_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/csce431/squadron_six/app/helpers/users_helper.rb": {
+      "/Team_project/squadron_six/app/helpers/performances_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/csce431/squadron_six/spec/helpers/main_helper_spec.rb": {
+      "/Team_project/squadron_six/app/helpers/users_helper.rb": {
         "lines": [
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
           1,
           null
         ]
       },
-      "/csce431/squadron_six/spec/helpers/performances_helper_spec.rb": {
+      "/Team_project/squadron_six/spec/helpers/exams_helper_spec.rb": {
         "lines": [
           1,
           null,
@@ -371,7 +359,7 @@
           null
         ]
       },
-      "/csce431/squadron_six/spec/helpers/users_helper_spec.rb": {
+      "/Team_project/squadron_six/spec/helpers/main_helper_spec.rb": {
         "lines": [
           1,
           null,
@@ -390,59 +378,7 @@
           null
         ]
       },
-      "/csce431/squadron_six/spec/models/exam_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          null
-        ]
-      },
-      "/csce431/squadron_six/app/models/exam.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/csce431/squadron_six/app/models/application_record.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
-      },
-      "/csce431/squadron_six/spec/models/performance_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          null
-        ]
-      },
-      "/csce431/squadron_six/app/models/performance.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/csce431/squadron_six/spec/models/user_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          null
-        ]
-      },
-      "/csce431/squadron_six/app/models/user.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/csce431/squadron_six/spec/requests/exams_spec.rb": {
+      "/Team_project/squadron_six/spec/helpers/performances_helper_spec.rb": {
         "lines": [
           1,
           null,
@@ -456,143 +392,104 @@
           null,
           null,
           null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          10,
-          null,
-          null,
-          1,
-          2,
-          null,
-          null,
           1,
           1,
-          1,
-          0,
-          0,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          0,
-          0,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          0,
-          0,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          0,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          0,
-          null,
-          null,
-          1,
-          1,
-          0,
-          0,
-          0,
-          null,
-          null,
-          1,
-          1,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null,
-          1,
-          null,
-          1,
-          1,
-          0,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          0,
-          0,
-          null,
-          null,
-          null,
-          1,
-          1,
-          0,
-          0,
-          null,
-          null,
           null
         ]
       },
-      "/csce431/squadron_six/spec/requests/main_spec.rb": {
+      "/Team_project/squadron_six/spec/helpers/users_helper_spec.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Team_project/squadron_six/spec/models/alumni_spec.rb": {
         "lines": [
           1,
           null,
           1,
           1,
-          1,
-          null,
           null
         ]
       },
-      "/csce431/squadron_six/spec/requests/performances_spec.rb": {
+      "/Team_project/squadron_six/app/models/alumni.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Team_project/squadron_six/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Team_project/squadron_six/spec/models/exam_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Team_project/squadron_six/app/models/exam.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Team_project/squadron_six/spec/models/performance_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Team_project/squadron_six/app/models/performance.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Team_project/squadron_six/spec/models/user_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Team_project/squadron_six/app/models/user.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Team_project/squadron_six/spec/requests/alumnis_spec.rb": {
         "lines": [
           1,
           null,
@@ -731,7 +628,7 @@
           null
         ]
       },
-      "/csce431/squadron_six/spec/requests/users_spec.rb": {
+      "/Team_project/squadron_six/spec/requests/exams_spec.rb": {
         "lines": [
           1,
           null,
@@ -870,7 +767,296 @@
           null
         ]
       },
-      "/csce431/squadron_six/spec/routing/exams_routing_spec.rb": {
+      "/Team_project/squadron_six/spec/requests/main_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Team_project/squadron_six/spec/requests/performances_spec.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          10,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          1,
+          1,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          0,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          0,
+          null,
+          null,
+          1,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null,
+          1,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          1,
+          0,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Team_project/squadron_six/spec/requests/users_spec.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          10,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          1,
+          1,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          0,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          0,
+          null,
+          null,
+          1,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null,
+          1,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          1,
+          0,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Team_project/squadron_six/spec/routing/alumnis_routing_spec.rb": {
         "lines": [
           1,
           null,
@@ -912,7 +1098,7 @@
           null
         ]
       },
-      "/csce431/squadron_six/app/controllers/exams_controller.rb": {
+      "/Team_project/squadron_six/app/controllers/alumnis_controller.rb": {
         "lines": [
           1,
           1,
@@ -986,129 +1172,13 @@
           null
         ]
       },
-      "/csce431/squadron_six/app/controllers/application_controller.rb": {
+      "/Team_project/squadron_six/app/controllers/application_controller.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/csce431/squadron_six/spec/routing/performances_routing_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/csce431/squadron_six/app/controllers/performances_controller.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          1,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null,
-          1,
-          null,
-          1,
-          0,
-          null,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null
-        ]
-      },
-      "/csce431/squadron_six/spec/routing/users_routing_spec.rb": {
+      "/Team_project/squadron_six/spec/routing/exams_routing_spec.rb": {
         "lines": [
           1,
           null,
@@ -1150,7 +1220,7 @@
           null
         ]
       },
-      "/csce431/squadron_six/app/controllers/users_controller.rb": {
+      "/Team_project/squadron_six/app/controllers/exams_controller.rb": {
         "lines": [
           1,
           1,
@@ -1224,7 +1294,384 @@
           null
         ]
       },
-      "/csce431/squadron_six/spec/views/exams/edit.html.erb_spec.rb": {
+      "/Team_project/squadron_six/spec/routing/performances_routing_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Team_project/squadron_six/app/controllers/performances_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Team_project/squadron_six/spec/routing/users_routing_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Team_project/squadron_six/app/controllers/users_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Team_project/squadron_six/spec/views/alumnis/edit.html.erb_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Team_project/squadron_six/spec/views/alumnis/index.html.erb_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Team_project/squadron_six/spec/views/alumnis/new.html.erb_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Team_project/squadron_six/spec/views/alumnis/show.html.erb_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Team_project/squadron_six/spec/views/exams/edit.html.erb_spec.rb": {
         "lines": [
           1,
           null,
@@ -1250,7 +1697,7 @@
           null
         ]
       },
-      "/csce431/squadron_six/spec/views/exams/index.html.erb_spec.rb": {
+      "/Team_project/squadron_six/spec/views/exams/index.html.erb_spec.rb": {
         "lines": [
           1,
           null,
@@ -1274,7 +1721,7 @@
           null
         ]
       },
-      "/csce431/squadron_six/spec/views/exams/new.html.erb_spec.rb": {
+      "/Team_project/squadron_six/spec/views/exams/new.html.erb_spec.rb": {
         "lines": [
           1,
           null,
@@ -1296,7 +1743,7 @@
           null
         ]
       },
-      "/csce431/squadron_six/spec/views/exams/show.html.erb_spec.rb": {
+      "/Team_project/squadron_six/spec/views/exams/show.html.erb_spec.rb": {
         "lines": [
           1,
           null,
@@ -1314,7 +1761,7 @@
           null
         ]
       },
-      "/csce431/squadron_six/spec/views/performances/edit.html.erb_spec.rb": {
+      "/Team_project/squadron_six/spec/views/performances/edit.html.erb_spec.rb": {
         "lines": [
           1,
           null,
@@ -1346,7 +1793,7 @@
           null
         ]
       },
-      "/csce431/squadron_six/spec/views/performances/index.html.erb_spec.rb": {
+      "/Team_project/squadron_six/spec/views/performances/index.html.erb_spec.rb": {
         "lines": [
           1,
           null,
@@ -1376,7 +1823,7 @@
           null
         ]
       },
-      "/csce431/squadron_six/spec/views/performances/new.html.erb_spec.rb": {
+      "/Team_project/squadron_six/spec/views/performances/new.html.erb_spec.rb": {
         "lines": [
           1,
           null,
@@ -1404,7 +1851,7 @@
           null
         ]
       },
-      "/csce431/squadron_six/spec/views/performances/show.html.erb_spec.rb": {
+      "/Team_project/squadron_six/spec/views/performances/show.html.erb_spec.rb": {
         "lines": [
           1,
           null,
@@ -1426,7 +1873,7 @@
           null
         ]
       },
-      "/csce431/squadron_six/spec/views/users/edit.html.erb_spec.rb": {
+      "/Team_project/squadron_six/spec/views/users/edit.html.erb_spec.rb": {
         "lines": [
           1,
           null,
@@ -1444,82 +1891,6 @@
           null,
           1,
           1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/csce431/squadron_six/spec/views/users/index.html.erb_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/csce431/squadron_six/spec/views/users/new.html.erb_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           null,
           null,
           1,
@@ -1543,7 +1914,83 @@
           null
         ]
       },
-      "/csce431/squadron_six/spec/views/users/show.html.erb_spec.rb": {
+      "/Team_project/squadron_six/spec/views/users/index.html.erb_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Team_project/squadron_six/spec/views/users/new.html.erb_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Team_project/squadron_six/spec/views/users/show.html.erb_spec.rb": {
         "lines": [
           1,
           null,
@@ -1572,6 +2019,6 @@
         ]
       }
     },
-    "timestamp": 1676226025
+    "timestamp": 1676222723
   }
 }
