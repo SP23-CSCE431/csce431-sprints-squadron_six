@@ -15,6 +15,5 @@ Rails.application.routes.draw do
 
   resources :users
   resources :alumnis
-  get 'main', to: 'main#index'
   
 end
