@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :budgets
   devise_for :authusers, controllers: {
     omniauth_callbacks: 'authusers/omniauth_callbacks',
     sessions: 'authusers/sessions',
