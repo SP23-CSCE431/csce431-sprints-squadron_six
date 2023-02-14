@@ -10,14 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_12_024424) do
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
-  create_table "points", force: :cascade do |t|
-    t.string "user_id"
-    t.integer "total_points"
-    
 ActiveRecord::Schema[7.0].define(version: 2023_02_13_165642) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -69,7 +61,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_13_165642) do
     t.string "user_id"
     t.string "grade"
     t.integer "points"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
+  create_table "points", force: :cascade do |t|
+    t.string "user_id"
+    t.integer "total_points"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -80,9 +78,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_13_165642) do
     t.string "email"
     t.string "password"
     t.string "role"
-
     t.integer "uin"
-
     t.date "grad_year"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
