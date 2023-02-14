@@ -8,7 +8,7 @@ RSpec.describe "users/show", type: :view do
       email: "Email",
       password: "Password",
       role: "Role",
-      uin: ""
+      uin: 2
     ))
   end
 

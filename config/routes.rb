@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+  resources :points
+  resources :users
+
   resources :budgets
   devise_for :authusers, controllers: {
     omniauth_callbacks: 'authusers/omniauth_callbacks',
@@ -7,6 +11,7 @@ Rails.application.routes.draw do
   }
   resources :exams
   resources :performances
+  
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
