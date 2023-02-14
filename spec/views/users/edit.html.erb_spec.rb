@@ -8,8 +8,9 @@ RSpec.describe "users/edit", type: :view do
       email: "MyString",
       password: "MyString",
       role: "MyString",
-      uin: "MyString"
+      uin: 2
     )
+    
   }
 
   before(:each) do

@@ -9,7 +9,7 @@ RSpec.describe "users/index", type: :view do
         email: "Email",
         password: "Password",
         role: "Role",
-        uin: "Uin"
+        uin: 2
       ),
       User.create!(
         first_name: "First Name",
@@ -17,7 +17,7 @@ RSpec.describe "users/index", type: :view do
         email: "Email",
         password: "Password",
         role: "Role",
-        uin: "Uin"
+        uin: 2
       )
     ])
   end
@@ -30,6 +30,6 @@ RSpec.describe "users/index", type: :view do
     assert_select cell_selector, text: Regexp.new("Email".to_s), count: 2
     assert_select cell_selector, text: Regexp.new("Password".to_s), count: 2
     assert_select cell_selector, text: Regexp.new("Role".to_s), count: 2
-    assert_select cell_selector, text: Regexp.new("Uin".to_s), count: 2
+    assert_select cell_selector, text: Regexp.new(2.to_s), count: 2
   end
 end

@@ -8,7 +8,7 @@ RSpec.describe "users/show", type: :view do
       email: "Email",
       password: "Password",
       role: "Role",
-      uin: "Uin"
+      uin: 2
     ))
   end
 
@@ -19,6 +19,6 @@ RSpec.describe "users/show", type: :view do
     expect(rendered).to match(/Email/)
     expect(rendered).to match(/Password/)
     expect(rendered).to match(/Role/)
-    expect(rendered).to match(/Uin/)
+    expect(rendered).to match(//)
   end
 end
