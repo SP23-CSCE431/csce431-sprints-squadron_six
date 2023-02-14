@@ -39,4 +39,4 @@ jobs:
           cmd: install
       - name: Run tests
         run: bundler exec rspec .
-    
+
