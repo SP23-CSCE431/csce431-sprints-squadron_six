@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @point %>
+
+<div>
+  <%= link_to "Edit this point", edit_point_path(@point) %> |
+  <%= link_to "Back to points", points_path %>
+
+  <%= button_to "Destroy this point", @point, method: :delete %>
+</div>
