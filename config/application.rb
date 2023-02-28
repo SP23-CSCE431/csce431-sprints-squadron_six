@@ -11,6 +11,9 @@ module Csce431SprintsSquadronSix
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
+    # allowing 172.17.0.1 webspace in the app
+    config.web_console.permissions = '172.17.0.1'
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
