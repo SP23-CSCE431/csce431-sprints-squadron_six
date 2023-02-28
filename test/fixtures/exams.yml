@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  exam_date: 2023-02-28
+  exam_grade: MyString
+  course: one
+
+two:
+  exam_date: 2023-02-28
+  exam_grade: MyString
+  course: two

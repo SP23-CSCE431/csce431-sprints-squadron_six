@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  performance_points: 1
+  exam: one
+  user: one
+
+two:
+  performance_points: 1
+  exam: two
+  user: two

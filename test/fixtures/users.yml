@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_fname: MyString
+  user_lname: MyString
+  user_email: MyString
+  user_password: MyString
+  user_role: MyString
+  user_grad_year: 2023-02-28
+  user_points: 1
+
+two:
+  user_fname: MyString
+  user_lname: MyString
+  user_email: MyString
+  user_password: MyString
+  user_role: MyString
+  user_grad_year: 2023-02-28
+  user_points: 1
