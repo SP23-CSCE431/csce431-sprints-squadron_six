@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root "main#index"
+  
   resources :performances
   resources :exams
   resources :alumnis
