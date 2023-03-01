@@ -45,11 +45,11 @@ RSpec.describe User, type: :model do
     end
 
     describe 'relationship' do
-        it { should have_many :performances}
+        it { should have_many :performance}
     end
 
     describe 'relationship' do
-        it { should have_many(:exams).through(:performance) }
+        it { should have_many(:exam).through(:performance) }
     end
     
 end
