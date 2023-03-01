@@ -206,6 +206,8 @@ GEM
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
     sexp_processor (4.16.1)
+    shoulda-matchers (3.1.3)
+      activesupport (>= 4.0.0)
     sprockets (4.2.0)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -255,6 +257,7 @@ DEPENDENCIES
   rspec-rails
   rspec-scaffold (~> 2.0.0.beta1)
   selenium-webdriver
+  shoulda-matchers (~> 3.1)
   sprockets-rails
   stimulus-rails
   turbo-rails
