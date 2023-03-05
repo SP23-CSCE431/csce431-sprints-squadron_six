@@ -23,7 +23,8 @@
 
   <div>
     <%= form.label :course_id, style: "display: block" %>
-    <%= form.text_field :course_id %>
+    <!--making course selection from a list of valid courses inputted into the course entity-->
+    <%= form.collection_select :course_id, Course.order(:course_name), :id, :course_name, include_blank: true%>
   </div>
 
   <div>
