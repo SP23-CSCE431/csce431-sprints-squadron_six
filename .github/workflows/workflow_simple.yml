@@ -6,7 +6,8 @@ env:
   DATABASE_PASSWORD: password
 
 name: Rails tests
-on: workflow_dispatch
+on:
+  workflow_dispatch:
   pull_request:
     branches:
       - main
