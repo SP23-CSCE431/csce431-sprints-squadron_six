@@ -1,14 +1,25 @@
 <p style="color: green"><%= notice %></p>
 
+<br></br>
 <h1>Courses</h1>
 
 <div id="courses">
+  <table>
+  <tr>
+    <th><strong>Name</strong></th>
+    <th><strong>Hours</strong></th>
+    <th></th>
+  </tr>
   <% @courses.each do |course| %>
-    <%= render course %>
-    <p>
-      <%= link_to "Show this course", course %>
-    </p>
-  <% end %>
+    <tr>
+      <td><%= course.course_name %></td>
+      <td><%= course.course_hours %></td>
+      <td><%= button_to "SHOW", course, method: :get, class: "show-btn" %></td>
+      <% end %>
+    </tr>
+  </table>
 </div>
 
-<%= link_to "New course", new_course_path %>
+<div class = "newRecord">
+  <%= button_to "New course", new_course_path, method: :get, class: "new-and-back-btn"%>
+</div>

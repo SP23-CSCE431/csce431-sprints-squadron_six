@@ -1,14 +1,36 @@
 <p style="color: green"><%= notice %></p>
+<%= stylesheet_link_tag('application') %>
 
+<br></br>
 <h1>Users</h1>
 
 <div id="users">
+<table>
+  <tr>
+    <th><strong>First Name</strong></th>
+    <th><strong>Last Name</strong></th>
+    <th><strong>Email</strong></th>
+    <th><strong>Password</strong></th>
+    <th><strong>Role</strong></th>
+    <th><strong>Grad Year</strong></th>
+    <th><strong>Points</strong></th>
+    <th></th>
+  </tr>
   <% @users.each do |user| %>
-    <%= render user %>
-    <p>
-      <%= link_to "Show this user", user %>
-    </p>
-  <% end %>
+    <tr>
+      <td><%= user.user_fname %></td>
+      <td><%= user.user_lname %></td>
+      <td><%= user.user_email %></td>
+      <td><%= user.user_password %></td>
+      <td><%= user.user_role %></td>
+      <td><%= user.user_grad_year %></td>
+      <td><%= user.user_points %></td>
+      <td><%= button_to "SHOW", user, method: :get, class: "show-btn" %></td>
+      <% end %>
+    </tr>
+</table>
 </div>
 
-<%= link_to "New user", new_user_path %>
+<div class = "newRecord">
+  <%= button_to "New User", new_user_path, method: :get, class: "new-and-back-btn"%>
+</div>

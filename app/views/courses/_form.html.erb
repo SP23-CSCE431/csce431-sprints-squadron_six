@@ -1,6 +1,6 @@
 <%= form_with(model: course) do |form| %>
   <% if course.errors.any? %>
-    <div style="color: red">
+  <div class = "error">
       <h2><%= pluralize(course.errors.count, "error") %> prohibited this course from being saved:</h2>
 
       <ul>
@@ -11,6 +11,7 @@
     </div>
   <% end %>
 
+<div class = "newEntry">
   <div>
     <%= form.label :course_name, style: "display: block" %>
     <%= form.text_field :course_name %>
@@ -24,4 +25,6 @@
   <div>
     <%= form.submit %>
   </div>
+</div>
+
 <% end %>
