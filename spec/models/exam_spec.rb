@@ -3,40 +3,55 @@ require 'rails_helper'
 RSpec.describe Exam, type: :model do
 
     subject {
-        described_class.new(course_id: "course", exam_date: Date.today + 1.week, exam_grade:"A")
+        course = Course.create(course_name:"CSCE 431", course_hours:3)
+        described_class.new(course_id: course.id, exam_date: Date.today + 1.week, exam_grade: 'A')
     }
 
-    it "is not valid without a date" do
-        subject.exam_date = nil
-        expect(subject).to_not be_valid
+    it "is valid with valid attributes" do
+        expect(subject).to be_valid
     end
 
-    it "is not valid with a date in the past" do
-        if subject.exam_date < Date.today
-          expect(subject).to_not be_valid
-    end
-
+    # course checking: should be a course that has been added to the system (available in dropdown)
     it "is not valid without a course" do
-        subject.course_id = nil
-        expect(subject).to_not be_valid
+      subject.course_id = nil
+      expect(subject).to_not be_valid
     end
 
-    it "is valid with a date today or in the future" do
-        if subject.exam_date >= Date.today
-          expect(subject).to be_valid
+    # date checking: should be today or in the future
+
+    # it "is not valid with a date in the past" do
+    #     subject.exam_date = Date.today - 1.year
+    #     if subject.exam_date < Date.today
+    #       expect(subject).to_not be_valid
+    #     end
+    # end
+    #
+    # it "is valid with a date today or in the future" do
+    #     if subject.exam_date >= Date.today
+    #       expect(subject).to be_valid
+    #     end
+    # end
+
+    it "is not valid without a date" do
+      subject.exam_date = nil
+      expect(subject).to_not be_valid
     end
 
+    # grade checking
     it "is valid with no grade" do
-      # if subject.exam_grade = nil
-      #   expect(subject).to_not be_valid
-      # end
+      subject.exam_grade = nil
+      expect(subject).to be_valid
     end
 
-    it "is valid with a positive grade between 0-100" do
-      # if subject.exam_grade >=0 && subject.exam_grade <=100
-      #   expect(subject).to be_valid
-      # end
+    # check for valid grade range w letter grading using ASCII comparisons
+    it "is valid with a positive grade between A-F" do
+      if subject.exam_grade >= 'A' && subject.exam_grade <= 'F'
+        expect(subject).to be_valid
+      end
     end
+
+    # can't have an exam grade for a date in the future
+
 
     describe 'relationships' do
         it { should belong_to :course }
