@@ -18,7 +18,8 @@ RSpec.describe "/exams", type: :request do
   # Exam. As you add validations to Exam, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    # "course_id": exam.course_id
+    skip("Add a hash of attributes invalid for your model")
   }
 
   let(:invalid_attributes) {
