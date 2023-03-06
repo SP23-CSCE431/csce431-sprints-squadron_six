@@ -12,8 +12,8 @@
   </tr>
   <% @alumnis.each do |alumni| %>
     <tr>
-      <td><%= alumni.company_id %></td>
-      <td><%= alumni.user_id %></td>
+      <td><%= alumni.company_name %></td>
+      <td><%= alumni.user_email %></td>
       <td><%= link_to "Show this alumni", alumni %></td>
       <% end %>
     </tr>

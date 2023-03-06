@@ -2,9 +2,6 @@
 
 <%= render @exam %>
 
-<div>
-  <%= link_to "Edit this exam", edit_exam_path(@exam) %> |
-  <%= link_to "Back to exams", exams_path %>
-
-  <%= button_to "Destroy this exam", @exam, method: :delete %>
+<div class = "newRecord">
+  <%= button_to "Back to Exams", exams_path, method: :get, class: "new-and-back-btn"%>
 </div>

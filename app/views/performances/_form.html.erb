@@ -1,6 +1,6 @@
 <%= form_with(model: performance) do |form| %>
   <% if performance.errors.any? %>
-    <div style="color: red">
+  <div class = "error">
       <h2><%= pluralize(performance.errors.count, "error") %> prohibited this performance from being saved:</h2>
 
       <ul>
@@ -11,22 +11,24 @@
     </div>
   <% end %>
 
+<div class = "newEntry">
   <div>
     <%= form.label :performance_points, style: "display: block" %>
-    <%= form.number_field :performance_points %>
+    <%= form.number_field :performance_points, id: "text-field-vals" %>
   </div>
 
   <div>
     <%= form.label :exam_id, style: "display: block" %>
-    <%= form.text_field :exam_id %>
+    <%= form.select :exam_id, options_for_select([["", nil]] + Performance.all.map{ |p| [p.exam_id] }), {}, {class: "text-field-vals"} %>
   </div>
 
   <div>
     <%= form.label :user_id, style: "display: block" %>
-    <%= form.text_field :user_id %>
+    <%= form.select :user_id, options_for_select([["", nil]] + Performance.all.map{ |p| [p.user_id] }), {}, {class: "text-field-vals"} %>
   </div>
 
   <div>
     <%= form.submit %>
   </div>
+</div>
 <% end %>

@@ -1,10 +1,8 @@
 <p style="color: green"><%= notice %></p>
+<br></br>
 
 <%= render @course %>
 
-<div>
-  <%= link_to "Edit this course", edit_course_path(@course) %> |
-  <%= link_to "Back to courses", courses_path %>
-
-  <%= button_to "Destroy this course", @course, method: :delete %>
+<div class = "newRecord">
+  <%= button_to "Back to Courses", courses_path, method: :get, class: "new-and-back-btn"%>
 </div>
