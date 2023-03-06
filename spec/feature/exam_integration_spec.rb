@@ -40,7 +40,7 @@ RSpec.describe 'Updating an Exam', type: :feature do
     click_on 'Create Exam'
     visit exams_path
     click_on 'SHOW'
-    click_on 'Edit this exam'
+    click_on 'EDIT'
     fill_in "exam[exam_grade]", with: 'A'
     click_on 'Update Exam'
     expect(page).to have_content('A')
@@ -59,7 +59,7 @@ RSpec.describe 'Updating an Exam', type: :feature do
     click_on 'Create Exam'
     visit exams_path
     click_on 'SHOW'
-    click_on 'Edit this exam'
+    click_on 'EDIT'
     fill_in "exam[exam_date]", with: nil
     click_on 'Update Exam'
     expect(page).to have_content('1 error prohibited')
@@ -77,7 +77,7 @@ RSpec.describe 'Deleting an Exam', type: :feature do
     click_on 'Create Exam'
     visit exams_path
     click_on 'SHOW'
-    click_on 'Destroy this exam'
+    click_on 'DELETE'
     expect(page).to have_content('Exam was successfully destroyed.')
   end
 
