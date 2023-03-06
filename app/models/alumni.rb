@@ -5,8 +5,6 @@ class Alumni < ApplicationRecord
    # validate that all parameters are inputted
    validates_presence_of:company_id
    validates_presence_of:user_id
-   validates_presence_of:created_at
-   validates_presence_of:updated_at
-   # a course can't be created that already exists
+   # a company can't be created that already exists
    validates_uniqueness_of:company_id
 end
