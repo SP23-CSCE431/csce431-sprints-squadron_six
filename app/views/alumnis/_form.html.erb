@@ -13,15 +13,16 @@
 
   <div>
     <%= form.label :company_id, style: "display: block" %>
-    <%= form.text_field :company_id %>
+    <%= form.select :company_id, options_for_select(Company.all.map{ |c| [c.company_name] }), {}, style: "height: 30px; background-color: rgb(200, 209, 244);" %>
   </div>
 
   <div>
     <%= form.label :user_id, style: "display: block" %>
-    <%= form.text_field :user_id %>
+    <%= form.select :user_id, options_for_select(User.all.map{ |u| [u.user_email] }), {}, style: "height: 30px; background-color: rgb(200, 209, 244);" %>
   </div>
 
   <div>
     <%= form.submit %>
   </div>
 <% end %>
+
