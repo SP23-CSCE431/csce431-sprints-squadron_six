@@ -25,6 +25,14 @@ h1{
     font-size: 300%;
 }
 
+h2{
+  color: white;
+}
+
+li {
+  color: white;
+}
+
 table{
     border-collapse: collapse;
     width: 90%;
@@ -107,11 +115,11 @@ input#text-field-vals {
 }
 
 .error{
-    color: red; 
-    border: 1px solid black; 
-    background-color: lightgray; 
+    color: white;
+    border: 1px solid black;
+    background-color: lightgray;
     font-size: 75%;
-    width: 40%; 
+    width: 40%;
     padding: 10px;
     margin-bottom: 10px;
     margin-left: auto;
@@ -122,7 +130,7 @@ nav {
     background-color: lightgray;
     height: 50px;
 }
-  
+
 nav ul {
     list-style: none;
     margin: 0;
@@ -132,11 +140,11 @@ nav ul {
     align-items: center;
     height: 100%;
 }
-  
+
 nav li {
     margin: 0 25px;
 }
-  
+
 nav a {
     color: black;
     text-decoration: none;

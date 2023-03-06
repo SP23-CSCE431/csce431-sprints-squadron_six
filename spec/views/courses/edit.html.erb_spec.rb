@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "courses/edit", type: :view do
   let(:course) {
-    Course.create!()
+    Course.create(course_name: "CSCE431", course_hours: 3)
   }
 
   before(:each) do

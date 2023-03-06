@@ -1,6 +1,6 @@
 <%= form_with(model: exam) do |form| %>
   <% if exam.errors.any? %>
-    <div style="color: red">
+    <div class = "error">
       <h2><%= pluralize(exam.errors.count, "error") %> prohibited this exam from being saved:</h2>
 
       <ul>
@@ -11,7 +11,7 @@
     </div>
   <% end %>
 
-  <div>
+  <div class = newEntry>
     <%= form.label :exam_date, style: "display: block" %>
     <%= form.date_field :exam_date %>
   </div>
@@ -22,9 +22,9 @@
   </div>
 
   <div>
-    <%= form.label :course_id, style: "display: block" %>
+    <%= form.label :course_id, id:'course_id', style: "display: block" %>
     <!--making course selection from a list of valid courses inputted into the course entity-->
-    <%= form.collection_select :course_id, Course.order(:course_name), :id, :course_name, include_blank: true%>
+    <%= form.collection_select :course_id, Course.order(:course_name), :id, :course_name, include_blank: false%>
   </div>
 
   <div>
