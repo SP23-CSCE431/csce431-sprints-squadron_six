@@ -3,8 +3,8 @@ require 'rails_helper'
 RSpec.describe "courses/index", type: :view do
   before(:each) do
     assign(:courses, [
-      Course.create!(),
-      Course.create!()
+      Course.create(course_name: "CSCE431", course_hours: 3),
+      Course.create(course_name: "class", course_hours: 1)
     ])
   end
 
