@@ -1,14 +1,25 @@
 <p style="color: green"><%= notice %></p>
 
+<br></br>
 <h1>Alumnis</h1>
 
 <div id="alumnis">
+<table>
+  <tr>
+    <th><strong>Company name</strong></th>
+    <th><strong>User</strong></th>
+    <th></th>
+  </tr>
   <% @alumnis.each do |alumni| %>
-    <%= render alumni %>
-    <p>
-      <%= link_to "Show this alumni", alumni %>
-    </p>
-  <% end %>
+    <tr>
+      <td><%= alumni.company_id %></td>
+      <td><%= alumni.user_id %></td>
+      <td><%= link_to "Show this alumni", alumni %></td>
+      <% end %>
+    </tr>
+</table>
 </div>
 
-<%= link_to "New alumni", new_alumni_path %>
+<div class = "newRecord">
+  <%= button_to "New Alumni", new_alumni_path, method: :get, class: "new-and-back-btn" %>
+</div>

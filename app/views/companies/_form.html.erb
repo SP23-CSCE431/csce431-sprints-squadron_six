@@ -1,8 +1,9 @@
+<%= stylesheet_link_tag('application') %>
+
 <%= form_with(model: company) do |form| %>
   <% if company.errors.any? %>
-    <div style="color: red">
+    <div class = "error">
       <h2><%= pluralize(company.errors.count, "error") %> prohibited this company from being saved:</h2>
-
       <ul>
         <% company.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -11,22 +12,24 @@
     </div>
   <% end %>
 
+<div class = "newEntry">
   <div>
-    <%= form.label :company_name, style: "display: block" %>
-    <%= form.text_field :company_name %>
+    <%= form.label :name, style: "display: block;" %>
+    <%= form.text_field :company_name, id: "text-field-vals" %>
   </div>
 
   <div>
-    <%= form.label :company_location, style: "display: block" %>
-    <%= form.text_field :company_location %>
+    <%= form.label :location, style: "display: block" %>
+    <%= form.text_field :company_location, id: "text-field-vals" %>
   </div>
 
   <div>
-    <%= form.label :company_industry, style: "display: block" %>
-    <%= form.text_field :company_industry %>
+    <%= form.label :industry, style: "display: block" %>
+    <%= form.text_field :company_industry, id: "text-field-vals" %>
   </div>
 
   <div>
     <%= form.submit %>
+  </div>
   </div>
 <% end %>
