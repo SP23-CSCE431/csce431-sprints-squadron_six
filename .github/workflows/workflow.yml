@@ -7,7 +7,6 @@ env:
 
 name: Rails tests
 on:
-  workflow_dispatch:
   pull_request:
     branches:
       - main

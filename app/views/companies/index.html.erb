@@ -1,28 +1,14 @@
 <p style="color: green"><%= notice %></p>
-<%= stylesheet_link_tag('application') %>
 
-<br></br>
 <h1>Companies</h1>
 
 <div id="companies">
-<table>
-  <tr>
-    <th><strong>Name</strong></th>
-    <th><strong>Location</strong></th>
-    <th><strong>Industry</strong></th>
-    <th></th>
-  </tr>
   <% @companies.each do |company| %>
-    <tr>
-      <td><%= company.company_name %></td>
-      <td><%= company.company_location %></td>
-      <td><%= company.company_industry %></td>
-      <td><%= button_to "SHOW", company, method: :get, class: "show-btn" %></td>
-      <% end %>
-    </tr>
-</table>
-
-<div class = "newRecord">
-  <%= button_to "New Company", new_company_path, method: :get, class: "new-and-back-btn"%>
+    <%= render company %>
+    <p>
+      <%= link_to "Show this company", company %>
+    </p>
+  <% end %>
 </div>
 
+<%= link_to "New company", new_company_path %>

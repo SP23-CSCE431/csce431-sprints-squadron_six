@@ -18,13 +18,12 @@
 
   <div>
     <%= form.label :exam_id, style: "display: block" %>
-    <%= form.collection_select :exam_id, Exam.order(:id), :id, :exam_grade, include_blank: true %>
+    <%= form.text_field :exam_id %>
   </div>
 
   <div>
     <%= form.label :user_id, style: "display: block" %>
-    <%# <%= form.text_field :user_id %>
-    <%= form.collection_select :user_id, User.order(:id), :id,  :user_lname, include_blank: true %>
+    <%= form.text_field :user_id %>
   </div>
 
   <div>
