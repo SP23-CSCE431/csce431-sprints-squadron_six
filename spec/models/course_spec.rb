@@ -4,7 +4,7 @@ RSpec.describe Course, type: :model do
     
     subject {
         described_class.new(course_name: "Course",
-                            course_hours: "Hours")
+                            course_hours: 1)
     }
 
     it "is valid with valid attributes" do
