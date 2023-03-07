@@ -71,9 +71,13 @@ group :test do
   gem "capybara", ">= 3.26"
   gem "selenium-webdriver"
   gem "webdrivers"
+  gem 'simplecov', :require => false
 end
 
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem "omniauth-rails_csrf_protection", "~>1.0"
+
+gem 'shoulda-matchers', '~> 5.0'
+
