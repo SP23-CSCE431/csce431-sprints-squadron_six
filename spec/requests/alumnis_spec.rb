@@ -20,7 +20,7 @@ RSpec.describe "/alumnis", type: :request do
   let(:valid_attributes) {
     {
       "company_id": Company.create(company_name:"HP", company_location:"Houston", company_industry:"Softwares").id,
-      "user_id": User.create(user_fname:"Evan", user_lname:"Qin",user_email:"evanqin2002@outlook.com",user_password:"tamucomputerscience",user_role:"Alumni",user_grad_year:Date.today + 1.week,user_points:999).id
+      "user_id": User.create(user_fname:"Evan", user_lname:"Qin",user_email:"qinyif001@tamu.edu",user_password:"tamucomputerscience",user_role:"Alumni",user_grad_year:Date.today + 1.week,user_points:999).id
     }
   }
 
@@ -98,7 +98,7 @@ RSpec.describe "/alumnis", type: :request do
       let(:new_attributes) {
         {
           "company_id": Company.create(company_name:"HP1", company_location:"Houston1", company_industry:"Softwares1").id,
-          "user_id": User.create(user_fname:"Evan1", user_lname:"Qin1",user_email:"evanqin2002@outlook.com1",user_password:"tamucomputerscience1",user_role:"Alumni1",user_grad_year:Date.today + 1.week,user_points:991).id
+          "user_id": User.create(user_fname:"Evan1", user_lname:"Qin1",user_email:"qinyif002@tamu.edu",user_password:"tamucomputerscience1",user_role:"Alumni1",user_grad_year:Date.today + 1.week,user_points:991).id
       
         }
       }
