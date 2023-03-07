@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Alumni, type: :model do
     subject {
-        user = User.create(user_fname:"Evan", user_lname:"Qin",user_email:"evanqin2002@outlook.com",user_password:"tamucomputerscience",user_role:"Alumni",user_grad_year:Date.today + 1.week,user_points:999)
+        user = User.create(user_fname:"Evan", user_lname:"Qin",user_email:"qinyif001@tamu.edu",user_password:"tamucomputerscience",user_role:"Alumni",user_grad_year:Date.today + 1.week,user_points:999)
         company1 = Company.create(company_name:"HP", company_location:"Houston", company_industry:"Softwares")
         company2 = Company.create(company_name:"Apple", company_location:"Houston", company_industry:"Softwares/Hardwares")
         described_class.new(company_id: company1.id, user_id: user.id)
