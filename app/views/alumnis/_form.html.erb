@@ -10,8 +10,13 @@
       </ul>
     </div>
   <% end %>
+<<<<<<< HEAD
 
 <div class = "newEntry">
+=======
+  
+  <!--added drop down for selecting the company from the list of added company-->
+>>>>>>> 708c301 (finished implementation and passed all previously wrote test cases)
   <div>
 
     <%= form.label :company_id, style: "display: block" %>
@@ -19,7 +24,7 @@
     <!-- switching how selection works: -->
     <%= form.collection_select :company_id, Company.order(:company_name), :id, :company_name, include_blank: false%>
   </div>
-
+  <!--added drop down for selecting the user from a list of added users-->
   <div>
     <%= form.label :user_id, style: "display: block" %>
     <%# <!--<%= form.select :user_id, options_for_select(User.all.map{ |u| [u.user_email] }), {}, style: "height: 30px; background-color: rgb(200, 209, 244);" %>
