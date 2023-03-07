@@ -1,5 +1,5 @@
 <p style="color: green"><%= notice %></p>
-
+<%= stylesheet_link_tag('application') %>
 <br></br>
 <h1>Alumnis</h1>
 
@@ -7,14 +7,16 @@
 <table>
   <tr>
     <th><strong>Company name</strong></th>
-    <th><strong>User</strong></th>
+    <th><strong>Alumni Name</strong></th>
+    <th><strong>Graduation year</strong></th>
     <th></th>
   </tr>
   <% @alumnis.each do |alumni| %>
     <tr>
-      <td><%= alumni.company_name %></td>
-      <td><%= alumni.user_email %></td>
-      <td><%= link_to "Show this alumni", alumni %></td>
+      <td><%= alumni.company.company_name %></td>
+      <td><%= alumni.user.user_fname %>&nbsp<%= alumni.user.user_lname %></td>
+      <td><%= alumni.user.user_grad_year %></td>
+      <td><%= link_to "Details about this Alumni", alumni %></td>
       <% end %>
     </tr>
 </table>
