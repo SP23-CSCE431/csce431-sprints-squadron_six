@@ -1,12 +1,25 @@
-<div id="<%= dom_id alumni %>">
-  <p>
-    <strong>Company:</strong>
-    <%= alumni.company_id%>
-  </p>
 
+<div id="<%= dom_id alumni %>">
+  <!--displays the name of the alumni in show detail page-->
   <p>
-    <strong>User:</strong>
-    <%= alumni.user_id %>
+    <strong>Alumni Name:</strong>
+    <%= alumni.user.user_fname%>
+    <%= alumni.user.user_lname%>
+  </p>
+  <!--displays the name of the alumni's company in show detail page-->
+  <p>
+    <strong>Company Name:</strong>
+    <%= alumni.company.company_name%>
+  </p>
+  <!--displays the location of the alumni's company in show detail page-->
+  <p>
+    <strong>Company Location:</strong>
+    <%= alumni.company.company_location%>
+  </p>
+  <!--displays the email of the alumni in show detail page-->
+  <p>
+    <strong>Contact email:</strong>
+    <%= alumni.user.user_email%>
   </p>
 
 </div>

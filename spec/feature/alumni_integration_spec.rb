@@ -4,14 +4,61 @@ require 'rails_helper'
 RSpec.describe 'Creating an Alumni', type: :feature do
   # sunny day
   scenario 'valid inputs' do
+    User.create(user_fname:"Evan", user_lname:"Qin",user_email:"evanqin2002@outlook.com",user_password:"tamucomputerscience",user_role:"Alumni",user_grad_year:Date.today + 1.week,user_points:999)
+    Company.create(company_name:"HP", company_location:"Houston", company_industry:"Softwares")
     visit new_alumni_path
-    fill_in "exam[exam_grade]", with: nil
-    fill_in "exam[course_id]", with: Course.create(course_name:"CSCE 431", course_hours:3).id
-    click_on 'Create Exam'
-    visit exams_path
+    click_on 'Back to alumnis'
+    click_on 'New Alumni'
+    select "Qin", :from =>"alumni[user_id]"
+    select "HP", :from =>"alumni[company_id]"
+    click_on 'Create Alumni'
     expect(page).to have_content('successfully created')
   end
 
-  # rainy days: no course, no date, or both
-  
+  #rainy days where there does not exist a company that could be added to the alumni
+  scenario 'ivalid inputs, missing company' do
+    User.create(user_fname:"Evan", user_lname:"Qin",user_email:"evanqin2002@outlook.com",user_password:"tamucomputerscience",user_role:"Alumni",user_grad_year:Date.today + 1.week,user_points:999)
+    visit new_alumni_path
+    select "Qin", :from =>"alumni[user_id]"
+    click_on 'Create Alumni'
+    expect(page).to have_content('Company must exist')
+  end
+  #rainy days where there does not exist a User that could be added to the alumni
+  scenario 'ivalid inputs, missing user' do
+    Company.create(company_name:"HP", company_location:"Houston", company_industry:"Softwares")
+    visit new_alumni_path
+    select "HP", :from =>"alumni[company_id]"
+    click_on 'Create Alumni'
+    expect(page).to have_content('User must exist')
+  end
+  # sunny day
+  scenario 'modify alumni' do
+    User.create(user_fname:"Evan", user_lname:"Qin",user_email:"evanqin2002@outlook.com",user_password:"tamucomputerscience",user_role:"Alumni",user_grad_year:Date.today + 1.week,user_points:999)
+    Company.create(company_name:"HP", company_location:"Houston", company_industry:"Softwares")
+    Company.create(company_name:"Apple", company_location:"Houston", company_industry:"Softwares/Hardwares")
+    visit new_alumni_path
+    select "Qin", :from =>"alumni[user_id]"
+    select "HP", :from =>"alumni[company_id]"
+    click_on 'Create Alumni'
+    visit alumnis_path
+    click_on 'Details about this Alumni'
+    click_on 'Edit this alumni'
+    select "Apple", :from =>"alumni[company_id]"
+    expect(page).to have_content('Apple')
+  end
+  #rainy day, there can not be a rainy day for modifying an alumni because there will have to be at least one company for alumni and there is nothing you can do to give a drop down menu invalid input.
+  #sunny day
+  scenario 'delete alumni' do
+    User.create(user_fname:"Evan", user_lname:"Qin",user_email:"evanqin2002@outlook.com",user_password:"tamucomputerscience",user_role:"Alumni",user_grad_year:Date.today + 1.week,user_points:999)
+    Company.create(company_name:"HP", company_location:"Houston", company_industry:"Softwares")
+    Company.create(company_name:"Apple", company_location:"Houston", company_industry:"Softwares/Hardwares")
+    visit new_alumni_path
+    select "Qin", :from =>"alumni[user_id]"
+    select "HP", :from =>"alumni[company_id]"
+    click_on 'Create Alumni'
+    visit alumnis_path
+    click_on 'Details about this Alumni'
+    click_on 'Destroy this alumni'
+    expect(page).to have_content('Alumni was successfully destroyed.')
+  end
 end
