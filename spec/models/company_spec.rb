@@ -26,13 +26,9 @@ RSpec.describe Company, type: :model do
         expect(subject).to_not be_valid
     end
 
-    it "is not valid with a duplicate company name and location" do
-        subject.save
-        new_company = described_class.new(company_name: "Something",
-        company_location: "Another State",
-        company_industry: "Finance")
-        expect(new_company).to_not be_valid
-        expect(new_company.errors[:company_name]).to include("has already been taken")
+    it "is not valid with a duplicate name" do
+        expect(comp).to_not be_valid
+        expect(comp.errors[:company_name]).to include('has already been taken')
     end
         
 
