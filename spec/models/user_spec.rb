@@ -40,6 +40,14 @@ RSpec.describe User, type: :model do
         expect(subject).to_not be_valid
     end
 
+    it "is not valid with an email that doesn't end with @tamu.edu" do
+        subject.user_email = "something@gmail.com"
+        expect(subject).to_not be_valid
+        subject.user_email = "something@tamu.edu"
+        expect(subject).to be_valid
+    end
+
+
     describe 'relationship' do
         it { should have_one :alumni}
     end

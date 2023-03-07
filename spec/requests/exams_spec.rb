@@ -17,13 +17,23 @@ RSpec.describe "/exams", type: :request do
   # This should return the minimal set of attributes required to create a valid
   # Exam. As you add validations to Exam, be sure to
   # adjust the attributes here as well.
+
+  # providing valid attributes to test
   let(:valid_attributes) {
-  #   "course_id": exam.course_id
-    skip("Add a hash of attributes invalid for your model")
+    {
+      "course_id": Course.create(course_name:"CSCE_431", course_hours:3).id,
+      "exam_date": Date.today,
+      "exam_grade": 'A'
+    }
   }
 
+# providing invalid attributes to test
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    {
+      "course_id": nil,
+      "exam_date": nil,
+      "exam_grade": nil
+    }
   }
 
   describe "GET /index" do
@@ -90,14 +100,20 @@ RSpec.describe "/exams", type: :request do
   describe "PATCH /update" do
     context "with valid parameters" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        {
+          # added a new course, changed the date, and changed the grade to test updated exams
+          "course_id": Course.create(course_name:"CSCE_451", course_hours:3).id,
+          "exam_date": Date.today+ 1.week,
+          "exam_grade": 'B'
+        }
       }
 
+      # adding check that when an update occurs it's successful and redirects to viewing exam
       it "updates the requested exam" do
         exam = Exam.create! valid_attributes
         patch exam_url(exam), params: { exam: new_attributes }
         exam.reload
-        skip("Add assertions for updated state")
+        expect(response).to redirect_to(exam_url(exam))
       end
 
       it "redirects to the exam" do

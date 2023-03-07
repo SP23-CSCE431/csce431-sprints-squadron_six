@@ -1,10 +1,11 @@
-<h1>Editing user</h1>
+<br></br>
+<h1>Editing User</h1>
 
 <%= render "form", user: @user %>
 
 <br>
 
-<div>
-  <%= link_to "Show this user", @user %> |
-  <%= link_to "Back to users", users_path %>
+<div class = "newRecord" style = "margin-bottom: 50px;">
+  <%= link_to "Show this User", @user, style: "color: white;" %> |
+  <%= link_to "Back to Users", users_path, style: "color: white;" %>
 </div>
