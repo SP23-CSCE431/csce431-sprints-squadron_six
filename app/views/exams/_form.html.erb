@@ -22,9 +22,11 @@
       <%= form.text_field :exam_grade %>
     </div>
 
-    <!--making course selection from a list of valid courses inputted into the course entity-->
-    <%= form.collection_select :course_id, Course.order(:course_name), :id, :course_name, include_blank: true, class: "text-field-vals" %>
-  </div>
+    <div>
+      <%= form.label :course_id, id:'course_id', style: "display: block" %>
+      <!--making course selection from a list of valid courses inputted into the course entity-->
+      <%= form.collection_select :course_id, Course.order(:course_name), :id, :course_name, include_blank: false%>
+    </div>
 
     <div>
       <%= form.label :course_id, id:'course_id', style: "display: block" %>

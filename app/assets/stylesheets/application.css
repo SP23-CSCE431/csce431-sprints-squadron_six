@@ -13,8 +13,6 @@
  *= require_tree .
  *= require_self
  */
-<<<<<<< HEAD
-=======
 
 body{
     font-family: Helvetica;
@@ -127,10 +125,17 @@ input#text-field-vals {
 }
 
 .error{
+
     color: white;
     background-color: red; 
     font-size: 75%;
     width: 45%; 
+=======
+    color: red; 
+    border: 1px solid black; 
+    background-color: lightgray; 
+    font-size: 75%;
+    width: 40%; 
     padding: 10px;
     margin-bottom: 10px;
     margin-left: auto;
@@ -161,6 +166,6 @@ nav a {
     color: black;
     text-decoration: none;
     font-size: 18px;
+
 }
 
->>>>>>> 3d282af (changed the frontend colors and added an additional test case for user)

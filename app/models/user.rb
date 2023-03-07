@@ -20,5 +20,8 @@ class User < ApplicationRecord
         errors.add(:user_email, "must end with @tamu.edu")
       end
     end
+<<<<<<< HEAD
 >>>>>>> 3d282af (changed the frontend colors and added an additional test case for user)
+=======
+>>>>>>> 378ed17 (merge conflict)
 end
