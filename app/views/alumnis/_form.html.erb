@@ -22,24 +22,9 @@
 
   <div>
     <%= form.label :user_id, style: "display: block" %>
-<<<<<<< HEAD
-    <%= form.label :company_name, style: "display: block" %>
-    <%= form.select :company_name, options_for_select([["", nil]] + Company.all.map{ |c| [c.company_name] }), {}, {class: "text-field-vals"} %>
-  </div>
-
-  <div>
-    <%= form.label :user_email, style: "display: block" %>
-    <%= form.select :user_email, options_for_select([["", nil]] + User.all.map{ |u| [u.user_email] }), {}, {class: "text-field-vals"} %>
-
-    <!--<%= form.select :user_id, options_for_select(User.all.map{ |u| [u.user_email] }), {}, style: "height: 30px; background-color: rgb(200, 209, 244);" %> -->
-    <!-- switching how selection works: -->
-    <%= form.collection_select :user_id, Course.order(:user_email), :id, :user_email, include_blank: false%>
-
-=======
     <%# <!--<%= form.select :user_id, options_for_select(User.all.map{ |u| [u.user_email] }), {}, style: "height: 30px; background-color: rgb(200, 209, 244);" %>
     <!-- switching how selection works: -->
     <%= form.collection_select :user_id, User.order(:user_email), :id, :user_email, include_blank: false%>
->>>>>>> 0dbd360 (changing selections to alumni, alum can now be created)
   </div>
 
   <div>

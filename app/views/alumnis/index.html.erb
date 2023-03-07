@@ -1,16 +1,10 @@
 <p style="color: green"><%= notice %></p>
-
+<%= stylesheet_link_tag('application') %>
+<br></br>
 <h1>Alumnis</h1>
 
 <div id="alumnis">
   <% @alumnis.each do |alumni| %>
-<<<<<<< HEAD
-    <%= render alumni %>
-    <p>
-      <%= link_to "Show this alumni", alumni %>
-    </p>
-  <% end %>
-=======
     <tr>
       <td><%= alumni.company_name %></td>
       <td><%= alumni.user_email %></td>
@@ -18,7 +12,6 @@
       <% end %>
     </tr>
 </table>
->>>>>>> 3d282af (changed the frontend colors and added an additional test case for user)
 </div>
 
 <%= link_to "New alumni", new_alumni_path %>
