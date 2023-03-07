@@ -4,7 +4,7 @@ RSpec.describe User, type: :model do
     subject {
         described_class.new(user_fname: "Anything",
                            user_lname: "Something",
-                           user_email: "something@gmail.com",
+                           user_email: "something@tamu.edu",
                            user_password: "password",
                            user_role: "some role",
                            user_grad_year: Date.today + 1.week,
