@@ -17,9 +17,9 @@ RSpec.describe "/exams", type: :request do
   # This should return the minimal set of attributes required to create a valid
   # Exam. As you add validations to Exam, be sure to
   # adjust the attributes here as well.
-  # let(:valid_attributes) {
+  let(:valid_attributes) {
   #   "course_id": exam.course_id
-    skip("Add a hash of attributes invalid for your model") 
+    skip("Add a hash of attributes invalid for your model")
   }
 
   let(:invalid_attributes) {
