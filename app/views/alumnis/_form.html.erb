@@ -22,7 +22,7 @@
     <%= form.label :user_id, style: "display: block" %>
     <%# <!--<%= form.select :user_id, options_for_select(User.all.map{ |u| [u.user_email] }), {}, style: "height: 30px; background-color: rgb(200, 209, 244);" %>
     <!-- switching how selection works: -->
-    <%= form.collection_select :user_id, User.order(:user_email), :id, :user_email, include_blank: false%>
+    <%= form.collection_select :user_id, User.order(:user_email), :id, :user_lname, include_blank: false%>
   </div>
 
   <div>
