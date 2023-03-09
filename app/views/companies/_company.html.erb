@@ -1,4 +1,11 @@
 <div id="<%= dom_id company %>">
+<<<<<<< HEAD
+=======
+<br></br>
+<div class = "newEntry" style = "text-align: left; width: 25%;">
+  <p><b><center>SHOWING THIS COMPANY</center></b></p>
+  <br></br>
+>>>>>>> 3d282af (changed the frontend colors and added an additional test case for user)
   <p>
     <strong>Company name:</strong>
     <%= company.company_name %>
@@ -13,5 +20,14 @@
     <strong>Company industry:</strong>
     <%= company.company_industry %>
   </p>
+<<<<<<< HEAD
 
+=======
+  <br></br>
+  <div style = "margin-left: auto; margin-right: auto; text-align: center;">
+    <%= button_to "EDIT", edit_company_path(@company), method: :get, class: "show-btn", style: "margin-bottom: 10px; font-size: 12px;" %>
+    <%= button_to "DELETE", @company, method: :delete, class: "show-btn", style: "font-size: 12px;" %>
+  </div>
+</div>
+>>>>>>> 3d282af (changed the frontend colors and added an additional test case for user)
 </div>

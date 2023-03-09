@@ -1,6 +1,6 @@
 <%= form_with(model: alumni) do |form| %>
   <% if alumni.errors.any? %>
-    <div style="color: red">
+  <div class = "error">
       <h2><%= pluralize(alumni.errors.count, "error") %> prohibited this alumni from being saved:</h2>
 
       <ul>
@@ -11,7 +11,9 @@
     </div>
   <% end %>
 
+<div class = "newEntry">
   <div>
+<<<<<<< HEAD
     <%= form.label :company_id, style: "display: block" %>
     <%= form.text_field :company_id %>
   </div>
@@ -19,9 +21,19 @@
   <div>
     <%= form.label :user_id, style: "display: block" %>
     <%= form.text_field :user_id %>
+=======
+    <%= form.label :company_name, style: "display: block" %>
+    <%= form.select :company_name, options_for_select([["", nil]] + Company.all.map{ |c| [c.company_name] }), {}, {class: "text-field-vals"} %>
+  </div>
+
+  <div>
+    <%= form.label :user_email, style: "display: block" %>
+    <%= form.select :user_email, options_for_select([["", nil]] + User.all.map{ |u| [u.user_email] }), {}, {class: "text-field-vals"} %>
+>>>>>>> 3d282af (changed the frontend colors and added an additional test case for user)
   </div>
 
   <div>
     <%= form.submit %>
+  </div>
   </div>
 <% end %>

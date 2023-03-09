@@ -4,11 +4,21 @@
 
 <div id="alumnis">
   <% @alumnis.each do |alumni| %>
+<<<<<<< HEAD
     <%= render alumni %>
     <p>
       <%= link_to "Show this alumni", alumni %>
     </p>
   <% end %>
+=======
+    <tr>
+      <td><%= alumni.company_name %></td>
+      <td><%= alumni.user_email %></td>
+      <td><%= link_to "Show this alumni", alumni %></td>
+      <% end %>
+    </tr>
+</table>
+>>>>>>> 3d282af (changed the frontend colors and added an additional test case for user)
 </div>
 
 <%= link_to "New alumni", new_alumni_path %>
