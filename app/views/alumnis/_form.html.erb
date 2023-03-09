@@ -13,6 +13,7 @@
   
   <!--added drop down for selecting the company from the list of added company-->
   <div>
+
     <%= form.label :company_id, style: "display: block" %>
     <%# <!-- <%= form.select :company_id, options_for_select(Company.all.map{ |c| [c.company_name] }), {}, style: "height: 30px; background-color: rgb(200, 209, 244);" %>
     <!-- switching how selection works: -->
@@ -23,7 +24,11 @@
     <%= form.label :user_id, style: "display: block" %>
     <%# <!--<%= form.select :user_id, options_for_select(User.all.map{ |u| [u.user_email] }), {}, style: "height: 30px; background-color: rgb(200, 209, 244);" %>
     <!-- switching how selection works: -->
+<<<<<<< HEAD
     <%= form.collection_select :user_id, User.order(:user_email), :id, :user_lname, include_blank: false%>
+=======
+    <%= form.collection_select :user_id, User.order(:user_email), :id, :user_email, include_blank: false%>
+>>>>>>> main
   </div>
 
   <div>

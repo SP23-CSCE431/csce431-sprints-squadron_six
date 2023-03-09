@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+<<<<<<< HEAD
+=======
     has_many :performance
     has_many :exam, through: :performance
     has_one :alumni
@@ -18,4 +20,11 @@ class User < ApplicationRecord
         errors.add(:user_email, "must end with @tamu.edu")
       end
     end
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3d282af (changed the frontend colors and added an additional test case for user)
+=======
+>>>>>>> 378ed17 (merge conflict)
+>>>>>>> main
 end

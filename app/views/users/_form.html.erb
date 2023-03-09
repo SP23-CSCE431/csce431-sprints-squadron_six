@@ -1,6 +1,6 @@
 <%= form_with(model: user) do |form| %>
   <% if user.errors.any? %>
-  <div class = "error">
+    <div style="color: red">
       <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
       <ul>
@@ -11,40 +11,39 @@
     </div>
   <% end %>
 
-<div class = "newEntry">
   <div>
-    <%= form.label :first_name, style: "display: block" %>
-    <%= form.text_field :user_fname, id: "text-field-vals" %> 
+    <%= form.label :user_fname, style: "display: block" %>
+    <%= form.text_field :user_fname %>
   </div>
 
   <div>
-    <%= form.label :last_name, style: "display: block" %>
-    <%= form.text_field :user_lname, id: "text-field-vals" %> 
+    <%= form.label :user_lname, style: "display: block" %>
+    <%= form.text_field :user_lname %>
   </div>
 
   <div>
-    <%= form.label :email, style: "display: block" %>
-    <%= form.text_field :user_email, id: "text-field-vals" %> 
+    <%= form.label :user_email, style: "display: block" %>
+    <%= form.text_field :user_email %>
   </div>
 
   <div>
-    <%= form.label :password, style: "display: block" %>
-    <%= form.text_field :user_password, id: "text-field-vals" %> 
+    <%= form.label :user_password, style: "display: block" %>
+    <%= form.text_field :user_password %>
   </div>
 
   <div>
-    <%= form.label :role, style: "display: block" %>
-    <%= form.text_field :user_role, id: "text-field-vals" %> 
+    <%= form.label :user_role, style: "display: block" %>
+    <%= form.text_field :user_role %>
   </div>
 
   <div>
-    <%= form.label :grad_year, style: "display: block" %>
-    <%= form.date_field :user_grad_year, id: "text-field-vals" %> 
+    <%= form.label :user_grad_year, style: "display: block" %>
+    <%= form.date_field :user_grad_year %>
   </div>
 
   <div>
-    <%= form.label :points, style: "display: block" %>
-    <%= form.number_field :user_points, id: "text-field-vals" %> 
+    <%= form.label :user_points, style: "display: block" %>
+    <%= form.number_field :user_points %>
   </div>
 
   <div>

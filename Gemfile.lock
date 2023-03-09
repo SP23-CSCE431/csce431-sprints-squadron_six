@@ -74,7 +74,6 @@ GEM
       debug_inspector (>= 0.0.1)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
-    brakeman (5.4.1)
     builder (3.2.4)
     capybara (3.38.0)
       addressable
@@ -99,7 +98,6 @@ GEM
       responders
       warden (~> 1.2.3)
     diff-lcs (1.5.0)
-    docile (1.4.0)
     erubi (1.12.0)
     faraday (2.7.4)
       faraday-net_http (>= 2.0, < 3.1)
@@ -212,7 +210,6 @@ GEM
       rake (>= 12.2)
       thor (~> 1.0)
       zeitwerk (~> 2.5)
-    rainbow (3.1.1)
     rake (13.0.6)
     regexp_parser (2.7.0)
     reline (0.3.2)
@@ -322,7 +319,6 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
-  brakeman
   capybara (>= 3.26)
   debug
   devise
@@ -337,7 +333,6 @@ DEPENDENCIES
   rexml
   rspec-rails
   rspec-scaffold (~> 2.0.0.beta1)
-  rubocop
   selenium-webdriver
   simplecov
   sprockets-rails
