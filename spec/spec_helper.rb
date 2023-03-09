@@ -14,7 +14,7 @@
 #
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
-require "shoulda/matchers"
+# require "shoulda/matchers"
 
 # require "shoulda/matchers/integrations/rspec"
 
