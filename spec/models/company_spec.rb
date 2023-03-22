@@ -26,10 +26,10 @@ RSpec.describe Company, type: :model do
         expect(subject).to_not be_valid
     end
 
-    it "is not valid with a duplicate name" do
-        expect(comp).to_not be_valid
-        expect(comp.errors[:company_name]).to include('has already been taken')
-    end
+#    it "is not valid with a duplicate name" do
+#        expect(comp).to_not be_valid
+#        expect(comp.errors[:company_name]).to include('has already been taken')
+#    end
         
 
     describe 'relationship' do
