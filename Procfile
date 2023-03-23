@@ -1,1 +1,1 @@
-release: rails db:schema:load && rails db:seed
+release: rails db:migrate && rails db:seed
