@@ -12,6 +12,10 @@ on:
     branches:
       - main
       - test
+  push:
+    branches:
+      - main
+      - test
 jobs:
   rspec-test:
     name: RSpec
