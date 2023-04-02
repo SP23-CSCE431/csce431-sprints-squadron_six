@@ -32,7 +32,7 @@ RSpec.describe 'Updating a course', type: :feature do
         click_on 'Create Course'
         visit courses_path
         click_on 'SHOW'
-        click_on 'Edit this course'
+        click_on 'EDIT'
         fill_in "course[course_hours]", with: 6
         click_on 'Update Course'
         expect(page).to have_content('6')
@@ -46,7 +46,7 @@ RSpec.describe 'Updating a course', type: :feature do
         click_on 'Create Course'
         visit courses_path
         click_on 'SHOW'
-        click_on 'Edit this course'
+        click_on 'EDIT'
         fill_in "course[course_hours]", with: -1
         click_on 'Update Course'
         expect(page).to have_content('Course hours must be greater than 0')
@@ -62,10 +62,9 @@ RSpec.describe 'Deleting a course', type: :feature do
         click_on 'Create Course'
         visit courses_path
         click_on 'SHOW'
-        click_on 'Destroy this course'
+        click_on 'DELETE'
         expect(page).to have_content('Course was successfully destroyed.')
     end
 
     # No rainy day as of yet because always can delete
 end
-

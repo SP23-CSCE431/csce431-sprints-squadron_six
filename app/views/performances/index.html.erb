@@ -1,14 +1,27 @@
 <p style="color: green"><%= notice %></p>
 
+<br></br>
 <h1>Performances</h1>
 
 <div id="performances">
+  <table>
+  <tr>
+    <th><strong>Points</strong></th>
+    <th><strong>Exam ID</strong></th>
+    <th><strong>User ID</strong></th>
+    <th></th>
+  </tr>
   <% @performances.each do |performance| %>
-    <%= render performance %>
-    <p>
-      <%= link_to "Show this performance", performance %>
-    </p>
-  <% end %>
+    <tr>
+      <td><%= performance.performance_points %></td>
+      <td><%= performance.exam_id %></td>
+      <td><%= performance.user_id %></td>
+      <td><%= button_to "SHOW", performance, method: :get, class: "show-btn" %></td>
+      <% end %>
+    </tr>
+  </table>
 </div>
 
-<%= link_to "New performance", new_performance_path %>
+<div class = "newRecord">
+  <%= button_to "New Performance", new_performance_path, method: :get, class: "new-and-back-btn"%>
+</div>

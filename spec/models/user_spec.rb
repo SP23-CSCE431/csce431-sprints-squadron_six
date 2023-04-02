@@ -4,7 +4,7 @@ RSpec.describe User, type: :model do
     subject {
         described_class.new(user_fname: "Anything",
                            user_lname: "Something",
-                           user_email: "something@gmail.com",
+                           user_email: "something@tamu.edu",
                            user_password: "password",
                            user_role: "some role",
                            user_grad_year: Date.today + 1.week,
@@ -39,6 +39,14 @@ RSpec.describe User, type: :model do
         subject.user_grad_year = nil
         expect(subject).to_not be_valid
     end
+
+    it "is not valid with an email that doesn't end with @tamu.edu" do
+        subject.user_email = "something@gmail.com"
+        expect(subject).to_not be_valid
+        subject.user_email = "something@tamu.edu"
+        expect(subject).to be_valid
+    end
+
 
     describe 'relationship' do
         it { should have_one :alumni}
