@@ -5,4 +5,8 @@ class ApplicationController < ActionController::Base
   def isadmin
     @isadmin = current_authuser.admin
   end
+
+  def user_info
+    @user_email = current_authuser.email
+  end
 end

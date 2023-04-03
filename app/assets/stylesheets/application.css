@@ -312,6 +312,38 @@ nav a.selected:active {
 }
 
 /* FORM ENTRY */
-.newEntry {
+.calendar_element a {
+  text-decoration: none;
+  color: black;
+}
 
+/* TABS ON EXAM */
+.tab {
+  overflow: hidden;
+}
+
+.tab button {
+  border: none;
+  outline: none;
+}
+
+.tabcontent {
+  display: none;
+}
+
+.fake-btn {
+  text-decoration: none;
+  outline: none;
+  border:none;
+  background-color: rgb(242, 242, 242);
+  color: black;
+  font-size: 14px;
+  float: left;
+  font-weight: 590;
+}
+
+.fake-btn:hover {
+  background-color: rgb(242, 242, 242);
+  outline:none;
+  border:none;
 }
