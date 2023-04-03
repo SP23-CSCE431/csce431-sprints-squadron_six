@@ -41,7 +41,7 @@
   <% @exam_by_month.each do |exam| %>
     <div>
       <% if date == exam.exam_date %>
-        <%= exam.course.course_name %>
+        <%= link_to exam.course.course_name, exams_path %>
       <% end %>
     </div>
   <% end %>
