@@ -1,17 +1,16 @@
 <%= stylesheet_link_tag('application') %>
 <% if !devise_controller? || controller_name != 'sessions' %>
   <nav>
-    
+
       <ul>
-        <li><%= link_to "Main Page", root_path %></li>
-        <li><%= link_to "Users", users_path %></li>
-        <li><%= link_to "Alumnis", alumnis_path %></li>
+        <li><%= link_to "Main", root_path %></li>
+        <li><%= link_to "Alumni", alumnis_path %></li>
         <li><%= link_to "Companies", companies_path %></li>
         <li><%= link_to "Exams", exams_path %></li>
         <li><%= link_to "Courses", courses_path %></li>
-        <li><%= link_to "Performances", performances_path %></li>
+        <li><%= link_to "Points", performances_path %></li>
       </ul>
 
-    
+
   </nav>
 <% end %>
