@@ -39,7 +39,7 @@
     <%= date.day %>
     <% @exam_by_month.each do |exam| %>
       <div class="calendar_element">
-        <% if date == exam.exam_date %>
+        <% if date == exam.exam_date && exam.user_id == user_info%>
           <%= button_to exam.course.course_name, exam, method: :get, class: "fake-btn" %>
         <% end %>
       </div>
@@ -84,7 +84,7 @@
       <%= date.day %>
       <% @exam_by_month.each do |exam| %>
         <div class="calendar_element">
-          <% if date == exam.exam_date %>
+          <% if date == exam.exam_date && exam.user_id == user_info%>
             <%= button_to exam.course.course_name, exam, method: :get, class: "fake-btn" %>
           <% end %>
         </div>
