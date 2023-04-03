@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_04_234124) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_03_032350) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -83,6 +83,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_04_234124) do
     t.integer "user_points"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "authuser_id"
+    t.index ["authuser_id"], name: "index_users_on_authuser_id"
   end
 
   add_foreign_key "alumnis", "companies"
@@ -90,4 +92,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_04_234124) do
   add_foreign_key "exams", "courses"
   add_foreign_key "performances", "exams"
   add_foreign_key "performances", "users"
+  add_foreign_key "users", "authusers"
 end

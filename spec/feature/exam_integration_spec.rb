@@ -80,6 +80,29 @@ RSpec.describe 'Deleting an Exam', type: :feature do
     click_on 'DELETE'
     expect(page).to have_content('Exam was successfully destroyed.')
   end
-
   # exam deletion does not cause errors/there's not a wrong way to do it
+
+  # viewing exam calendar: user
+  # sunny day: displays all exams for a user, if user has no exams, blank calendar
+  # rainy day: user can see exams from other user
+Rspec.describe "Viewing Exam Calendar", type: :feature do
+  scenario 'user' do
+    Course.create(course_name:"CSCE_431", course_hours:3)
+    visit new_exam_path
+    select "CSCE_431", :from =>"exam[course_id]"
+    fill_in "exam[exam_date]", with: Date.today + 1.week
+    fill_in "exam[exam_grade]", with: nil
+    click_on 'Create Exam'
+    visit exams_path
+    click_on 'My Exam Schedule'
+    # expect(
+    # expect(page).to have_content()
+  end
+end
+
+
+  # viewing exam calendar: admin
+  # sunny day: displays all exams for the squad, if no exams, blank calendar
+  # rainy day: displays only admin exams
+
 end
