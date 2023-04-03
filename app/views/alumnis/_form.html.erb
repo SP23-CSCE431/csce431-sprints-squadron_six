@@ -16,7 +16,9 @@
     <%= form.label :company_id, style: "display: block" %>
     <%# <!-- <%= form.select :company_id, options_for_select(Company.all.map{ |c| [c.company_name] }), {}, style: "height: 30px; background-color: rgb(200, 209, 244);" %>
     <!-- switching how selection works: -->
+
     <%= form.collection_select :company_id, Company.order(:company_name), :id, :company_name, include_blank: false, style: "height: 30px; background-color: rgb(200, 209, 244);" %>
+
   </div>
   <!--added drop down for selecting the user from a list of added users-->
   <div>
