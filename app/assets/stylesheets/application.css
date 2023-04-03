@@ -99,6 +99,7 @@ button:hover{
 
 .show-btn:hover{
     background-color: rgb(19, 70, 95);
+    color: white;
 }
 
 .new-and-back-btn {
@@ -131,6 +132,11 @@ input#text-field-vals {
     margin-top: 5px;
     background-color: rgb(242, 242, 242);
     color: black;
+}
+
+.text-field-tag{
+    width: 320px;
+    height: 25px;
 }
 
 .error{
@@ -174,3 +180,4 @@ nav a {
 .oauth {
     color: rgb(242, 242, 242);
 }
+
