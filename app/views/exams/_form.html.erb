@@ -25,6 +25,9 @@
     <br>
 
     <div>
+      <%= form.label :grade_photo, style: "display: block" %>
+      <%= form.file_field :avatars %>
+
       <form action="/exam_grade.png">
         <input type="file" id="exam_grade" name="exam_grade.png">
         <input type="submit">

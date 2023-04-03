@@ -12,27 +12,6 @@
   <h1>Exams</h1>
 </div>
 
-<!--
-<div id="exams">
-  <table>
-    <tr>
-      <th><strong>Course</strong></th>
-      <th><strong>Exam Date</strong></th>
-      <th><strong>Exam Grade</strong></th>
-      <th></th>
-    </tr>
-    <%# <% @exams.each do |exam| %> %>
-      <tr>
-        <%# <td><%= exam.course.course_name %></td> %>
-        <%# <td><%= exam.exam_date.strftime("%m/%d/%y") %></td> %>
-        <%# <td><%= exam.exam_grade %></td> %>
-        <%# <td><%= button_to "SHOW", exam, method: :get, class: "show-btn" %></td> %>
-        <%# <% end %>  %>
-      </tr>
-  </table>
-</div>
- -->
-
 <% if !isadmin %>
   <div id="calendar">
   <%= month_calendar(exams: @exam_by_month) do |date, exams| %>
@@ -52,12 +31,9 @@
   </div>
 <% else %>
   <div class="tab">
-    <button type="tab_links" onclick="openTab(event,'Squad')" id="default">View Squadron 6 Exams</button>
+    <button type="tab_links" onclick="openTab(event,'Squad')">View Squadron 6 Exams</button>
     <button type="tab_links" onclick="openTab(event,'Personal')">View My Exams</button>
 
-    <script type="text/javascript">
-      document.getElementById("default").click();
-    </script>
   </div>
 
   <div class="tabcontent" id="Squad">
