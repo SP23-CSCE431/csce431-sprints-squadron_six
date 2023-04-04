@@ -3,6 +3,7 @@
 
 <h1>Exams</h1>
 
+<!--
 <div id="exams">
   <table>
     <tr>
@@ -11,21 +12,32 @@
       <th><strong>Exam Grade</strong></th>
       <th></th>
     </tr>
-    <% @exams.each do |exam| %>
+    <%# <% @exams.each do |exam| %> %>
       <tr>
-        <td><%= exam.course.course_name %></td>
-        <td><%= exam.exam_date.strftime("%m/%d/%y") %></td>
-        <td><%= exam.exam_grade %></td>
-        <td><%= button_to "SHOW", exam, method: :get, class: "show-btn" %></td>
-        <% end %>
+        <%# <td><%= exam.course.course_name %></td> %>
+        <%# <td><%= exam.exam_date.strftime("%m/%d/%y") %></td> %>
+        <%# <td><%= exam.exam_grade %></td> %>
+        <%# <td><%= button_to "SHOW", exam, method: :get, class: "show-btn" %></td> %>
+        <%# <% end %>  %>
       </tr>
   </table>
 </div>
+ -->
+<br>
+<br>
 
-<%# <%= month_calendar do |date| %>
+<div id="calendar">
+<%= month_calendar(exams: @exam_by_month) do |date, exams| %>
   <%= date.day %>
-<% end %> %>
-
+  <% @exam_by_month.each do |exam| %>
+    <div>
+      <% if date == exam.exam_date %>
+        <%= exam.course.course_name %>
+      <% end %>
+    </div>
+  <% end %>
+<% end %>
+</div>
 
 <div class = "newRecord">
   <%= button_to "New exam", new_exam_path, method: :get, class: "new-and-back-btn"%>
