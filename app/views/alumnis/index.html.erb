@@ -4,8 +4,10 @@
 <h1>Alumnis</h1>
 
 <div id="alumnis">
+<!-- search function-->
+<!-- currently accepts only the first name of the alumni and takes you to the editing page-->
 <center>
-  <%= form_tag(alumnis_path, method: :get) do %>
+                                              <%= form_tag(alumnis_path, method: :get) do %>
     <%= text_field_tag(:search, params[:search], placeholder: 'Search for an alumni by name', class: 'text-field-tag')%> <%= submit_tag ("Search"), style: "height: 30px" %></p>
   <% end %>
 </center>

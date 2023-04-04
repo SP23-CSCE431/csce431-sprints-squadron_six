@@ -9,7 +9,6 @@ class AlumnisController < ApplicationController
       @alumnis = Alumni.all
     end
   end
-  #search function for alumnis
   def search
     if @alumni = Alumni.all.find{|alumni| alumni.user.user_fname.downcase == params[:search].downcase}
       redirect_to alumni_url(@alumni)
