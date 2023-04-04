@@ -1,14 +1,26 @@
-<p style="color: green"><%= notice %></p>
+<p class="notice"><%= notice %></p>
 
-<h1>Adminusers</h1>
-
-<div id="adminusers">
-  <% @adminusers.each do |adminuser| %>
-    <%= render adminuser %>
-    <p>
-      <%= link_to "Show this adminuser", adminuser %>
-    </p>
-  <% end %>
+<div class="const">
+  <h1>Users</h1>
 </div>
 
-<%= link_to "New adminuser", new_adminuser_path %>
+<div id="adminusers">
+  <table>
+  <tr>
+    <th><strong>Email</strong></th>
+    <th><strong>Admin</strong></th>
+    <th></th>
+  </tr>
+  <% @adminusers.each do |adminuser| %>
+    <tr>
+      <td><%= adminuser.email %></td>
+      <td><%=adminuser.isaadmin ? "X" : " "%></td>
+      <td><%= button_to "SHOW", adminuser, method: :get, class: "show-btn" %></td>
+      <% end %>
+    </tr>
+  </table>
+</div>
+
+<div class="newRecord">
+  <%= button_to "New User", new_adminuser_path, method: :get, class: "new-and-back-btn"%>
+</div>
