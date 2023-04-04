@@ -21,12 +21,14 @@
     </table>
 
 <% else %>
+<center>
   <div class="tab">
-    <button type="tab_links" onclick="openTab(event,'Squad')">View Scoreboard</button>
-    <button type="tab_links" onclick="openTab(event,'Submissions')">View Submissions</button>
+    <button type="tab_links" class= "new-and-back-btn" onclick="openTab(event,'Squad')">View Scoreboard</button>
+    <button type="tab_links" class= "new-and-back-btn" onclick="openTab(event,'Submissions')">View Submissions</button>
   </div>
-
+</center>
   <div class="tabcontent" id="Submissions">
+      <h1>Submissions</h1>
       <table>
       <tr>
         <th><strong>Member</strong></th>
@@ -37,11 +39,11 @@
         <th><strong>Points</strong></th>
         <th></th>
       </tr>
-      
+
       <% @performances.each do |performance| %>
         <tr>
           <td><%= User.find(performance.user_id).user_lname %>, <%= User.find(performance.user_id).user_fname %></td>
-          <td><%= Course.find(Exam.find(performance.exam_id).course_id).course_name %></td> | 
+          <td><%= Course.find(Exam.find(performance.exam_id).course_id).course_name %></td> |
           <td><%= Course.find(Exam.find(performance.exam_id).course_id).course_hours %></td>
           <td><%= Exam.find(performance.exam_id).exam_date %></td>
           <td><%= Exam.find(performance.exam_id).exam_grade %></td>
@@ -57,6 +59,7 @@
     </div>
 
   <div class="tabcontent" id="Squad">
+    <h1>Scoreboard</h1>
     <table>
       <tr>
         <th><strong>Member</strong></th>
