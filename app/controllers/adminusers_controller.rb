@@ -61,6 +61,14 @@ class AdminusersController < ApplicationController
   def destroy
     return unless isadmin
 
+    # authuser = Authuser.find_by(email: @adminuser.email)
+    # authuser.destroy if authuser
+    # @adminuser.destroy
+    user = User.find_by(user_email: @adminuser.email)
+    authuser = Authuser.find_by(email: @adminuser.email)
+    user.destroy if user
+    authuser.destroy if authuser
+    # @user.destroy
     @adminuser.destroy
 
     respond_to do |format|
