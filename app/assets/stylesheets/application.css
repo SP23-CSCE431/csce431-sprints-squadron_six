@@ -313,9 +313,9 @@ nav a.selected:active {
 
 /* PAGE CONSTANTS */
 .notice {
-  top: 20%;
+  /* top: 20%; */
   color: rgb(197, 197, 197);
-  background-color: black;
+  /* background-color: black; */
 }
 
 .const {
