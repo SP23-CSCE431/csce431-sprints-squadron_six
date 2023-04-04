@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'adminuser/index'
+  get 'adminuser/show'
+  get 'adminuser/new'
+  get 'adminuser/edit'
+  get 'admin/index'
+  get 'admin/show'
+  get 'admin/new'
+  get 'admin/edit'
   # devise_for :users
   devise_for :authusers,
              controllers: {

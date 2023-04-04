@@ -23,5 +23,7 @@
 </div>
 
 <div class = "newRecord">
-  <%= button_to "New Alumni", new_alumni_path, method: :get, class: "new-and-back-btn" %>
+  <% if isadmin%>
+    <%= button_to "New Alumni", new_alumni_path, method: :get, class: "new-and-back-btn" %>
+  <%end%>
 </div>

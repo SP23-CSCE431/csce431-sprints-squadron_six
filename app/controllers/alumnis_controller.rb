@@ -7,8 +7,7 @@ class AlumnisController < ApplicationController
   end
 
   # GET /alumnis/1 or /alumnis/1.json
-  def show
-  end
+  def show; end
 
   # GET /alumnis/new
   def new
@@ -16,18 +15,19 @@ class AlumnisController < ApplicationController
   end
 
   # GET /alumnis/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /alumnis or /alumnis.json
   def create
+    return unless isadmin
+
     @alumni = Alumni.new(alumni_params)
 
     respond_to do |format|
       if @alumni.save
         format.html do
           redirect_to alumni_url(@alumni),
-                      notice: "Alumni was successfully created."
+                      notice: 'Alumni was successfully created.'
         end
         format.json { render :show, status: :created, location: @alumni }
       else
@@ -41,11 +41,13 @@ class AlumnisController < ApplicationController
 
   # PATCH/PUT /alumnis/1 or /alumnis/1.json
   def update
+    return unless isadmin
+
     respond_to do |format|
       if @alumni.update(alumni_params)
         format.html do
           redirect_to alumni_url(@alumni),
-                      notice: "Alumni was successfully updated."
+                      notice: 'Alumni was successfully updated.'
         end
         format.json { render :show, status: :ok, location: @alumni }
       else
@@ -59,11 +61,13 @@ class AlumnisController < ApplicationController
 
   # DELETE /alumnis/1 or /alumnis/1.json
   def destroy
+    return unless isadmin
+
     @alumni.destroy
 
     respond_to do |format|
       format.html do
-        redirect_to alumnis_url, notice: "Alumni was successfully destroyed."
+        redirect_to alumnis_url, notice: 'Alumni was successfully destroyed.'
       end
       format.json { head :no_content }
     end
