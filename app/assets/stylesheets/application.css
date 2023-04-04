@@ -281,6 +281,7 @@ nav a.selected:active {
   /* move down */
   margin: -10%;
   margin-top: 28%;
+  border-radius: 12px;
 }
 
 .oauth a:link {
