@@ -92,6 +92,7 @@ button:hover{
 
 .show-btn:hover{
     background-color: rgb(19, 70, 95);
+    color: white;
 }
 
 .new-and-back-btn {
@@ -127,7 +128,13 @@ input#text-field-vals {
     color: black;
 }
 
+
 /* ERROR */
+
+.text-field-tag{
+    width: 320px;
+    height: 25px;
+}
 .error{
     color: black;
     border: 1px solid rgb(242, 242, 242);
@@ -179,6 +186,7 @@ nav a {
 .oauth {
     color: rgb(242, 242, 242);
 }
+
 
 /* CALENDAR */
 .calendar div {
