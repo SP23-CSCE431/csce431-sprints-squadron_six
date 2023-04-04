@@ -3,9 +3,20 @@ class AlumnisController < ApplicationController
 
   # GET /alumnis or /alumnis.json
   def index
-    @alumnis = Alumni.all
+    if params[:search]
+      search
+    else
+      @alumnis = Alumni.all
+    end
   end
-
+  #search function for alumnis
+  def search
+    if @alumni = Alumni.all.find{|alumni| alumni.user.user_fname.downcase == params[:search].downcase}
+      redirect_to alumni_url(@alumni)
+    else
+      redirect_to alumnis_path
+    end
+  end
   # GET /alumnis/1 or /alumnis/1.json
   def show
   end

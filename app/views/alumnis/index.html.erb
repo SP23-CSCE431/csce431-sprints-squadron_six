@@ -4,6 +4,12 @@
 <h1>Alumnis</h1>
 
 <div id="alumnis">
+<center>
+  <%= form_tag(alumnis_path, method: :get) do %>
+    <%= text_field_tag(:search, params[:search], placeholder: 'Search for an alumni by name', class: 'text-field-tag')%> <%= submit_tag ("Search"), style: "height: 30px" %></p>
+  <% end %>
+</center>
+<br></br>
 <table>
   <tr>
     <th><strong>Company name</strong></th>
