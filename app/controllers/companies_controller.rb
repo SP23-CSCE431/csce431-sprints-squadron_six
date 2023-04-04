@@ -6,7 +6,7 @@ class CompaniesController < ApplicationController
     if params[:search]
       @companies = Company.search(params[:search].downcase).order(:company_name.downcase)
     else
-      @companies = Company.all.order(:company_name)
+      @companies = Company.all.order(:company_name, :company_location)
     end
   end
       
