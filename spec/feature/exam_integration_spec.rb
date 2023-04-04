@@ -20,7 +20,6 @@ RSpec.describe 'Creating an Exam', type: :feature do
      }
    })
     visit new_authuser_session_path
-
     click_button 'Sign in with Google'
   end
 
@@ -171,21 +170,30 @@ RSpec.describe "Viewing Exam Calendar", type: :feature do
     expect(page).to have_content('CSCE_431')
   end
   # sunny day: cannot see other people's exams
-  # scenario 'user, valid inputs' do
-  #   visit new_authuser_session_path
-  #   click_button 'Sign in with Google'
-  #   Course.create(course_name:"CSCE_431", course_hours:3)
-  #   visit new_exam_path
-  #   select "CSCE_431", :from =>"exam[course_id]"
-  #   fill_in "exam[exam_date]", with: Date.today + 1.week
-  #   fill_in "exam[exam_grade]", with: nil
-  #   click_on 'Create Exam'
-  #   visit new_authuser_session_path
-  #   click_button 'Sign in with Google'
-  #   visit exams_path
-  #
-  #   expect(page).to_not have_content('CSCE_431')
-  # end
+  scenario 'user, valid inputs, see only personal' do
+    Course.create(course_name:"CSCE_431", course_hours:3)
+    visit new_exam_path
+    select "CSCE_431", :from =>"exam[course_id]"
+    fill_in "exam[exam_date]", with: Date.today + 1.week
+    fill_in "exam[exam_grade]", with: nil
+    click_on 'Create Exam'
+
+    OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
+     provider: 'google_oauth2',
+     uid: '123456',
+     info: {
+       email: 'ansleythomp@tamu.edu',
+       name: 'Ansley Thompson',
+       first_name: 'Ansley',
+       last_name: 'Thompson',
+       image: 'https://lh3.googleusercontent.com/a/AGNmyxZ9w0R3_loFhlk46VAFMyqvC2ZqrZgHuPYnlaAH=s96-c'
+     }
+    })
+    visit new_authuser_session_path
+    click_button 'Sign in with Google'
+    visit exams_path
+    expect(page).to_not have_content('CSCE_431')
+  end
 
   scenario 'admin, personal, valid inputs' do
     Course.create(course_name:"CSCE_431", course_hours:3)
