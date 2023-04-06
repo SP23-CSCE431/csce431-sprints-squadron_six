@@ -1,9 +1,11 @@
 # integration tests for alumnis
 require 'rails_helper'
-
+#require 'test_helper'
 RSpec.describe 'Creating an Alumni', type: :feature do
   # sunny day
   scenario 'valid inputs' do
+    #mock_google_oauth2
+    #click_link "Sign in with Google"
     User.create(user_fname:"Evan", user_lname:"Qin",user_email:"qinyif001@tamu.edu",user_password:"tamucomputerscience",user_role:"Alumni",user_grad_year:Date.today + 1.week,user_points:999)
     Company.create(company_name:"HP", company_location:"Houston", company_industry:"Softwares")
     visit new_alumni_path
