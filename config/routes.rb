@@ -22,4 +22,11 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   get 'main', to: 'main#index'
+  get '/alumni_help', to: 'alumni_help#index'
+  get '/user_help', to: 'user_help#index'
+  get '/company_help', to: 'company_help#index'
+  get '/exam_help', to: 'exam_help#index'
+  get '/course_help', to: 'course_help#index'
+  get '/performance_help', to: 'performance_help#index'
+  get '/adminpage_help', to: 'adminpage_help#index'
 end

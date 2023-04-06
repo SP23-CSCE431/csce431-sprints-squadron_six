@@ -10,7 +10,9 @@ class AlumnisController < ApplicationController
     end
   end
   def search
-    if @alumni = Alumni.all.find{|alumni| alumni.user.user_fname.downcase == params[:search].downcase}
+    if @alumni = Alumni.all.find{|alumni| alumni.user.user_lname.downcase == params[:search].downcase}
+      #@alumni = Alumni.all
+      #@q = Alumni.ransack([])
       redirect_to alumni_url(@alumni)
     else
       redirect_to alumnis_path
@@ -18,7 +20,6 @@ class AlumnisController < ApplicationController
   end
   # GET /alumnis/1 or /alumnis/1.json
   def show; end
-
   # GET /alumnis/new
   def new
     @alumni = Alumni.new

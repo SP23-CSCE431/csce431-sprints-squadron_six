@@ -1,0 +1,2 @@
+module AlumniHelpHelper
+end

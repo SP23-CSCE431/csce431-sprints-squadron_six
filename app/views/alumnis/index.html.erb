@@ -3,11 +3,10 @@
 <br></br>
 <h1>Alumnis</h1>
 <div id="alumnis">
-<!-- search function-->
-<!-- currently accepts only the first name of the alumni and takes you to the editing page-->
+
 <center>
   <%= form_tag(alumnis_path, method: :get) do %>
-    <%= text_field_tag(:search, params[:search], placeholder: 'Search for an alumni by name', class: 'text-field-tag')%> <%= submit_tag ("Search"), style: "height: 30px" %></p>
+    <%= text_field_tag(:search, params[:search], placeholder: 'Search for an alumni by last name', class: 'text-field-tag')%> <%= submit_tag ("Search"), style: "height: 30px" %></p>
   <% end %>
 </center>
 <br></br>
@@ -33,4 +32,5 @@
   <% if isadmin%>
     <%= button_to "New Alumni", new_alumni_path, method: :get, class: "new-and-back-btn" %>
   <%end%>
+  <%= link_to 'Help', '/alumni_help' %>
 </div>

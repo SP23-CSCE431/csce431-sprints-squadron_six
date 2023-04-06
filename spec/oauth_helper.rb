@@ -14,6 +14,8 @@ def mock_google_oauth2
         token: 'token',
         refresh_token: 'refresh_token',
         expires_at: Time.now + 1.week
+        client_id: ENV['GOOGLE_CLIENT_ID'],
+        client_secret: ENV['GOOGLE_CLIENT_SECRET']
       }
     })
 end
