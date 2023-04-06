@@ -1,11 +1,10 @@
-<br></br>
-<h1>Editing alumni</h1>
+<div class="const">
+  <h1>Edit Alumni</h1>
+</div>
 
 <%= render "form", alumni: @alumni %>
 
-<br>
-
 <div>
-  <%= link_to "Show this alumni", @alumni %> |
-  <%= link_to "Back to alumnis", alumnis_path %>
+  <%= link_to "Show this alumni", @alumni, class: "new-and-back-btn" %>
+  <%= link_to "Back to alumnis", alumnis_path, class: "new-and-back-btn" %>
 </div>

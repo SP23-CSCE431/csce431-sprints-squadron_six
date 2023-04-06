@@ -1,14 +1,39 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Csce431SprintsSquadronSix</title>
+    <title>Squadron Six</title>
+    <%= favicon_link_tag "SS_logo.jpg" %>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
   </head>
+
+  <div class="header">
+      <%=image_tag("SS_logo.jpg", :alt => "Squadron Six Logo") %>
+      <h1>Squadron 6</h1>
+    <!-- <h2>Flying Tigers</h2> -->
+
+    <div class="oauth">
+      <% if current_authuser %>
+      <%= link_to (image_tag(current_authuser.avatar_url, :class => "profile")), users_path %>
+      <%# <%= link_to "Edit Account", edit_authuser_registration_path %>
+      <%= button_to "Logout", destroy_authuser_session_path, data: {turbo: "false"}, method: :delete, :class => "profileB" %>
+    </div>
+    <div class="loggedout">
+      <% else %>
+      <h2><%= link_to "Login", new_authuser_session_path %></h2>
+      <%# <%= link_to "Create Account", new_authuser_registration_path %>
+      <% end %>
+    </div>
+  </div>
 
   <body>
     <%= render "layouts/navbar" %>
