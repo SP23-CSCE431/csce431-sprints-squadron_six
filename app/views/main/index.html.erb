@@ -4,11 +4,13 @@
 
 <br></br>
 
-
+<h1>Main Page for Squadron Six</h1>
 
 
 <% if current_authuser %>
 <h2><%= current_authuser.email %></h2>
+
+
 <%= image_tag(current_authuser.avatar_url) %>
 <%# <%= link_to "Edit Account", edit_authuser_registration_path %>
 <div class="oauth">
