@@ -61,4 +61,8 @@ RSpec.describe 'Creating an Alumni', type: :feature do
     click_on 'Destroy this alumni'
     expect(page).to have_content('Alumni was successfully destroyed.')
   end
+  #scenario 'delete alumni' do
+    #visit new_alumni_path
+    #expect(page).to have_content('Help')
+  #end
 end

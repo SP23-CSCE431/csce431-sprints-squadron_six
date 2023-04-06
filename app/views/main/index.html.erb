@@ -1,11 +1,10 @@
+<img src="SS_logo.jpg" alt="Squadron Six Logo">
+<h1>Squadron 6</h1>
+<h2 center>Flying Tigers</h2>
 
 <br></br>
+
 <h1>Main Page for Squadron Six</h1>
-<% if isadmin %>
-  <h1>I am a Admin</h1>
-<% else %>
-  <h1>Not Admin</h1>
-<% end %>
 
 
 <% if current_authuser %>
@@ -17,7 +16,7 @@
 <div class="oauth">
   <%= button_to "Logout", destroy_authuser_session_path, data: {turbo: "false"}, method: :delete %>
   <% else %>
-  <h2><%= link_to "Login", new_authuser_session_path %><\h2>
+    <h2><%= link_to "Login", new_authuser_session_path %></h2>
   <%# <%= link_to "Create Account", new_authuser_registration_path %>
   <% end %>
 </div>

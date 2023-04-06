@@ -8,6 +8,8 @@ class ExamsController < ApplicationController
 
   # GET /exams/1 or /exams/1.json
   def show
+    # SHOW JUST USER EXAMS
+    # .select{|a| a['userId'] == @user['id']}
   end
 
   # GET /exams/new
@@ -55,6 +57,11 @@ class ExamsController < ApplicationController
       format.html { redirect_to exams_url, notice: "Exam was successfully destroyed." }
       format.json { head :no_content }
     end
+  end
+
+  def index
+    exam_date = params.fetch(:exam_date, Date.today).to_date
+    @exam_by_month = Exam.where(exam_date: exam_date.beginning_of_month.beginning_of_week..exam_date.end_of_month.end_of_week)
   end
 
   private

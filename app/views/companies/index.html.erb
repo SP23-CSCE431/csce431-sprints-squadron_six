@@ -4,6 +4,14 @@
 <br></br>
 <h1>Companies</h1>
 
+<center>
+  <%= form_tag(companies_path, method: :get) do %>
+    <%= text_field_tag(:search, params[:search], placeholder: 'Search for a company by name', class: 'text-field-tag')%> <%= submit_tag ("Search"), style: "height: 30px" %></p>
+  <% end %>
+</center>
+
+<br></br>
+
 <div id="companies">
 <table>
   <tr>

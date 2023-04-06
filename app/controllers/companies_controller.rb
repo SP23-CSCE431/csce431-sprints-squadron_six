@@ -3,11 +3,24 @@ class CompaniesController < ApplicationController
 
   # GET /companies or /companies.json
   def index
-    @companies = Company.all
+    if params[:search]
+      search
+    else
+      @companies = Company.order(:company_name)
+    end
   end
 
+  def search
+    if @company = Company.all.find{|company| company.company_name.downcase == params[:search].downcase}
+      redirect_to company_url(@company)
+    else
+      redirect_to companies_path
+    end
+  end
+      
   # GET /companies/1 or /companies/1.json
   def show
+    @company = Company.find(params[:id])
   end
 
   # GET /companies/new
