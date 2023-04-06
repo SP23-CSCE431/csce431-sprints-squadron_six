@@ -1,11 +1,13 @@
 # integration tests combine two or more aspects of my application in testing
 # location: spec/feature/course_integration_spec.rb
 require 'rails_helper'
-
+require 'oauth_helper'
 
 RSpec.describe 'Creating a course', type: :feature do
   # Sunny Day
   scenario 'valid inputs' do
+    mock_google_oauth2
+    click_link "Sign in with Google"
     visit new_course_path
     fill_in "course[course_name]", with: 'CSCE 421'
     fill_in "course[course_hours]", with: 2
