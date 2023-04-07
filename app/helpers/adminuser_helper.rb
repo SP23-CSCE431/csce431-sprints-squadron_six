@@ -1,0 +1,2 @@
+module AdminuserHelper
+end

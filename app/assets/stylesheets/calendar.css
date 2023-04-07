@@ -1,0 +1,57 @@
+.simple-calendar {
+}
+.day {}
+
+.wday-0 {}
+.wday-1 {}
+.wday-2 {}
+.wday-3 {}
+.wday-4 {}
+.wday-5 {}
+.wday-6 {}
+
+.today {
+}
+.past {}
+.future {}
+
+.start-date {}
+
+.prev-month {}
+.next-month { }
+.current-month {}
+
+.has-events {}
+
+.calendar-heading{
+  text-align: center;
+}
+
+.calendar-heading a{
+  text-decoration: none;
+  color: black;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+td {
+  text-align: left;
+  border: 1px solid;
+  border-color: black;
+  margin-top: -4px;
+
+}
+
+.head {
+  background-color: rgba(255, 198, 2, .5);
+}
+
+.calendar-heading a {
+  color: rgb(233, 233, 233);
+}

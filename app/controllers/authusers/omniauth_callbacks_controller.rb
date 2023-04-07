@@ -10,16 +10,40 @@ class Authusers::OmniauthCallbacksController < Devise::OmniauthCallbacksControll
 
   def google_oauth2
     authuser = Authuser.from_omniauth(auth)
+    adminuser = Adminuser.find_by(email: auth.info.email)
 
-    if authuser.present?
+    if authuser.persisted? && adminuser.present?
+      authuser.update(
+        admin: adminuser.isaadmin
+        # add any other fields that you want to update
+      )
+    else
+      authuser.save!
+    end
+
+    if authuser.present? && adminuser.present?
+      # if authuser.present?
       sign_out_all_scopes
       flash[:success] = t 'devise.omniauth_callbacks.success', kind: 'Google'
+      # redirect_to new_authuser_session_path unless adminuser
+
       sign_in_and_redirect authuser, event: :authentication
     else
-      flash[:alert] =
-        t 'devise.omniauth_callbacks.failure', kind: 'Google', reason: "#{auth.info.email} is not authorized."
+      flash[:alert] = t 'devise.omniauth_callbacks.failure',
+                        kind: 'Google',
+                        reason: "#{auth.info.email} is not authorized."
       redirect_to new_authuser_session_path
     end
+
+    # @authuser = Authuser.from_omniauth(request.env["omniauth.auth"])
+    # if @authuser.persisted?
+    #   sign_in_and_redirect @authuser, event: :authentication
+    #   if is_navigational_format?
+    #     set_flash_message(:notice, :success, kind: "Google")
+    #   end
+    # else
+    #   redirect_to new_user_registration_url
+    # end
   end
 
   # More info at:

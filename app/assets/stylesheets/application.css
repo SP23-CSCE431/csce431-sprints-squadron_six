@@ -14,20 +14,30 @@
  *= require_self
  */
 
+/* BASICS */
+html *{
+  font-family: 'Oxygen', sans-serif !important;
+  /* font-family: 'Open Sans', sans-serif !important; */
+}
+
 body{
-    font-family: Helvetica;
-    background-color: rgb(30, 108, 147);
-    /* color: orange; */
+  background-color: rgb(124, 132, 121);
+  width: auto;
 }
 
 h1{
-    text-align: center;
-    font-size: 300%;
-    color: rgb(242, 242, 242);
+  font-family: 'Oxygen', sans-serif !important;
+  text-align: center;
+  font-size: 300%;
+  color: rgb(233, 233, 233);
 }
 
 h2{
-  color: rgb(242, 242, 242);
+  color: rgb(233, 233, 233);
+}
+
+h3{
+  color: rgb(233, 233, 233);
 }
 
 li {
@@ -35,55 +45,58 @@ li {
 }
 
 table{
-    border-collapse: collapse;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 12px;
-    overflow: hidden;
-    background-color: rgb(242, 242, 242);
-    box-shadow: 2px 2px 4px #000000;
+  border-collapse: collapse;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: rgb(242, 242, 242);
+  /* box-shadow: 2px 2px 4px #000000; */
 }
 
 td, th {
-    text-align: center;
-    font-size: 92%;
-    color: black;
-    padding: 20px;
+  text-align: center;
+  font-size: 92%;
+  color: black;
+  padding: 20px;
 }
 
 th{
-    background-color: rgb(30, 108, 147);
-    color: black);
+  /* background-color: rgb(30, 108, 147); */
+  background-color: hsl(46, 75%, 60%);
+  color: black;
 }
 
+/* CREATE */
 .newRecord{
-    margin-top: 15px;
-    text-align: center;
+  margin-top: 15px;
+  text-align: center;
 }
 
 .newEntry{
-    border-radius: 12px;
-    overflow: hidden;
-    background-color: rgb(242, 242, 242);
-    color: black;
-    width: 30%;
-    padding: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    box-shadow: 0.5px 2px 4px #000000;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: rgb(242, 242, 242);
+  color: black;
+  width: 30%;
+  padding: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 10%;
+  /* box-shadow: 0.5px 2px 4px #000000; */
 }
 
-.navBar{
-    border: 1px solid rgb(242, 242, 242);
-    background-color: rgb(242, 242, 242);
-    color: rgb(242, 242, 242);
-    padding: 30px;
-    width: 15%;
-    font-size: 120%;
+.newEntry label {
+  padding: 5px;
 }
 
+.newEntry collection_select {
+  margin: 10px;
+}
+
+/* BUTTONS */
 .show-btn {
     font-size: 12px;
     padding: 7px 16px;
@@ -95,10 +108,13 @@ th{
 
 button:hover{
     cursor: pointer;
+    background-color: rgb(197, 197, 197);
+    border-radius: none;
 }
 
 .show-btn:hover{
-    background-color: rgb(19, 70, 95);
+    background-color: hsl(46, 50%, 50%);
+    color: white;
 }
 
 .new-and-back-btn {
@@ -106,16 +122,20 @@ button:hover{
     font-size: 15px;
     padding: 7px 16px;
     margin-bottom: 10px;
-    border-radius: 12px;
+    border-radius: 5px;
     border: none;
     background-color: rgb(242, 242, 242);
-    border: 1px solid rgb(242, 242, 242);
+    text-decoration: none;
+    color: black;
+    /* border: 1px solid rgb(242, 242, 242); */
+    /* width: 10%; */
 }
 
 .new-and-back-btn:hover{
-    background-color: rgb(19, 70, 95);
+    background-color: hsl(46, 75%, 60%);
 }
 
+/* TEXT FIELDS */
 input#text-field-vals {
     height: 25px;
     text-align: center;
@@ -133,22 +153,39 @@ input#text-field-vals {
     color: black;
 }
 
+
+/* ERROR */
+
+.text-field-tag{
+    width: 320px;
+    height: 25px;
+}
 .error{
     color: black;
-    border: 1px solid rgb(242, 242, 242);
-    background-color: rgb(45, 164, 223);
-    font-size: 75%;
-    width: 40%;
+    font-size: 100%;
+    width: 50%;
     padding: 10px;
     margin-bottom: 10px;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 }
 
+.error li {
+  list-style-type: none;
+  color: black;
+}
 
+.error h2 {
+  color: black;
+}
+/* NAVIGATION BAR */
 nav {
-    background-color: rgb(19, 70, 95);
+    background-color: rgb(17, 54, 96);
     height: 50px;
+    width: 100%;
+    position: absolute;
+    top: 60px;
 }
 
 nav ul {
@@ -171,6 +208,110 @@ nav a {
     font-size: 18px;
 }
 
+nav a.selected:active {
+  color: rgb(223, 96, 72);
+}
+
+/* OAUTH */
 .oauth {
     color: rgb(242, 242, 242);
+}
+
+
+/* CALENDAR */
+.calendar div {
+
+}
+
+/* MAIN */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.header img {
+  float: left;
+  width: 50px;
+  /* padding: 5px; */
+  /* margin: 5px; */
+  margin: .3%;
+  margin-right: .5%;
+}
+
+.header h1 {
+  float: left;
+  margin-top: -.3%;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+.header h2 {
+  margin-top: 5%;
+  float: left;
+}
+
+.profile {
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  /* height: auto; */
+  /* padding-right: 10px; */
+}
+
+.profileB {
+  /* move down */
+}
+
+.oauth a:link {
+  text-decoration: none;
+}
+
+.oauth {
+  float: right;
+  display: flex;
+  justify-content: center;
+  /* position: fixed; */
+}
+
+.oauth img {
+  margin-top: 7;
+}
+
+.loggedout {
+  margin-top: 100px;
+  /* display: flex; */
+  justify-content: center;
+  text-align: center;
+}
+
+.loggedout img {
+  width: 200px;
+}
+
+/* PAGE CONSTANTS */
+.notice {
+  top: 20%;
+  color: rgb(197, 197, 197);
+  background-color: black;
+}
+
+.const {
+  position: relative;
+  top: 40px;
+  margin: 50px;
+}
+
+.const h1 {
+  margin-top: 100px;
+}
+
+.simple_calendar div {
+  background-color: black;
+}
+
+/* FORM ENTRY */
+.newEntry {
+
 }

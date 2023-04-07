@@ -1,11 +1,12 @@
-<br></br>
-<h1>Editing User</h1>
+<div class="const">
+  <h1>Edit Profile</h1>
+</div>
 
 <%= render "form", user: @user %>
 
 <br>
 
 <div class = "newRecord" style = "margin-bottom: 50px;">
-  <%= link_to "Show this User", @user, style: "color: white;" %> |
-  <%= link_to "Back to Users", users_path, style: "color: white;" %>
+  <%= link_to "Show this User", @user, class: "new-and-back-btn" %>
+  <%= link_to "Back to Users", users_path, class: "new-and-back-btn" %>
 </div>

@@ -8,4 +8,7 @@ class Company < ApplicationRecord
 
     # The user cannot enter a company name that already exists
     validates_uniqueness_of :company_name
+
+    validates :company_name, presence: true, uniqueness: {case_sensitive: false}
+
 end

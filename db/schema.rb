@@ -10,9 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_04_234124) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_04_181334) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "adminusers", force: :cascade do |t|
+    t.string "email"
+    t.boolean "isaadmin"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "alumnis", force: :cascade do |t|
     t.bigint "company_id", null: false
@@ -35,6 +42,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_04_234124) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "admin", default: false
     t.index ["email"], name: "index_authusers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_authusers_on_reset_password_token", unique: true
   end
@@ -83,6 +91,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_04_234124) do
     t.integer "user_points"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "authuser_id"
+    t.index ["authuser_id"], name: "index_users_on_authuser_id"
   end
 
   add_foreign_key "alumnis", "companies"
@@ -90,4 +100,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_04_234124) do
   add_foreign_key "exams", "courses"
   add_foreign_key "performances", "exams"
   add_foreign_key "performances", "users"
+  add_foreign_key "users", "authusers"
 end
