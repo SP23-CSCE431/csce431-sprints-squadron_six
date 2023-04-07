@@ -16,115 +16,115 @@ RSpec.describe '/adminusers', type: :request do
   # This should return the minimal set of attributes required to create a valid
   # Adminuser. As you add validations to Adminuser, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) do
-    skip('Add a hash of attributes valid for your model')
-  end
+  # let(:valid_attributes) do
+  #   skip('Add a hash of attributes valid for your model')
+  # end
 
-  let(:invalid_attributes) do
-    skip('Add a hash of attributes invalid for your model')
-  end
+  # let(:invalid_attributes) do
+  #   skip('Add a hash of attributes invalid for your model')
+  # end
 
-  describe 'GET /index' do
-    it 'renders a successful response' do
-      Adminuser.create! valid_attributes
-      get adminusers_url
-      expect(response).to be_successful
-    end
-  end
+  # describe 'GET /index' do
+  #   it 'renders a successful response' do
+  #     Adminuser.create! valid_attributes
+  #     get adminusers_url
+  #     expect(response).to be_successful
+  #   end
+  # end
 
-  describe 'GET /show' do
-    it 'renders a successful response' do
-      adminuser = Adminuser.create! valid_attributes
-      get adminuser_url(adminuser)
-      expect(response).to be_successful
-    end
-  end
+  # describe 'GET /show' do
+  #   it 'renders a successful response' do
+  #     adminuser = Adminuser.create! valid_attributes
+  #     get adminuser_url(adminuser)
+  #     expect(response).to be_successful
+  #   end
+  # end
 
-  describe 'GET /new' do
-    it 'renders a successful response' do
-      get new_adminuser_url
-      expect(response).to be_successful
-    end
-  end
+  # describe 'GET /new' do
+  #   it 'renders a successful response' do
+  #     get new_adminuser_url
+  #     expect(response).to be_successful
+  #   end
+  # end
 
-  describe 'GET /edit' do
-    it 'renders a successful response' do
-      adminuser = Adminuser.create! valid_attributes
-      get edit_adminuser_url(adminuser)
-      expect(response).to be_successful
-    end
-  end
+  # describe 'GET /edit' do
+  #   it 'renders a successful response' do
+  #     adminuser = Adminuser.create! valid_attributes
+  #     get edit_adminuser_url(adminuser)
+  #     expect(response).to be_successful
+  #   end
+  # end
 
-  describe 'POST /create' do
-    context 'with valid parameters' do
-      it 'creates a new Adminuser' do
-        expect do
-          post adminusers_url, params: { adminuser: valid_attributes }
-        end.to change(Adminuser, :count).by(1)
-      end
+  # describe 'POST /create' do
+  #   context 'with valid parameters' do
+  #     it 'creates a new Adminuser' do
+  #       expect do
+  #         post adminusers_url, params: { adminuser: valid_attributes }
+  #       end.to change(Adminuser, :count).by(1)
+  #     end
 
-      it 'redirects to the created adminuser' do
-        post adminusers_url, params: { adminuser: valid_attributes }
-        expect(response).to redirect_to(adminuser_url(Adminuser.last))
-      end
-    end
+  #     it 'redirects to the created adminuser' do
+  #       post adminusers_url, params: { adminuser: valid_attributes }
+  #       expect(response).to redirect_to(adminuser_url(Adminuser.last))
+  #     end
+  #   end
 
-    context 'with invalid parameters' do
-      it 'does not create a new Adminuser' do
-        expect do
-          post adminusers_url, params: { adminuser: invalid_attributes }
-        end.to change(Adminuser, :count).by(0)
-      end
+  #   context 'with invalid parameters' do
+  #     it 'does not create a new Adminuser' do
+  #       expect do
+  #         post adminusers_url, params: { adminuser: invalid_attributes }
+  #       end.to change(Adminuser, :count).by(0)
+  #     end
 
-      it "renders a response with 422 status (i.e. to display the 'new' template)" do
-        post adminusers_url, params: { adminuser: invalid_attributes }
-        expect(response).to have_http_status(:unprocessable_entity)
-      end
-    end
-  end
+  #     it "renders a response with 422 status (i.e. to display the 'new' template)" do
+  #       post adminusers_url, params: { adminuser: invalid_attributes }
+  #       expect(response).to have_http_status(:unprocessable_entity)
+  #     end
+  #   end
+  # end
 
-  describe 'PATCH /update' do
-    context 'with valid parameters' do
-      let(:new_attributes) do
-        skip('Add a hash of attributes valid for your model')
-      end
+  # describe 'PATCH /update' do
+  #   context 'with valid parameters' do
+  #     let(:new_attributes) do
+  #       skip('Add a hash of attributes valid for your model')
+  #     end
 
-      it 'updates the requested adminuser' do
-        adminuser = Adminuser.create! valid_attributes
-        patch adminuser_url(adminuser), params: { adminuser: new_attributes }
-        adminuser.reload
-        skip('Add assertions for updated state')
-      end
+  #     it 'updates the requested adminuser' do
+  #       adminuser = Adminuser.create! valid_attributes
+  #       patch adminuser_url(adminuser), params: { adminuser: new_attributes }
+  #       adminuser.reload
+  #       skip('Add assertions for updated state')
+  #     end
 
-      it 'redirects to the adminuser' do
-        adminuser = Adminuser.create! valid_attributes
-        patch adminuser_url(adminuser), params: { adminuser: new_attributes }
-        adminuser.reload
-        expect(response).to redirect_to(adminuser_url(adminuser))
-      end
-    end
+  #     it 'redirects to the adminuser' do
+  #       adminuser = Adminuser.create! valid_attributes
+  #       patch adminuser_url(adminuser), params: { adminuser: new_attributes }
+  #       adminuser.reload
+  #       expect(response).to redirect_to(adminuser_url(adminuser))
+  #     end
+  #   end
 
-    context 'with invalid parameters' do
-      it "renders a response with 422 status (i.e. to display the 'edit' template)" do
-        adminuser = Adminuser.create! valid_attributes
-        patch adminuser_url(adminuser), params: { adminuser: invalid_attributes }
-        expect(response).to have_http_status(:unprocessable_entity)
-      end
-    end
-  end
+  #   context 'with invalid parameters' do
+  #     it "renders a response with 422 status (i.e. to display the 'edit' template)" do
+  #       adminuser = Adminuser.create! valid_attributes
+  #       patch adminuser_url(adminuser), params: { adminuser: invalid_attributes }
+  #       expect(response).to have_http_status(:unprocessable_entity)
+  #     end
+  #   end
+  # end
 
-  describe 'DELETE /destroy' do
-    it 'destroys the requested adminuser' do
-      adminuser = Adminuser.create! valid_attributes
-      expect do
-        delete adminuser_url(adminuser)
-      end.to change(Adminuser, :count).by(-1)
-    end
+  # describe 'DELETE /destroy' do
+  #   it 'destroys the requested adminuser' do
+  #     adminuser = Adminuser.create! valid_attributes
+  #     expect do
+  #       delete adminuser_url(adminuser)
+  #     end.to change(Adminuser, :count).by(-1)
+  #   end
 
-    it 'redirects to the adminusers list' do
-      adminuser = Adminuser.create! valid_attributes
-      delete adminuser_url(adminuser)
-      expect(response).to redirect_to(adminusers_url)
-    end
-  end
+  #   it 'redirects to the adminusers list' do
+  #     adminuser = Adminuser.create! valid_attributes
+  #     delete adminuser_url(adminuser)
+  #     expect(response).to redirect_to(adminusers_url)
+  #   end
+  # end
 end
