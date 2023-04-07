@@ -3,6 +3,25 @@ require 'rails_helper'
 # require 'test_helper'
 RSpec.describe 'Creating an Alumni', type: :feature do
   # sunny day
+  before(:all) do
+    Rails.application.load_seed # or load your custom seed file
+  end
+  before do
+    OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
+                                                                         provider: 'google_oauth2',
+                                                                         uid: '123456',
+                                                                         info: {
+                                                                           email: 'ivanattexas@tamu.edu',
+                                                                           name: 'Ivan Martinez',
+                                                                           first_name: 'Ivan',
+                                                                           last_name: 'Martinez',
+                                                                           image: 'https://lh3.googleusercontent.com/a/AGNmyxZ9w0R3_loFhlk46VAFMyqvC2ZqrZgHuPYnlaAH=s96-c'
+                                                                         }
+                                                                       })
+    visit new_authuser_session_path
+
+    click_button 'Sign in with Google'
+  end
   scenario 'valid inputs' do
     # mock_google_oauth2
     # click_link "Sign in with Google"
