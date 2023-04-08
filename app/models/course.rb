@@ -1,5 +1,8 @@
 class Course < ApplicationRecord
     has_many :exam
+    def self.ransackable_attributes(auth_object = nil)
+        ["course_hours", "course_name"]
+    end
 
     validates_presence_of :course_name
     validates_presence_of :course_hours

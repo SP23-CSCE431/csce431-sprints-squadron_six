@@ -4,7 +4,9 @@ class CoursesController < ApplicationController
   # GET /courses or /courses.json
   def index
     
-    @courses = Course.all
+    #@courses = Course.all
+    @q = Course.ransack(params[:q])
+    @courses = @q.result(distinct: true)
   end
 
   # GET /courses/1 or /courses/1.json
