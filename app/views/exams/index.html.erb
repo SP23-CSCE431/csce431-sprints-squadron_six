@@ -10,44 +10,87 @@
 
 <div class="const">
   <h1>Exams</h1>
-
 </div>
 
-<!--
-<div id="exams">
-  <table>
-    <tr>
-      <th><strong>Course</strong></th>
-      <th><strong>Exam Date</strong></th>
-      <th><strong>Exam Grade</strong></th>
-      <th></th>
-    </tr>
-    <%# <% @exams.each do |exam| %> %>
-      <tr>
-        <%# <td><%= exam.course.course_name %></td> %>
-        <%# <td><%= exam.exam_date.strftime("%m/%d/%y") %></td> %>
-        <%# <td><%= exam.exam_grade %></td> %>
-        <%# <td><%= button_to "SHOW", exam, method: :get, class: "show-btn" %></td> %>
-        <%# <% end %>  %>
-      </tr>
-  </table>
-</div>
- -->
-
-<div id="calendar">
-  <%# <%= if  %>
-<%= month_calendar(exams: @exam_by_month) do |date, exams| %>
-  <%= date.day %>
-  <% @exam_by_month.each do |exam| %>
-    <div>
-      <% if date == exam.exam_date %>
-        <%= exam.course.course_name %>
-      <% end %>
-    </div>
+<% if !isadmin %>
+  <div id="calendar">
+  <%= month_calendar(exams: @exam_by_month) do |date, exams| %>
+    <%= date.day %>
+    <% @exam_by_month.each do |exam| %>
+      <div class="calendar_element">
+        <% if date == exam.exam_date && exam.user_id == user_info%>
+          <%= button_to exam.course.course_name, exam, method: :get, class: "fake-btn" %>
+        <% end %>
+      </div>
+    <% end %>
   <% end %>
-<% end %>
-</div>
+  </div>
 
-<div class = "newRecord">
-  <%= button_to "New Exam", new_exam_path, method: :get, class: "new-and-back-btn"%>
-</div>
+  <div class = "newRecord">
+    <%= button_to "New Exam", new_exam_path, method: :get, class: "new-and-back-btn"%>
+  </div>
+<% else %>
+  <div class="tab">
+    <button type="tab_links" onclick="openTab(event,'Squad')">View Squadron 6 Exams</button>
+    <button type="tab_links" onclick="openTab(event,'Personal')">View My Exams</button>
+
+  </div>
+
+  <div class="tabcontent" id="Squad">
+    <h1>Squadron 6 Exam Schedule</h1>
+    <div id="calendar">
+    <%= month_calendar(exams: @exam_by_month) do |date, exams| %>
+      <%= date.day %>
+      <% @exam_by_month.each do |exam| %>
+        <div class="calendar_element">
+          <% if date == exam.exam_date %>
+            <%= button_to exam.course.course_name, exam, method: :get, class: "fake-btn" %>
+          <% end %>
+        </div>
+      <% end %>
+    <% end %>
+    </div>
+
+  </div>
+
+  <div class="tabcontent" id="Personal">
+    <h1>My Exam Schedule</h1>
+    <div id="calendar">
+    <%= month_calendar(exams: @exam_by_month) do |date, exams| %>
+      <%= date.day %>
+      <% @exam_by_month.each do |exam| %>
+        <div class="calendar_element">
+          <% if date == exam.exam_date && exam.user_id == user_info%>
+            <%= button_to exam.course.course_name, exam, method: :get, class: "fake-btn" %>
+          <% end %>
+        </div>
+      <% end %>
+    <% end %>
+    </div>
+
+    <div class = "newRecord">
+      <%= button_to "New Exam", new_exam_path, method: :get, class: "new-and-back-btn"%>
+    </div>
+  </div>
+
+
+
+  <script type="text/javascript">
+    function openTab(evt, view){
+      var i, tabcontent, tab_links;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for(i = 0; i < tabcontent.lenth; i++){
+        tabcontent[i].style.display = "none";
+      }
+      tab_links = document.getElementsByClassName("tab_links");
+      if (view == "Squad"){
+        document.getElementById(view).style.display = "block";
+        document.getElementById("Personal").style.display = "none";
+      }
+      else {
+        document.getElementById(view).style.display = "block";
+        document.getElementById("Squad").style.display = "none";
+      }
+    }
+  </script>
+<% end %>
