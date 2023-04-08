@@ -24,20 +24,28 @@
     </div>
     <br>
 
-    <div>
-      <form action="/exam_grade.png">
+    <!-- <div> -->
+      <%# <%= form.label :grade_photo, style: "display: block" %>
+      <%# <%= form.file_field :file %>
+
+      <!-- <form action="/exam_grade.png">
         <input type="file" id="exam_grade" name="exam_grade.png">
         <input type="submit">
       </form>
-    </div>
-    <br>
-    
+    </div> -->
+    <!-- <br> -->
+
     <div>
       <%= form.label :course_id, id:'course_id', style: "display: block" %>
       <!--making course selection from a list of valid courses inputted into the course entity-->
       <%= form.collection_select :course_id, Course.order(:course_name), :id, :course_name, include_blank: false%>
     </div>
     <br>
+
+      <%= form.label :user_id, style: "display: block" %>
+      <%= form.text_field :user_id, value: user_info, :readonly => true %>
+      <%# <%= form.collection_select :user_id, user_info, :id, :string, include_blank: false%>
+      <%# <%= :user_id => user_info %>
 
 
 
