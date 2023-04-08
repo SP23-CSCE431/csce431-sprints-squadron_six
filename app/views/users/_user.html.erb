@@ -39,11 +39,10 @@
   </p>
   <br></br>
   <div style = "margin-left: auto; margin-right: auto; text-align: center;">
-    <%= button_to "EDIT", edit_user_path(@user), method: :get, class: "show-btn", style: "margin-bottom: 10px; font-size: 12px;" %>
+    <%= button_to "Edit", edit_user_path(@user), method: :get, class: "show-btn", style: "margin-bottom: 10px; font-size: 12px;" %>
     <% if isadmin%>
-      <%= button_to "DELETE", @user, method: :delete, class: "show-btn", style: "font-size: 12px;" %>
+      <%= button_to "Delete", @user, method: :delete, class: "show-btn", style: "font-size: 12px;" %>
     <%end%>
   </div>
 </div>
 </div>
-
