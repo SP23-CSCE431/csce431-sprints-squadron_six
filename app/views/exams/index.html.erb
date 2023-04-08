@@ -1,7 +1,17 @@
-<p style="color: green"><%= notice %></p>
-<%= stylesheet_link_tag('application') %>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+</head>
 
-<h1>Exams</h1>
+<p class="notice"><%= notice %></p>
+<%= stylesheet_link_tag('application') %>
+<%= stylesheet_link_tag('calendar') %>
+
+<div class="const">
+  <h1>Exams</h1>
+
+</div>
 
 <!--
 <div id="exams">
@@ -23,10 +33,9 @@
   </table>
 </div>
  -->
-<br>
-<br>
 
 <div id="calendar">
+  <%# <%= if  %>
 <%= month_calendar(exams: @exam_by_month) do |date, exams| %>
   <%= date.day %>
   <% @exam_by_month.each do |exam| %>
@@ -40,5 +49,5 @@
 </div>
 
 <div class = "newRecord">
-  <%= button_to "New exam", new_exam_path, method: :get, class: "new-and-back-btn"%>
+  <%= button_to "New Exam", new_exam_path, method: :get, class: "new-and-back-btn"%>
 </div>

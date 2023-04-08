@@ -1,13 +1,15 @@
-<p style="color: green"><%= notice %></p>
+<p class="notice"><%= notice %></p>
 <%= stylesheet_link_tag('application') %>
-<br></br>
-<h1>Alumnis</h1>
+
+<div class="const">
+  <h1>Alumni</h1>
+</div>
 
 <div id="alumnis">
 <!-- search function-->
 <!-- currently accepts only the first name of the alumni and takes you to the editing page-->
 <center>
-                                              <%= form_tag(alumnis_path, method: :get) do %>
+  <%= form_tag(alumnis_path, method: :get) do %>
     <%= text_field_tag(:search, params[:search], placeholder: 'Search for an alumni by name', class: 'text-field-tag')%> <%= submit_tag ("Search"), style: "height: 30px" %></p>
   <% end %>
 </center>
@@ -31,5 +33,7 @@
 </div>
 
 <div class = "newRecord">
-  <%= button_to "New Alumni", new_alumni_path, method: :get, class: "new-and-back-btn" %>
+  <% if isadmin%>
+    <%= button_to "New Alumni", new_alumni_path, method: :get, class: "new-and-back-btn" %>
+  <%end%>
 </div>

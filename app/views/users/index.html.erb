@@ -1,8 +1,9 @@
-<p style="color: green"><%= notice %></p>
+<p class="notice"><%= notice %></p>
 <%= stylesheet_link_tag('application') %>
 
-<br></br>
-<h1>Users</h1>
+<div class="const">
+  <h1>Profile</h1>
+</div>
 
 <div id="users">
 <table>
@@ -32,5 +33,8 @@
 </div>
 
 <div class = "newRecord">
-  <%= button_to "New User", new_user_path, method: :get, class: "new-and-back-btn"%>
+  <% if isadmin%> 
+    <%= button_to "New User", new_user_path, method: :get, class: "new-and-back-btn"%>
+  <%end%> 
+  
 </div>

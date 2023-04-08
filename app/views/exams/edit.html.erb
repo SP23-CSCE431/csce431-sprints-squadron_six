@@ -1,11 +1,18 @@
-<br></br>
-<h1>Editing Exam</h1>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+</head>
+
+<div class="const">
+  <h1>Edit Exam</h1>
+</div>
 
 <%= render "form", exam: @exam %>
 
 <br>
 
 <div class = "newRecord">
-  <%= link_to "Show this Exam", @exam, style: "color: white;" %> |
-  <%= link_to "Back to Exams", exams_path, style: "color: white;" %>
+  <%= link_to "Show this Exam", @exam, class: "new-and-back-btn" %>
+  <%= link_to "Back to Exams", exams_path, class: "new-and-back-btn" %>
 </div>

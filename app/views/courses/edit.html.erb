@@ -1,11 +1,12 @@
-<br></br>
-<h1>Editing Course</h1>
+<div class="const">
+  <h1>Edit Course</h1>
+</div>
 
 <%= render "form", course: @course %>
 
 <br>
 
 <div class = "newRecord">
-  <%= link_to "Show this Course", @course, style: "color: white;" %> |
-  <%= link_to "Back to Courses", courses_path, style: "color: white;" %>
+  <%= link_to "Show this Course", @course, class: "new-and-back-btn" %>
+  <%= link_to "Back to Courses", courses_path, class: "new-and-back-btn" %>
 </div>

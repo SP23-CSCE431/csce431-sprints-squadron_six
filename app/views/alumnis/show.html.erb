@@ -1,10 +1,16 @@
-<p style="color: green"><%= notice %></p>
+<p class="notice"><%= notice %></p>
+<div class="const">
+  <h1>Alumni Details</h1>
+</div>
 
 <%= render @alumni %>
 
 <div class = "edit-and-back-div">
-  <%= link_to "Edit this alumni", edit_alumni_path(@alumni) %> |
+  <% if isadmin%>
+    <%= link_to "Edit this alumni", edit_alumni_path(@alumni) %>
+  <%end%>
   <%= link_to "Back to alumnis", alumnis_path %>
-
-  <%= button_to "Destroy this alumni", @alumni, method: :delete %>
+  <% if isadmin%>
+    <%= button_to "Destroy this alumni", @alumni, method: :delete %>
+  <%end%>
 </div>
