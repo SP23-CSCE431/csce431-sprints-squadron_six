@@ -1,5 +1,4 @@
 <p class="notice"><%= notice %></p>
-
 <div class="const">
   <h1>Performance Points</h1>
 </div>
@@ -11,6 +10,7 @@
       <th><strong>Member</strong></th>
       <th><strong>Point Total</strong></th>
     </tr>
+
 
     <% @users.each do |user| %>
       <tr>
@@ -90,3 +90,7 @@
     }
   </script>
 <% end %>
+<div class = "newRecord">
+  <%= link_to 'Help', '/performance_help', class: "new-and-back-btn" %>
+</div>
+
