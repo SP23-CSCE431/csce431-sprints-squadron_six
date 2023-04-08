@@ -11,5 +11,5 @@
   <% end %>
 </div>
 
-<%= link_to "New admin user", new_adminuser_path %>
-<%= link_to 'Help', '/admin_help' %>
+<%= button_to "New admin user", new_adminuser_path, method: :get, class: "new-and-back-btn"%>
+<%= link_to 'Help', '/admin_help', class: "new-and-back-btn" %>

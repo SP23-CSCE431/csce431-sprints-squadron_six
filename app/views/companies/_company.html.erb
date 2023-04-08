@@ -14,8 +14,12 @@
         <td><%= company.company_name %></td>
         <td><%= company.company_location %></td>
         <td><%= company.company_industry %></td>
+        <% if isadmin%>
         <td><%= button_to "EDIT", edit_company_path(@company), method: :get, class: "show-btn", style: "margin-bottom: 10px; font-size: 12px;" %></td>
+        <%end%>
+        <% if isadmin%>
         <td><%= button_to "DELETE", @company, method: :delete, class: "show-btn", style: "margin-bottom: 10px; font-size: 12px;" %></td>
+        <%end%>
     </tr>
   </table>
 </div>

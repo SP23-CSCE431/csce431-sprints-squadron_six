@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <html>
+  <br><br><br><br>
   <head>
-    <title>Alumni Tracker Help</title>
+    <title>Exam Help</title>
   </head>
   <body>
-    <h1>Alumni Tracker Help Page</h1>
+    <h1>Exams Help Page</h1>
 
     <h2>General functions</h2>
     <p>
-      By clicking on the Alumni page on the navigation bar, you are able to see the list of Alumnis with their Company, Name, and Graduation Year.
+      By clicking on the Exams page on the navigation bar, you are able to see a calendar that displays your personal exams that you entered into the system on their dates.
     </p>
     <p>
-      You can see more detailed information about an Alumni if you click on the "Details about this Alumni". This will provide more information such as contact information about that Alumni.
+      You can see more detailed information about an exam if you click on the exam on the calendar. 
     </p>
     <p>
-      You can go back to the Alumni list at any time by clicking on "Back to alumnis" button.
+      You can go back to the Exam calendar at any time by clicking on "Back to Exams" button.
     </p>
     <p>
-      If you need to find a specific alumni, you can use the search bar at the top of the page to search by last name. This will lead you to the details page of that Alumni.
+      To add a new exam to the calendar, click on the "New Exam" button. You will be presented with a form where you can enter a date, exam grade(enter TBD if it is in the future), select a course from the existing list of courses, and enter your email to create a new exam and add it to the calendar.
+    </p>
+    <p>
+      To edit an exisitng exam, click on the exam then click on the "Edit" button. This allows you to modify any values regarding the exam.
+    </p>
+    <p>
+      To delete an exisitng exam, click on the exam then click on the "Delete" button.
     </p>
 
+    <% if isadmin%>
     <h2>Admin function</h2>
-    
     <p>
-      To add a new alumni to the list, click on the "Add Alumni" button on the admin page. You will be presented with a form where you can select an existing user and existing company from drop down lists. Once you submit the form, the new alumni will be added to the list.
+      Aside from the personal calendar, you can click on the "View Squadron 6 Exams" button to open up a calendar that shows the exams of every user on their relative dates.
     </p>
-    <p>
-      To edit an existing alumni, click on "Details about this Alumni" in the list to go to their profile page. On the profile page, click on the "Edit this alumni" button to update their information.
-    </p>
-    <p>
-      To delete an existing alumni, click on "Details about this Alumni" their name in the list to go to their profile page. On the profile page, click on the "Destroy this alumni" button to remove them from the list.
-    </p>
+    <%end%>
 
     <h2>Contact Us</h2>
     <p>
