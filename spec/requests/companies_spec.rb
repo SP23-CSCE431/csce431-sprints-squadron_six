@@ -31,6 +31,14 @@ RSpec.describe "/companies", type: :request do
       get companies_url
       expect(response).to be_successful
     end
+
+    it "renders a list of companies based on keyword in search bar" do
+      Company.create! valid_attributes
+      assign(:search, Company.search)
+      assign(:companies, [stub_model(Company)])
+      render
+      rendered.should contain("Companies search")
+    end
   end
 
   describe "GET /show" do
