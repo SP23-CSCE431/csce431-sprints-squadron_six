@@ -5,6 +5,8 @@
 <br>
 
 <div>
-  <%= link_to "Show this admin user", @adminuser %> |
-  <%= link_to "Back to admin users", adminusers_path %>
+
+  <%= button_to "Show this Admin", @adminuser, class: "new-and-back-btn" %>
+  <%= button_to "Back to Admin", adminusers_path, class: "new-and-back-btn"  %>
+
 </div>

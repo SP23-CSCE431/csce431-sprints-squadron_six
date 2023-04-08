@@ -23,9 +23,8 @@
 
     <div class="oauth">
       <% if current_authuser %>
-      <%= link_to (image_tag(current_authuser.avatar_url, :class => "profile")), users_path %>
-      <%# <%= link_to "Edit Account", edit_authuser_registration_path %>
       <%= button_to "Logout", destroy_authuser_session_path, data: {turbo: "false"}, method: :delete, :class => "profileB" %>
+      <%= link_to (image_tag(current_authuser.avatar_url, :class => "profile")), users_path %>
     </div>
     <div class="loggedout">
       <% else %>

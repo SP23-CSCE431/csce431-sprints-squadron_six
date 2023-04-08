@@ -1,25 +1,28 @@
 <div id="<%= dom_id company %>">
-  <h1>Showing This Company</h1>
+  <div class = "newEntry" style = "text-align: left; width: 25%;">
+    <p><b><center>SHOWING THIS COMPANY</center></b></p>
+    <p>
+      <strong>Name:</strong>
+      <%= company.company_name%>
+    </p>
+
+    <p>
+      <strong>Location:</strong>
+      <%= company.company_location%>
+    </p>
+
+    <p>
+      <strong>Industry:</strong>
+      <%= company.company_industry%>
+    </p>
   <br></br>
-  <div id="companies">
-  <table>
-    <tr>
-      <th><strong>Name</strong></th>
-      <th><strong>Location</strong></th>
-      <th><strong>Industry</strong></th>
-      <th style = "width: 10px;"></th>
-      <th style = "width: 10px;"></th>
-    </tr>
-    <tr>
-        <td><%= company.company_name %></td>
-        <td><%= company.company_location %></td>
-        <td><%= company.company_industry %></td>
-        <% if isadmin%>
-        <td><%= button_to "EDIT", edit_company_path(@company), method: :get, class: "show-btn", style: "margin-bottom: 10px; font-size: 12px;" %></td>
-        <%end%>
-        <% if isadmin%>
-        <td><%= button_to "DELETE", @company, method: :delete, class: "show-btn", style: "margin-bottom: 10px; font-size: 12px;" %></td>
-        <%end%>
-    </tr>
-  </table>
+
+  <div style = "margin-left: auto; margin-right: auto; text-align: center;">
+    <% if isadmin%>
+      <%= button_to "Edit", edit_company_path(@company), method: :get, class: "show-btn", style: "margin-bottom: 10px; font-size: 12px;" %>
+      <%= button_to "Delete", @company, method: :delete, class: "show-btn", style: "font-size: 12px;" %>
+    <%end%>
+  </div>
+</div>
+
 </div>

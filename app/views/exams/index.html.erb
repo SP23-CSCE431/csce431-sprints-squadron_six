@@ -30,12 +30,12 @@
     <%= button_to "New Exam", new_exam_path, method: :get, class: "new-and-back-btn"%>
   </div>
 <% else %>
+<center>
   <div class="tab">
-    <button type="tab_links" onclick="openTab(event,'Squad')">View Squadron 6 Exams</button>
-    <button type="tab_links" onclick="openTab(event,'Personal')">View My Exams</button>
-
+    <button type="tab_links" class= "new-and-back-btn" onclick="openTab(event,'Squad')">View Squadron 6 Exams</button>
+    <button type="tab_links" class= "new-and-back-btn" onclick="openTab(event,'Personal')">View My Exams</button>
   </div>
-
+</center>
   <div class="tabcontent" id="Squad">
     <h1>Squadron 6 Exam Schedule</h1>
     <div id="calendar">

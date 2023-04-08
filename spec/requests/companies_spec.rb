@@ -16,115 +16,127 @@ RSpec.describe '/companies', type: :request do
   # This should return the minimal set of attributes required to create a valid
   # Company. As you add validations to Company, be sure to
   # adjust the attributes here as well.
-  # let(:valid_attributes) do
-  #   skip('Add a hash of attributes valid for your model')
-  # end
+  let(:valid_attributes) {
+    skip("Add a hash of attributes valid for your model")
+  }
 
-  # let(:invalid_attributes) do
-  #   skip('Add a hash of attributes invalid for your model')
-  # end
+  let(:invalid_attributes) {
+    skip("Add a hash of attributes invalid for your model")
+  }
 
-  # describe 'GET /index' do
-  #   it 'renders a successful response' do
-  #     Company.create! valid_attributes
-  #     get companies_url
-  #     expect(response).to be_successful
-  #   end
-  # end
+  describe "GET /index" do
+    it "renders a successful response" do
+      Company.create! valid_attributes
+      get companies_url
+      expect(response).to be_successful
+    end
 
-  # describe 'GET /show' do
-  #   it 'renders a successful response' do
-  #     company = Company.create! valid_attributes
-  #     get company_url(company)
-  #     expect(response).to be_successful
-  #   end
-  # end
+    it "renders a list of companies based on keyword in search bar" do
+      Company.create! valid_attributes
+      assign(:search, Company.search)
+      assign(:companies, [stub_model(Company)])
+      render
+      rendered.should contain("Companies search")
+    end
+  end
 
-  # describe 'GET /new' do
-  #   it 'renders a successful response' do
-  #     get new_company_url
-  #     expect(response).to be_successful
-  #   end
-  # end
+  describe "GET /show" do
+    it "renders a successful response" do
+      company = Company.create! valid_attributes
+      get company_url(company)
+      expect(response).to be_successful
+    end
+  end
 
-  # describe 'GET /edit' do
-  #   it 'renders a successful response' do
-  #     company = Company.create! valid_attributes
-  #     get edit_company_url(company)
-  #     expect(response).to be_successful
-  #   end
-  # end
+  describe "GET /new" do
+    it "renders a successful response" do
+      get new_company_url
+      expect(response).to be_successful
+    end
+  end
 
-  # describe 'POST /create' do
-  #   context 'with valid parameters' do
-  #     it 'creates a new Company' do
-  #       expect do
-  #         post companies_url, params: { company: valid_attributes }
-  #       end.to change(Company, :count).by(1)
-  #     end
+  describe "GET /edit" do
+    it "renders a successful response" do
+      company = Company.create! valid_attributes
+      get edit_company_url(company)
+      expect(response).to be_successful
+    end
+  end
 
-  #     it 'redirects to the created company' do
-  #       post companies_url, params: { company: valid_attributes }
-  #       expect(response).to redirect_to(company_url(Company.last))
-  #     end
-  #   end
+  describe "POST /create" do
+    context "with valid parameters" do
+      it "creates a new Company" do
+        expect {
+          post companies_url, params: { company: valid_attributes }
+        }.to change(Company, :count).by(1)
+      end
 
-  #   context 'with invalid parameters' do
-  #     it 'does not create a new Company' do
-  #       expect do
-  #         post companies_url, params: { company: invalid_attributes }
-  #       end.to change(Company, :count).by(0)
-  #     end
+      it "redirects to the created company" do
+        post companies_url, params: { company: valid_attributes }
+        expect(response).to redirect_to(company_url(Company.last))
+      end
+    end
 
-  #     it "renders a response with 422 status (i.e. to display the 'new' template)" do
-  #       post companies_url, params: { company: invalid_attributes }
-  #       expect(response).to have_http_status(:unprocessable_entity)
-  #     end
-  #   end
-  # end
+    context "with invalid parameters" do
+      it "does not create a new Company" do
+        expect {
+          post companies_url, params: { company: invalid_attributes }
+        }.to change(Company, :count).by(0)
+      end
 
-  # describe 'PATCH /update' do
-  #   context 'with valid parameters' do
-  #     let(:new_attributes) do
-  #       skip('Add a hash of attributes valid for your model')
-  #     end
+    
+      it "renders a response with 422 status (i.e. to display the 'new' template)" do
+        post companies_url, params: { company: invalid_attributes }
+        expect(response).to have_http_status(:unprocessable_entity)
+      end
+    
+    end
+  end
 
-  #     it 'updates the requested company' do
-  #       company = Company.create! valid_attributes
-  #       patch company_url(company), params: { company: new_attributes }
-  #       company.reload
-  #       skip('Add assertions for updated state')
-  #     end
+  describe "PATCH /update" do
+    context "with valid parameters" do
+      let(:new_attributes) {
+        skip("Add a hash of attributes valid for your model")
+      }
 
-  #     it 'redirects to the company' do
-  #       company = Company.create! valid_attributes
-  #       patch company_url(company), params: { company: new_attributes }
-  #       company.reload
-  #       expect(response).to redirect_to(company_url(company))
-  #     end
-  #   end
+      it "updates the requested company" do
+        company = Company.create! valid_attributes
+        patch company_url(company), params: { company: new_attributes }
+        company.reload
+        skip("Add assertions for updated state")
+      end
 
-  #   context 'with invalid parameters' do
-  #     it "renders a response with 422 status (i.e. to display the 'edit' template)" do
-  #       company = Company.create! valid_attributes
-  #       patch company_url(company), params: { company: invalid_attributes }
-  #       expect(response).to have_http_status(:unprocessable_entity)
-  #     end
-  #   end
-  # end
+      it "redirects to the company" do
+        company = Company.create! valid_attributes
+        patch company_url(company), params: { company: new_attributes }
+        company.reload
+        expect(response).to redirect_to(company_url(company))
+      end
+    end
 
-  # describe 'DELETE /destroy' do
-  #   it 'destroys the requested company' do
-  #     company = Company.create! valid_attributes
-  #     expect do
-  #       delete company_url(company)
-  #     end.to change(Company, :count).by(-1)
-  #   end
+    context "with invalid parameters" do
+    
+      it "renders a response with 422 status (i.e. to display the 'edit' template)" do
+        company = Company.create! valid_attributes
+        patch company_url(company), params: { company: invalid_attributes }
+        expect(response).to have_http_status(:unprocessable_entity)
+      end
+    
+    end
+  end
 
-  #   it 'redirects to the companies list' do
-  #     company = Company.create! valid_attributes
-  #     delete company_url(company)
-  #     expect(response).to redirect_to(companies_url)
-  #   end
-  # end
+  describe "DELETE /destroy" do
+    it "destroys the requested company" do
+      company = Company.create! valid_attributes
+      expect {
+        delete company_url(company)
+      }.to change(Company, :count).by(-1)
+    end
+
+    it "redirects to the companies list" do
+      company = Company.create! valid_attributes
+      delete company_url(company)
+      expect(response).to redirect_to(companies_url)
+    end
+  end
 end
