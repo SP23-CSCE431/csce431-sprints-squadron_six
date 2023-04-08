@@ -1,6 +1,8 @@
 <div id="<%= dom_id performance %>">
+  <div class = "newEntry" style = "text-align: left; width: 25%;">
+    <p><b><center>SHOWING THIS PERFOMANCE</center></b></p>
   <p>
-    <strong>Performance points:</strong>
+    <strong>Points:</strong>
     <%= performance.performance_points %>
   </p>
 
@@ -13,5 +15,11 @@
     <strong>User:</strong>
     <%= performance.user_id %>
   </p>
+  <br></br>
+  <div style = "margin-left: auto; margin-right: auto; text-align: center;">
+    <%= button_to "Edit", edit_course_path(@course), method: :get, class: "show-btn", style: "margin-bottom: 10px; font-size: 12px;" %>
+    <%= button_to "Delete", @course, method: :delete, class: "show-btn", style: "font-size: 12px;" %>
+  </div>
 
+</div>
 </div>
