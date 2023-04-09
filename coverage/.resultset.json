@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/spec/feature/adminuser_integration_spec.rb": {
+      "/csce431/csce431-sprints-squadron_six/spec/feature/adminuser_integration_spec.rb": {
         "lines": [
           1,
           1,
@@ -45,7 +45,7 @@
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/spec/rails_helper.rb": {
+      "/csce431/csce431-sprints-squadron_six/spec/rails_helper.rb": {
         "lines": [
           null,
           1,
@@ -119,7 +119,7 @@
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/config/environment.rb": {
+      "/csce431/csce431-sprints-squadron_six/config/environment.rb": {
         "lines": [
           null,
           1,
@@ -128,7 +128,7 @@
           1
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/config/application.rb": {
+      "/csce431/csce431-sprints-squadron_six/config/application.rb": {
         "lines": [
           1,
           null,
@@ -155,7 +155,7 @@
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/config/boot.rb": {
+      "/csce431/csce431-sprints-squadron_six/config/boot.rb": {
         "lines": [
           1,
           null,
@@ -163,7 +163,7 @@
           1
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/config/environments/test.rb": {
+      "/csce431/csce431-sprints-squadron_six/config/environments/test.rb": {
         "lines": [
           1,
           null,
@@ -227,7 +227,7 @@
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/config/initializers/assets.rb": {
+      "/csce431/csce431-sprints-squadron_six/config/initializers/assets.rb": {
         "lines": [
           null,
           null,
@@ -243,326 +243,8 @@
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/config/initializers/content_security_policy.rb": {
+      "/csce431/csce431-sprints-squadron_six/config/initializers/content_security_policy.rb": {
         "lines": [
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/config/initializers/devise.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           null,
           null,
           null,
@@ -590,19 +272,7 @@
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/config/initializers/filter_parameter_logging.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null
-        ]
-      },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/config/initializers/inflections.rb": {
+      "/csce431/csce431-sprints-squadron_six/config/initializers/devise.rb": {
         "lines": [
           null,
           null,
@@ -614,6 +284,304 @@
           null,
           null,
           null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           null,
           null,
           null,
@@ -622,7 +590,39 @@
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/config/initializers/permissions_policy.rb": {
+      "/csce431/csce431-sprints-squadron_six/config/initializers/filter_parameter_logging.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/csce431/csce431-sprints-squadron_six/config/initializers/inflections.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/csce431/csce431-sprints-squadron_six/config/initializers/permissions_policy.rb": {
         "lines": [
           null,
           null,
@@ -637,7 +637,7 @@
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/config/routes.rb": {
+      "/csce431/csce431-sprints-squadron_six/config/routes.rb": {
         "lines": [
           1,
           null,
@@ -660,6 +660,11 @@
           1,
           1,
           1,
+          1,
+          null,
+          null,
+          null,
+          1,
           null,
           null,
           1,
@@ -672,7 +677,7 @@
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/app/models/authuser.rb": {
+      "/csce431/csce431-sprints-squadron_six/app/models/authuser.rb": {
         "lines": [
           1,
           null,
@@ -687,96 +692,96 @@
           1,
           1,
           25,
-          0,
-          0,
-          0,
-          0,
+          25,
+          25,
+          25,
+          25,
           null,
           null,
           null,
           null,
           null,
-          0,
+          25,
           null,
           null,
           null,
           null,
           null,
           null,
-          0,
+          25,
           null,
           null,
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/app/models/application_record.rb": {
+      "/csce431/csce431-sprints-squadron_six/app/models/application_record.rb": {
         "lines": [
           1,
           1,
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/app/helpers/adminuser_helper.rb": {
+      "/csce431/csce431-sprints-squadron_six/app/helpers/adminuser_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/app/helpers/adminusers_helper.rb": {
+      "/csce431/csce431-sprints-squadron_six/app/helpers/adminusers_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/app/helpers/alumnis_helper.rb": {
+      "/csce431/csce431-sprints-squadron_six/app/helpers/alumnis_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/app/helpers/application_helper.rb": {
+      "/csce431/csce431-sprints-squadron_six/app/helpers/application_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/app/helpers/companies_helper.rb": {
+      "/csce431/csce431-sprints-squadron_six/app/helpers/companies_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/app/helpers/courses_helper.rb": {
+      "/csce431/csce431-sprints-squadron_six/app/helpers/courses_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/app/helpers/exams_helper.rb": {
+      "/csce431/csce431-sprints-squadron_six/app/helpers/exams_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/app/helpers/main_helper.rb": {
+      "/csce431/csce431-sprints-squadron_six/app/helpers/main_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/app/helpers/performances_helper.rb": {
+      "/csce431/csce431-sprints-squadron_six/app/helpers/performances_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/app/helpers/users_helper.rb": {
+      "/csce431/csce431-sprints-squadron_six/app/helpers/users_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/spec/feature/alumni_integration_spec.rb": {
+      "/csce431/csce431-sprints-squadron_six/spec/feature/alumni_integration_spec.rb": {
         "lines": [
           null,
           1,
@@ -898,7 +903,7 @@
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/spec/feature/course_integration_spec.rb": {
+      "/csce431/csce431-sprints-squadron_six/spec/feature/course_integration_spec.rb": {
         "lines": [
           null,
           null,
@@ -1109,7 +1114,7 @@
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/app/controllers/authusers/omniauth_callbacks_controller.rb": {
+      "/csce431/csce431-sprints-squadron_six/app/controllers/authusers/omniauth_callbacks_controller.rb": {
         "lines": [
           null,
           null,
@@ -1206,7 +1211,7 @@
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/app/controllers/application_controller.rb": {
+      "/csce431/csce431-sprints-squadron_six/app/controllers/application_controller.rb": {
         "lines": [
           1,
           1,
@@ -1227,7 +1232,7 @@
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/spec/feature/exam_integration_spec.rb": {
+      "/csce431/csce431-sprints-squadron_six/spec/feature/exam_integration_spec.rb": {
         "lines": [
           null,
           null,
@@ -1277,7 +1282,6 @@
           null,
           null,
           null,
-          null,
           1,
           1,
           1,
@@ -1330,7 +1334,6 @@
           null,
           null,
           null,
-          null,
           1,
           1,
           1,
@@ -1389,7 +1392,6 @@
           2,
           null,
           null,
-          null,
           1,
           1,
           1,
@@ -1405,8 +1407,6 @@
           1,
           1,
           1,
-          null,
-          null,
           null,
           null,
           null,
@@ -1415,7 +1415,7 @@
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/spec/models/adminuser_spec.rb": {
+      "/csce431/csce431-sprints-squadron_six/spec/models/adminuser_spec.rb": {
         "lines": [
           1,
           null,
@@ -1424,13 +1424,13 @@
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/app/models/adminuser.rb": {
+      "/csce431/csce431-sprints-squadron_six/app/models/adminuser.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/spec/models/alumni_spec.rb": {
+      "/csce431/csce431-sprints-squadron_six/spec/models/alumni_spec.rb": {
         "lines": [
           1,
           null,
@@ -1439,6 +1439,7 @@
           null,
           4,
           4,
+          null,
           4,
           null,
           null,
@@ -1454,19 +1455,16 @@
           1,
           null,
           null,
-          null,
-          null,
           1,
           2,
           null,
           1,
           2,
-          null,
           null,
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/app/models/alumni.rb": {
+      "/csce431/csce431-sprints-squadron_six/app/models/alumni.rb": {
         "lines": [
           1,
           1,
@@ -1485,11 +1483,10 @@
           null,
           null,
           null,
-          null,
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/spec/models/company_spec.rb": {
+      "/csce431/csce431-sprints-squadron_six/spec/models/company_spec.rb": {
         "lines": [
           1,
           null,
@@ -1525,17 +1522,18 @@
           null,
           null,
           1,
-          2,
+          1,
+          1,
+          null,
           null,
           null,
           1,
           2,
           null,
-          null,
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/app/models/company.rb": {
+      "/csce431/csce431-sprints-squadron_six/app/models/company.rb": {
         "lines": [
           1,
           1,
@@ -1553,9 +1551,9 @@
           null,
           1,
           21,
+          null,
+          null,
           0,
-          null,
-          null,
           null,
           null,
           1,
@@ -1565,17 +1563,15 @@
           1,
           12,
           null,
-          null,
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/spec/models/course_spec.rb": {
+      "/csce431/csce431-sprints-squadron_six/spec/models/course_spec.rb": {
         "lines": [
           1,
           null,
           null,
           1,
-          null,
           1,
           9,
           null,
@@ -1618,11 +1614,10 @@
           1,
           2,
           null,
-          null,
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/app/models/course.rb": {
+      "/csce431/csce431-sprints-squadron_six/app/models/course.rb": {
         "lines": [
           1,
           1,
@@ -1636,8 +1631,6 @@
           null,
           null,
           null,
-          null,
-          null,
           1,
           1,
           null,
@@ -1652,12 +1645,11 @@
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/spec/models/exam_spec.rb": {
+      "/csce431/csce431-sprints-squadron_six/spec/models/exam_spec.rb": {
         "lines": [
           1,
           null,
           1,
-          null,
           1,
           7,
           7,
@@ -1702,9 +1694,6 @@
           null,
           1,
           1,
-          1,
-          null,
-          null,
           null,
           null,
           null,
@@ -1715,12 +1704,11 @@
           null,
           1,
           2,
-          null,
           null,
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/app/models/exam.rb": {
+      "/csce431/csce431-sprints-squadron_six/app/models/exam.rb": {
         "lines": [
           1,
           1,
@@ -1737,11 +1725,10 @@
           null,
           null,
           null,
-          null,
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/app/uploaders/avatar_uploader.rb": {
+      "/csce431/csce431-sprints-squadron_six/app/uploaders/avatar_uploader.rb": {
         "lines": [
           1,
           null,
@@ -1792,12 +1779,11 @@
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/spec/models/performance_spec.rb": {
+      "/csce431/csce431-sprints-squadron_six/spec/models/performance_spec.rb": {
         "lines": [
           1,
           null,
           1,
-          null,
           1,
           2,
           null,
@@ -1805,11 +1791,10 @@
           1,
           2,
           null,
-          null,
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/app/models/performance.rb": {
+      "/csce431/csce431-sprints-squadron_six/app/models/performance.rb": {
         "lines": [
           1,
           1,
@@ -1818,7 +1803,7 @@
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/spec/models/user_spec.rb": {
+      "/csce431/csce431-sprints-squadron_six/spec/models/user_spec.rb": {
         "lines": [
           1,
           null,
@@ -1880,12 +1865,10 @@
           null,
           null,
           null,
-          null,
-          null,
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/app/models/user.rb": {
+      "/csce431/csce431-sprints-squadron_six/app/models/user.rb": {
         "lines": [
           1,
           1,
@@ -1913,7 +1896,7 @@
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/db/seeds.rb": {
+      "/csce431/csce431-sprints-squadron_six/db/seeds.rb": {
         "lines": [
           null,
           null,
@@ -1935,7 +1918,7 @@
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/app/controllers/authusers/sessions_controller.rb": {
+      "/csce431/csce431-sprints-squadron_six/app/controllers/authusers/sessions_controller.rb": {
         "lines": [
           null,
           null,
@@ -1972,15 +1955,14 @@
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/app/controllers/main_controller.rb": {
+      "/csce431/csce431-sprints-squadron_six/app/controllers/main_controller.rb": {
         "lines": [
           1,
           1,
-          null,
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/app/controllers/adminusers_controller.rb": {
+      "/csce431/csce431-sprints-squadron_six/app/controllers/adminusers_controller.rb": {
         "lines": [
           1,
           1,
@@ -2075,7 +2057,7 @@
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/app/controllers/alumnis_controller.rb": {
+      "/csce431/csce431-sprints-squadron_six/app/controllers/alumnis_controller.rb": {
         "lines": [
           1,
           1,
@@ -2170,7 +2152,7 @@
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/app/controllers/courses_controller.rb": {
+      "/csce431/csce431-sprints-squadron_six/app/controllers/courses_controller.rb": {
         "lines": [
           1,
           1,
@@ -2178,14 +2160,12 @@
           null,
           1,
           null,
-          null,
           11,
           11,
           null,
           null,
           null,
           1,
-          null,
           null,
           null,
           1,
@@ -2194,7 +2174,6 @@
           null,
           null,
           1,
-          null,
           null,
           null,
           1,
@@ -2236,6 +2215,7 @@
           null,
           1,
           null,
+          null,
           1,
           16,
           null,
@@ -2247,7 +2227,7 @@
           null
         ]
       },
-      "/home/ivanr/Documents/CSCE431/csce431-sprints-squadron_six/app/controllers/exams_controller.rb": {
+      "/csce431/csce431-sprints-squadron_six/app/controllers/exams_controller.rb": {
         "lines": [
           1,
           1,
@@ -2273,13 +2253,8 @@
           1,
           null,
           null,
-          null,
           1,
-          null,
-          null,
           6,
-          null,
-          null,
           null,
           6,
           6,
@@ -2322,6 +2297,7 @@
           null,
           1,
           null,
+          null,
           1,
           11,
           null,
@@ -2334,6 +2310,6 @@
         ]
       }
     },
-    "timestamp": 1681106187
+    "timestamp": 1681071999
   }
 }

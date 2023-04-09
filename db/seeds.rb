@@ -14,5 +14,6 @@ Adminuser.create!([
                     { email: 'pbr27@tamu.edu', isaadmin: true },
                     { email: 'qinyif001@tamu.edu', isaadmin: true },
                     { email: 'ansleythomp@tamu.edu', isaadmin: true },
-                    { email: 'ansleythomp@gmail.com', isaadmin: false }
+                    { email: 'ansleythomp@gmail.com', isaadmin: false },
+                    { email: 'alvarogarcia@tamu.edu', isaadmin: true}
                   ])
