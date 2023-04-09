@@ -5,7 +5,7 @@
 
 <% if !isadmin %>
   <div id="scoreboard">
-  <%= button_to "Update Scoreboard", update_points_users_path %>
+  <center><%= button_to "Update Scoreboard", update_points_users_path, class: "new-and-back-btn"%></center>
     <table>
     <tr>
       <th><strong>Member</strong></th>
@@ -62,7 +62,7 @@
 
   <div class="tabcontent" id="Squad">
     <h1>Scoreboard</h1>
-    <%= button_to "Update Scoreboard", update_points_users_path %>
+    <center><%= button_to "Update Scoreboard", update_points_users_path, class: "new-and-back-btn"%></center>
     <table>
       <tr>
         <th><strong>Member</strong></th>
