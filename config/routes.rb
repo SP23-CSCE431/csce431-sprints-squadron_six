@@ -22,7 +22,7 @@ Rails.application.routes.draw do
       post :update_points
     end
   end
-  
+
   resources :adminusers
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

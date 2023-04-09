@@ -132,7 +132,7 @@ RSpec.describe 'Deleting a course', type: :feature do
     fill_in 'course[course_hours]', with: 2
     click_on 'Create Course'
     visit courses_path
-   # find(:xpath, "//tr[td[contains(.,'Foo')]]/td/a", :text => 'manage').click
+    # find(:xpath, "//tr[td[contains(.,'Foo')]]/td/a", :text => 'manage').click
     click_on 'SHOW'
     click_on 'Delete'
     expect(page).to have_content('Course was successfully destroyed.')
@@ -172,7 +172,7 @@ RSpec.describe 'Searching for a course', type: :feature do
     fill_in 'course[course_hours]', with: 2
     click_on 'Create Course'
     visit courses_path
-    fill_in 'q[course_name_cont]', with: "CSCE421"
+    fill_in 'q[course_name_cont]', with: 'CSCE421'
     click_on 'Search'
     expect(page).to have_content('CSCE421')
   end
@@ -186,7 +186,7 @@ RSpec.describe 'Searching for a course', type: :feature do
     fill_in 'course[course_hours]', with: 2
     click_on 'Create Course'
     visit courses_path
-    fill_in 'q[course_name_cont]', with: "C"
+    fill_in 'q[course_name_cont]', with: 'C'
     click_on 'Search'
     expect(page).to have_content('CSCE421')
   end
@@ -200,7 +200,7 @@ RSpec.describe 'Searching for a course', type: :feature do
     fill_in 'course[course_hours]', with: 2
     click_on 'Create Course'
     visit courses_path
-    fill_in 'q[course_name_cont]', with: "P"
+    fill_in 'q[course_name_cont]', with: 'P'
     click_on 'Search'
     page.should have_no_content('CSCE421')
   end

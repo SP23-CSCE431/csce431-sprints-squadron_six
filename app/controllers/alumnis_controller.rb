@@ -3,11 +3,11 @@ class AlumnisController < ApplicationController
 
   # GET /alumnis or /alumnis.json
   def index
-    if params[:search]
-      @alumnis = Alumni.search(params[:search].downcase)
-    else
-      @alumnis = Alumni.all
-    end
+    @alumnis = if params[:search]
+                 Alumni.search(params[:search].downcase)
+               else
+                 Alumni.all
+               end
   end
 
   # GET /alumnis/1 or /alumnis/1.json
