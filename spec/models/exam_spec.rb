@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Exam, type: :model do
 
     subject {
-        course = Course.create(course_name:"CSCE 431", course_hours:3)
+        course = Course.create(course_name:"CSCE431", course_hours:3)
         described_class.new(course_id: course.id, exam_date: Date.today + 1.week, exam_grade: 'A')
     }
 
