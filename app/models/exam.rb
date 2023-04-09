@@ -9,5 +9,9 @@ class Exam < ApplicationRecord
 
   # mount uploader for file upload
   mount_uploader :avatar, AvatarUploader
+  # validates_presence_of:exam_grade
+  
 
+  # a course can't be created that already exists
+  # validates_uniqueness_of:course_id
 end

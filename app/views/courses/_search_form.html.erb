@@ -1,0 +1,5 @@
+<%= search_form_for @q do |f| %>
+    <%= f.label :course_name%>
+    <%= f.search_field :course_name_cont%>
+    <%= f.submit "Search" %>
+<% end %>

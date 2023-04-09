@@ -24,7 +24,11 @@ class ExamsController < ApplicationController
 
   # POST /exams or /exams.json
   def create
+    
+
     @exam = Exam.new(exam_params)
+
+    
 
     respond_to do |format|
       if @exam.save
