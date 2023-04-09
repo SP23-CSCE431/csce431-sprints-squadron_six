@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <br><br><br><br>
+  <head>
+    <title>Company List Help</title>
+  </head>
+  <body>
+    <h1>Companies Help Page</h1>
+
+    <h2>General functions</h2>
+    <p>
+      By clicking on the Companies page on the navigation bar, you are able to see the list of Companies with their Name, Location, and Industry.
+    </p>
+    <p>
+      You can see more detailed information about a company if you click on the "show" button. This will provide more information such as contact information about that company.
+    </p>
+    <p>
+      You can go back to the company list at any time by clicking on "Back to Companies" button.
+    </p>
+    <p>
+      If you need to find a specific company, you can use the search bar at the top of the page to search by the company name. This will lead you to the details pages of that company.
+    </p>
+    <p>
+      To add a new company to the list, click on the "Add Company" button on the admin page. You will be presented with a form where you need to enter the Name, Location, and Industry of the company. Once you click "Create Company" button the company will be added to the list.
+    </p>
+    <% if isadmin%>
+    <h2>Admin functions</h2>
+    <p>
+      To edit an existing company, click on "show" button in the list to go to their profile page. On the profile page, click on the "EDIT" button to update their information.
+    </p>
+    <p>
+      To delete an existing company, click on "show" in the list to go to their profile page. On the profile page, click on the "DELETE" button to remove them from the list.
+    </p>
+    <%end%>
+    <h2>Contact Us</h2>
+    <p>
+      If you have any questions or concerns about this page, please contact <a href="mailto:pbr27@tamu.edu">pbr27@tamu.edu</a>.
+    </p>
+  </body>
+</html>
+<div class = "newRecord">
+  <%= button_to "Back to Companies", companies_path, method: :get, class: "new-and-back-btn"%>
+</div>

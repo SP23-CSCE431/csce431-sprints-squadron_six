@@ -368,7 +368,6 @@ DEPENDENCIES
   rspec-rails
   rspec-scaffold (~> 2.0.0.beta1)
   rubocop
-  ruby-vips (~> 2.1, >= 2.1.4)
   selenium-webdriver
   shoulda-matchers
   simple_calendar (~> 2.4)

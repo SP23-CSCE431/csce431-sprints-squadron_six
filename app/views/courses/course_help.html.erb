@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <br><br><br><br>
+  <head>
+    <title>Courses Help</title>
+  </head>
+  <body>
+    <h1>Courses Help Page</h1>
+
+    <h2>General functions</h2>
+    <p>
+      By clicking on the Courses page on the navigation bar, you are able to see the list of courses with their  Name, and credit hours.
+    </p>
+    <p>
+      You can go back to the Alumni list at any time by clicking on "Back to courses" button.
+    </p>
+    <p>
+      To add a new course to the list, click on the "New Course" button on the admin page. You will be presented with a form where you need to enter the course name and the corresponding credit hour to create the course.
+    </p>
+    <p>
+      To edit an existing course, click on "SHOW" in the list to go to their profile page. On the profile page, click on the "EDIT" button to update their information.
+    </p>
+    <p>
+      To delete an existing course, click on "SHOW" their name in the list to go to their profile page. On the profile page, click on the "DELETE" button to remove them from the list.
+    </p>
+
+    <h2>Contact Us</h2>
+    <p>
+      If you have any questions or concerns about using the alumni tracker, please contact us at <a href="mailto:ansleythomp@tamu.edu">ansleythomp@tamu.edu</a>.
+    </p>
+  </body>
+</html>
+<div class = "newRecord">
+  <%= button_to "Back to Courses", courses_path, method: :get, class: "new-and-back-btn"%>
+</div>
