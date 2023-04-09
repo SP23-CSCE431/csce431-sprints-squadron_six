@@ -1419,14 +1419,8 @@
         "lines": [
           1,
           null,
-          1,
-          1,
-          null
-        ]
-      },
-      "/csce431/csce431-sprints-squadron_six/app/models/adminuser.rb": {
-        "lines": [
-          1,
+          null,
+          null,
           null
         ]
       },
@@ -1492,7 +1486,7 @@
           null,
           1,
           1,
-          6,
+          5,
           null,
           null,
           null,
@@ -1521,9 +1515,9 @@
           null,
           null,
           null,
-          1,
-          1,
-          1,
+          null,
+          null,
+          null,
           null,
           null,
           null,
@@ -1915,6 +1909,12 @@
           null,
           null,
           null,
+          null
+        ]
+      },
+      "/csce431/csce431-sprints-squadron_six/app/models/adminuser.rb": {
+        "lines": [
+          1,
           null
         ]
       },
@@ -2310,6 +2310,6 @@
         ]
       }
     },
-    "timestamp": 1681071999
+    "timestamp": 1681140201
   }
 }
