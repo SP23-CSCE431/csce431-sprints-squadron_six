@@ -37,7 +37,7 @@
   </p>
   <div style = "margin-left: auto; margin-right: auto; text-align: center;">
     <%= button_to "Edit", edit_user_path(@user), method: :get, class: "show-btn", style: "margin-bottom: 10px; font-size: 12px;" %>
-    <% if isadmin%>
+    <% if isadmin && (current_authuser.email != @user.user_email)%> 
       <%= button_to "Delete", @user, method: :delete, class: "show-btn", style: "font-size: 12px;" %>
     <%end%>
   </div>
