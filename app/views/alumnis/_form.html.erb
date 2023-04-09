@@ -18,13 +18,13 @@
      <%# <!-- <%= form.select :company_id, options_for_select(Company.all.map{ |c| [c.company_name, "#{c.company_name} #{c.company_location}"] }), {}, style: "height: 30px; background-color: rgb(200, 209, 244);" %>
     <!-- switching how selection works: -->
 
-    <%= form.collection_select :company_id, Company.order(:company_name), :id, :company_name, include_blank: false, style: "height: 30px; background-color: rgb(200, 209, 244);" %>
+    <%= form.collection_select :company_id, Company.all.order(:company_name), :id, :company_with_location, include_blank: false, style: "height: 30px; background-color: rgb(200, 209, 244); text-align: center;" %>
 
   </div>
   <!--added drop down for selecting the user from a list of added users-->
   <div>
     <%= form.label :user_id, style: "display: block" %>
-    <%= form.collection_select :user_id, User.order(:user_email), :id, :user_lname, include_blank: false, style: "height: 30px; background-color: rgb(200, 209, 244);" %>
+    <%= form.collection_select :user_id, User.order(:user_email), :id, :user_email, include_blank: false, style: "height: 30px; background-color: rgb(200, 209, 244);" %>
   </div>
 
   <div>
