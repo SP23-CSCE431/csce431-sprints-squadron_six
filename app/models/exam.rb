@@ -6,6 +6,9 @@ class Exam < ApplicationRecord
   # grades doesn't have to be inputted at creation
   validates_presence_of:course_id
   validates_presence_of:exam_date
+
+  # mount uploader for file upload
+  mount_uploader :avatar, AvatarUploader
   # validates_presence_of:exam_grade
   
 

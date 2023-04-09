@@ -15,6 +15,7 @@ class ExamsController < ApplicationController
   # GET /exams/new
   def new
     @exam = Exam.new
+    @exam.user_id = user_info
   end
 
   # GET /exams/1/edit
@@ -76,6 +77,6 @@ class ExamsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def exam_params
-      params.require(:exam).permit(:exam_date, :exam_grade, :course_id)
+      params.require(:exam).permit(:exam_date, :exam_grade, :course_id, :user_id)
     end
 end

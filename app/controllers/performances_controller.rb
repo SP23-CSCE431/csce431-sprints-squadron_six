@@ -4,6 +4,7 @@ class PerformancesController < ApplicationController
   # GET /performances or /performances.json
   def index
     @performances = Performance.all
+    @users = User.order("user_points DESC")
   end
 
   # GET /performances/1 or /performances/1.json

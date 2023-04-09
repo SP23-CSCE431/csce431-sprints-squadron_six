@@ -11,4 +11,8 @@ class Company < ApplicationRecord
 
     validates :company_name, presence: true, uniqueness: {case_sensitive: false}
 
+    def self.search(search)
+        where(['company_name ILIKE ?', "%#{search}%"])
+    end
+
 end
