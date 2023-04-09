@@ -24,7 +24,7 @@
   <!--added drop down for selecting the user from a list of added users-->
   <div>
     <%= form.label :user_id, style: "display: block" %>
-    <%= form.collection_select :user_id, User.order(:user_email), :id, :user_lname, include_blank: false, style: "height: 30px; background-color: rgb(200, 209, 244);" %>
+    <%= form.collection_select :user_id, User.order(:user_email), :id, :full_name, include_blank: false, style: "height: 30px; background-color: rgb(200, 209, 244);" %>
   </div>
 
   <div>
