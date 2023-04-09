@@ -7,6 +7,8 @@ class Course < ApplicationRecord
     validates_presence_of :course_name
     #validates_presence_of :course_hours
 
+    #TODO: implement required format for course name & not allow delete if there are exams using the course
+
     validates_uniqueness_of :course_name
 
     # course hours max=6, min=0. must be integer
