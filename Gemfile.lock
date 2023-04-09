@@ -353,8 +353,6 @@ DEPENDENCIES
   debug
   devise
   faker
-  ffi (~> 1.15, >= 1.15.5)
-  image_processing (>= 1.2)
   importmap-rails
   jbuilder
   omniauth
