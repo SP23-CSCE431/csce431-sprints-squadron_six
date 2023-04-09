@@ -30,7 +30,10 @@ RSpec.describe Company, type: :model do
 #        expect(comp).to_not be_valid
 #        expect(comp.errors[:company_name]).to include('has already been taken')
 #    end
-        
+            
+    describe 'name-location pairs should be unique' do
+        it { should validate_uniqueness_of(:company_name).scoped_to(:company_location).with_message("has already been taken")}
+    end
 
     describe 'relationship' do
         it { should have_many :alumni }

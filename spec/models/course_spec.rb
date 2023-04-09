@@ -4,7 +4,7 @@ require 'rails_helper'
 RSpec.describe Course, type: :model do
     
     subject {
-        described_class.new(course_name: "Course",
+        described_class.new(course_name: "CSCE222",
                             course_hours: 1)
     }
 
@@ -32,7 +32,15 @@ RSpec.describe Course, type: :model do
         expect(subject).to_not be_valid
     end
 
-    it { should validate_uniqueness_of(:course_name) }
+    it "is not valid with too long of a course name" do
+        subject.course_name = "CSCE 222"
+    end
+
+    it "is not valid with too short of a course name" do
+        subject.course_name = "course"
+    end
+
+    it { should validate_uniqueness_of(:course_name).case_insensitive }
 
     describe 'relationships' do
         it { should have_many :exam}
