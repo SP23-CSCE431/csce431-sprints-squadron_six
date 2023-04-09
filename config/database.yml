@@ -24,8 +24,8 @@ default: &default
 
   username: <%= ENV['DATABASE_USER'] %>
   password: <%= ENV['DATABASE_PASSWORD'] %>
-  username: "roruser"
-  password: "Solveproblem5"
+  # username: "roruser"
+  # password: "Solveproblem5"
 
 development:
   <<: *default
