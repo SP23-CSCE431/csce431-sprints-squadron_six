@@ -23,11 +23,6 @@ class ExamsController < ApplicationController
 
   # POST /exams or /exams.json
   def create
-
-    Course.find_or_create_by(id: exam_params["course_id"]) do |course|
-      course.course_name = exam_params["course_id"]
-      course.course_hours = 4
-    end
     
 
     @exam = Exam.new(exam_params)
