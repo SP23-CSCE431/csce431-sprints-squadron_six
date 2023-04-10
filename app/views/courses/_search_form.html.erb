@@ -1,5 +1,9 @@
-<%= search_form_for @q do |f| %>
-    <%= f.label :course_name%>
-    <%= f.search_field :course_name_cont%>
-    <%= f.submit "Search" %>
-<% end %>
+<center>
+<div class="search">
+  <%= search_form_for @q do |f| %>
+  <%# <%= f.label :course_name%>
+  <%= f.search_field :course_name_cont, class: "searchbar", placeholder: "Course Name"%>
+  <%= f.submit "Search", class: "submit" %>
+  <% end %>
+</div>
+</center>
