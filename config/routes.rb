@@ -17,7 +17,12 @@ Rails.application.routes.draw do
   resources :alumnis
   resources :courses
   resources :companies
-  resources :users
+  resources :users do
+    collection do
+      post :update_points
+    end
+  end
+  
   resources :adminusers
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
