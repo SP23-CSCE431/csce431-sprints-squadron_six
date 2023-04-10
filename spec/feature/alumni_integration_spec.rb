@@ -8,24 +8,24 @@ RSpec.describe 'Creating an Alumni', type: :feature do
   end
   before do
     OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
-      provider: 'google_oauth2',
-      uid: '123456',
-      info: {
-        email: 'ivanattexas@tamu.edu',
-        name: 'Ivan Martinez',
-        first_name: 'Ivan',
-        last_name: 'Martinez',
-        image: 'https://lh3.googleusercontent.com/a/AGNmyxZ9w0R3_loFhlk46VAFMyqvC2ZqrZgHuPYnlaAH=s96-c'
-      }
-    })
+                                                                         provider: 'google_oauth2',
+                                                                         uid: '123456',
+                                                                         info: {
+                                                                           email: 'ivanattexas@tamu.edu',
+                                                                           name: 'Ivan Martinez',
+                                                                           first_name: 'Ivan',
+                                                                           last_name: 'Martinez',
+                                                                           image: 'https://lh3.googleusercontent.com/a/AGNmyxZ9w0R3_loFhlk46VAFMyqvC2ZqrZgHuPYnlaAH=s96-c'
+                                                                         }
+                                                                       })
     visit new_authuser_session_path
     click_button 'Sign in with Google'
   end
   scenario 'valid inputs' do
     # mock_google_oauth2
     # click_link "Sign in with Google"
-    #User.create(user_fname: 'Evan', user_lname: 'Qin', user_email: 'qinyif001@tamu.edu', user_password: 'tamucomputerscience',
-                #user_role: 'Alumni', user_grad_year: Date.today + 1.week, user_points: 999)
+    # User.create(user_fname: 'Evan', user_lname: 'Qin', user_email: 'qinyif001@tamu.edu', user_password: 'tamucomputerscience',
+    # user_role: 'Alumni', user_grad_year: Date.today + 1.week, user_points: 999)
     Company.create(company_name: 'HP', company_location: 'Houston', company_industry: 'Softwares')
     visit new_alumni_path
     click_on 'Back to Alumnis'
@@ -38,15 +38,15 @@ RSpec.describe 'Creating an Alumni', type: :feature do
 
   # rainy days where there does not exist a company that could be added to the alumni
   scenario 'invalid inputs, missing company' do
-    #User.create(user_fname: 'Evan', user_lname: 'Qin', user_email: 'qinyif001@tamu.edu', user_password: 'tamucomputerscience',
-                #user_role: 'Alumni', user_grad_year: Date.today + 1.week, user_points: 999)
+    # User.create(user_fname: 'Evan', user_lname: 'Qin', user_email: 'qinyif001@tamu.edu', user_password: 'tamucomputerscience',
+    # user_role: 'Alumni', user_grad_year: Date.today + 1.week, user_points: 999)
     visit new_alumni_path
     select 'Ivan Martinez', from: 'alumni[user_id]'
     click_on 'Create Alumni'
     expect(page).to have_content('Company must exist')
   end
   # rainy days where there does not exist a User that could be added to the alumni (removed due to change in structure, this will not happen)
-  
+
   # sunny day
   scenario 'modify alumni' do
     Company.create(company_name: 'HP', company_location: 'Houston', company_industry: 'Softwares')
@@ -87,7 +87,7 @@ RSpec.describe 'Creating an Alumni', type: :feature do
     select 'HP', from: 'alumni[company_id]'
     click_on 'Create Alumni'
     visit alumnis_path
-    fill_in "Search for an alumni by name", with: 'Martinez'
+    fill_in 'Search for an alumni by name', with: 'Martinez'
     click_on 'Search'
     expect(page).to have_content('Martinez')
   end
@@ -100,7 +100,7 @@ RSpec.describe 'Creating an Alumni', type: :feature do
     select 'HP', from: 'alumni[company_id]'
     click_on 'Create Alumni'
     visit alumnis_path
-    fill_in "Search for an alumni by name", with: 'Martinezaaaa'
+    fill_in 'Search for an alumni by name', with: 'Martinezaaaa'
     click_on 'Search'
     expect(page).to_not have_content('Martinez')
   end
