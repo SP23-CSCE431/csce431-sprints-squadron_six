@@ -1,25 +1,27 @@
-
 <div id="<%= dom_id alumni %>">
-  <!--displays the name of the alumni in show detail page-->
+<div class = "newEntry" style = "text-align: left; width: 25%;">
+  <p><b><center>SHOWING THIS ALUMNI</center></b></p>
   <p>
-    <strong>Alumni Name:</strong>
+    <strong>Name:</strong>
     <%= alumni.user.user_fname%>
     <%= alumni.user.user_lname%>
   </p>
-  <!--displays the name of the alumni's company in show detail page-->
   <p>
     <strong>Company Name:</strong>
     <%= alumni.company.company_name%>
   </p>
-  <!--displays the location of the alumni's company in show detail page-->
   <p>
     <strong>Company Location:</strong>
     <%= alumni.company.company_location%>
   </p>
-  <!--displays the email of the alumni in show detail page-->
   <p>
     <strong>Contact email:</strong>
     <%= alumni.user.user_email%>
   </p>
-
+  <br></br>
+  <div style = "margin-left: auto; margin-right: auto; text-align: center;">
+    <%= button_to "Edit", edit_alumni_path(@alumni), method: :get, class: "show-btn", style: "margin-bottom: 10px; font-size: 12px;" %>
+    <%= button_to "Delete", @alumni, method: :delete, class: "show-btn", style: "font-size: 12px;" %>
+  </div>
+</div>
 </div>

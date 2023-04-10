@@ -1,9 +1,10 @@
-<p style="color: green"><%= notice %></p>
-<br></br>
+<p class="notice"><%= notice %></p>
+<div class="const">
+  <h1>View Profile</h1>
+</div>
 
 <%= render @user %>
 
 <div class = "newRecord">
-  <%= button_to "Back to Users", users_path, method: :get, class: "new-and-back-btn"%>
+  <%= button_to "Back to Directory", users_path, method: :get, class: "new-and-back-btn"%>
 </div>
-

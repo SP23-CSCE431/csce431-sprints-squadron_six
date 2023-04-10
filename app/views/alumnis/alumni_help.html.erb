@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <br><br><br><br>
+  <head>
+    <title>Alumni Tracker Help</title>
+  </head>
+  <body>
+    <h1>Alumni Tracker Help Page</h1>
+
+    <h2>General functions</h2>
+    <p>
+      By clicking on the Alumni page on the navigation bar, you are able to see the list of Alumnis with their Company, Name, and Graduation Year.
+    </p>
+    <p>
+      You can see more detailed information about an Alumni if you click on the "Show". This will provide more information such as contact information about that Alumni.
+    </p>
+    <p>
+      You can go back to the Alumni list at any time by clicking on "Back to alumnis" button.
+    </p>
+    <p>
+      If you need to find a specific alumni, you can use the search bar at the top of the page to search by last name. This will lead you to the details page of that Alumni.
+    </p>
+    <% if isadmin%>
+    <h2>Admin functions</h2>
+    
+    <p>
+      To add a new alumni to the list, click on the "Add Alumni" button on the admin page. You will be presented with a form where you can select an existing user and existing company from drop down lists. Once you submit the form, the new alumni will be added to the list.
+    </p>
+    <p>
+      To edit an existing alumni, click on "SHOW" in the list to go to their profile page. On the profile page, click on the "Edit" button to update their information.
+    </p>
+    <p>
+      To delete an existing alumni, click on "Delete" in the list to go to their profile page. On the profile page, click on the "Delete" button to remove them from the list.
+    </p>
+    <%end%>
+    <h2>Contact Us</h2>
+    <p>
+      If you have any questions or concerns about using the alumni tracker, please contact us at <a href="mailto:ansleythomp@tamu.edu">ansleythomp@tamu.edu</a>.
+    </p>
+  </body>
+</html>
+<div class = "newRecord">
+  <%= button_to "Back to Alumnis", alumnis_path, method: :get, class: "new-and-back-btn"%>
+</div>

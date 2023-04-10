@@ -1,23 +1,25 @@
 class ExamsController < ApplicationController
-  before_action :set_exam, only: %i[ show edit update destroy ]
+  before_action :set_exam, only: %i[show edit update destroy]
 
   # GET /exams or /exams.json
-  def index
-    @exams = Exam.all
-  end
+  # def index
+  #   @exams = Exam.all
+  # end
 
   # GET /exams/1 or /exams/1.json
   def show
+    # SHOW JUST USER EXAMS
+    # .select{|a| a['userId'] == @user['id']}
   end
 
   # GET /exams/new
   def new
     @exam = Exam.new
+    @exam.user_id = user_info
   end
 
   # GET /exams/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /exams or /exams.json
   def create
@@ -25,7 +27,7 @@ class ExamsController < ApplicationController
 
     respond_to do |format|
       if @exam.save
-        format.html { redirect_to exam_url(@exam), notice: "Exam was successfully created." }
+        format.html { redirect_to exam_url(@exam), notice: 'Exam was successfully created.' }
         format.json { render :show, status: :created, location: @exam }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +40,7 @@ class ExamsController < ApplicationController
   def update
     respond_to do |format|
       if @exam.update(exam_params)
-        format.html { redirect_to exam_url(@exam), notice: "Exam was successfully updated." }
+        format.html { redirect_to exam_url(@exam), notice: 'Exam was successfully updated.' }
         format.json { render :show, status: :ok, location: @exam }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,19 +54,25 @@ class ExamsController < ApplicationController
     @exam.destroy
 
     respond_to do |format|
-      format.html { redirect_to exams_url, notice: "Exam was successfully destroyed." }
+      format.html { redirect_to exams_url, notice: 'Exam was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_exam
-      @exam = Exam.find(params[:id])
-    end
+  def index
+    exam_date = params.fetch(:exam_date, Date.today).to_date
+    @exam_by_month = Exam.where(exam_date: exam_date.beginning_of_month.beginning_of_week..exam_date.end_of_month.end_of_week)
+  end
 
-    # Only allow a list of trusted parameters through.
-    def exam_params
-      params.require(:exam).permit(:exam_date, :exam_grade, :course_id)
-    end
+  private
+
+  # Use callbacks to share common setup or constraints between actions.
+  def set_exam
+    @exam = Exam.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def exam_params
+    params.require(:exam).permit(:exam_date, :exam_grade, :course_id, :user_id)
+  end
 end

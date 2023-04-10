@@ -1,27 +1,98 @@
-<p style="color: green"><%= notice %></p>
+<p class="notice"><%= notice %></p>
+<div class="const">
+  <h1>Performance Points</h1>
+</div>
 
-<br></br>
-<h1>Performances</h1>
-
-<div id="performances">
-  <table>
-  <tr>
-    <th><strong>Points</strong></th>
-    <th><strong>Exam ID</strong></th>
-    <th><strong>User ID</strong></th>
-    <th></th>
-  </tr>
-  <% @performances.each do |performance| %>
+<% if !isadmin %>
+  <div id="scoreboard">
+  <center><%= button_to "Update Scoreboard", update_points_users_path, class: "new-and-back-btn"%></center>
+    <table>
     <tr>
-      <td><%= performance.performance_points %></td>
-      <td><%= performance.exam_id %></td>
-      <td><%= performance.user_id %></td>
-      <td><%= button_to "SHOW", performance, method: :get, class: "show-btn" %></td>
-      <% end %>
+      <th><strong>Member</strong></th>
+      <th><strong>Point Total</strong></th>
     </tr>
-  </table>
-</div>
 
-<div class = "newRecord">
-  <%= button_to "New Performance", new_performance_path, method: :get, class: "new-and-back-btn"%>
-</div>
+
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.user_lname %>, <%= user.user_fname %></td>
+        <td><%= user.user_points %></td>
+        <% end %>
+      </tr>
+    </table>
+
+<% else %>
+<center>
+  <div class="tab">
+    <button type="tab_links" class= "new-and-back-btn" onclick="openTab(event,'Squad')">View Scoreboard</button>
+    <button type="tab_links" class= "new-and-back-btn" onclick="openTab(event,'Submissions')">View Submissions</button>
+  </div>
+</center>
+  <div class="tabcontent" id="Submissions">
+      <h1>Submissions</h1>
+      <table>
+      <tr>
+        <th><strong>Member</strong></th>
+        <th><strong>Course</strong></th>
+        <th><strong>Hours</strong></th>
+        <th><strong>Exam Date</strong></th>
+        <th><strong>Exam Grade</strong></th>
+        <th><strong>Points</strong></th>
+        <th></th>
+      </tr>
+
+      <% @performances.each do |performance| %>
+        <tr>
+          <td><%= User.find(performance.user_id).user_lname %>, <%= User.find(performance.user_id).user_fname %></td>
+          <td><%= Course.find(Exam.find(performance.exam_id).course_id).course_name %></td> |
+          <td><%= Course.find(Exam.find(performance.exam_id).course_id).course_hours %></td>
+          <td><%= Exam.find(performance.exam_id).exam_date %></td>
+          <td><%= Exam.find(performance.exam_id).exam_grade %></td>
+          <td><%= performance.performance_points %></td>
+          <td><%= button_to "SHOW", performance, method: :get, class: "show-btn" %></td>
+          <% end %>
+        </tr>
+      </table>
+
+      <div class = "newRecord">
+        <%= button_to "New Performance", new_performance_path, method: :get, class: "new-and-back-btn"%>
+        <%= link_to 'Help', '/performance_help', class: "new-and-back-btn" %>
+      </div>
+    </div>
+
+  <div class="tabcontent" id="Squad">
+    <h1>Scoreboard</h1>
+    <center><%= button_to "Update Scoreboard", update_points_users_path, class: "new-and-back-btn"%></center>
+    <table>
+      <tr>
+        <th><strong>Member</strong></th>
+        <th><strong>Point Total</strong></th>
+      </tr>
+
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= user.user_lname %>, <%= user.user_fname %></td>
+          <td><%= user.user_points %></td>
+          <% end %>
+        </tr>
+      </table>
+
+  <script type="text/javascript">
+    function openTab(evt, view){
+      var i, tabcontent, tab_links;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for(i = 0; i < tabcontent.lenth; i++){
+        tabcontent[i].style.display = "none";
+      }
+      tab_links = document.getElementsByClassName("tab_links");
+      if (view == "Squad"){
+        document.getElementById(view).style.display = "block";
+        document.getElementById("Submissions").style.display = "none";
+      }
+      else {
+        document.getElementById(view).style.display = "block";
+        document.getElementById("Squad").style.display = "none";
+      }
+    }
+  </script>
+<% end %>

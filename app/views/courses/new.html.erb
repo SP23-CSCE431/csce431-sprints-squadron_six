@@ -1,5 +1,6 @@
-<br></br>
-<h1>New Course</h1>
+<div class="const">
+  <h1>New Course</h1>
+</div>
 
 <%= render "form", course: @course %>
 
@@ -7,4 +8,5 @@
 
 <div class = "newRecord">
   <%= button_to "Back to Courses", courses_path, method: :get, class: "new-and-back-btn"%>
+  
 </div>

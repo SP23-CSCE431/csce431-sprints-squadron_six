@@ -10,24 +10,25 @@
       </ul>
     </div>
   <% end %>
-  
+
   <!--added drop down for selecting the company from the list of added company-->
-  <div>
+  <div class = "newEntry">
+    <div>
     <%= form.label :company_id, style: "display: block" %>
-    <%# <!-- <%= form.select :company_id, options_for_select(Company.all.map{ |c| [c.company_name] }), {}, style: "height: 30px; background-color: rgb(200, 209, 244);" %>
+     <%# <!-- <%= form.select :company_id, options_for_select(Company.all.map{ |c| [c.company_name, "#{c.company_name} #{c.company_location}"] }), {}, style: "height: 30px; background-color: rgb(200, 209, 244);" %>
     <!-- switching how selection works: -->
-    <%= form.collection_select :company_id, Company.order(:company_name), :id, :company_name, include_blank: false%>
+
+    <%= form.collection_select :company_id, Company.all.order('LOWER(company_name), LOWER(company_location)'), :id, :company_with_location, include_blank: false, style: "height: 30px; background-color: rgb(200, 209, 244); text-align: center;" %>
+
   </div>
   <!--added drop down for selecting the user from a list of added users-->
   <div>
     <%= form.label :user_id, style: "display: block" %>
-    <%# <!--<%= form.select :user_id, options_for_select(User.all.map{ |u| [u.user_email] }), {}, style: "height: 30px; background-color: rgb(200, 209, 244);" %>
-    <!-- switching how selection works: -->
-    <%= form.collection_select :user_id, User.order(:user_email), :id, :user_lname, include_blank: false%>
+    <%= form.collection_select :user_id, User.order(:user_email), :id, :full_name, include_blank: false, style: "height: 30px; background-color: rgb(200, 209, 244);" %>
   </div>
 
   <div>
     <%= form.submit %>
   </div>
-  </div>
+</div>
 <% end %>

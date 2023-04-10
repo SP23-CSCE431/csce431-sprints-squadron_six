@@ -1,0 +1,29 @@
+
+<p class="notice"><%= notice %></p>
+
+<div class="const">
+  <h1>Users</h1>
+</div>
+
+<div id="adminusers">
+  <table>
+  <tr>
+    <th><strong>Email</strong></th>
+    <th><strong>Admin</strong></th>
+    <th></th>
+  </tr>
+  <% @adminusers.each do |adminuser| %>
+    <tr>
+      <td><%= adminuser.email %></td>
+      <td><%=adminuser.isaadmin ? "X" : " "%></td>
+      <td><%= button_to "SHOW", adminuser, method: :get, class: "show-btn" %></td>
+      <% end %>
+    </tr>
+  </table>
+</div>
+
+<div class="newRecord">
+  <%= button_to "New User", new_adminuser_path, method: :get, class: "new-and-back-btn"%>
+  <%= link_to 'Help', '/admin_help', class: "new-and-back-btn" %>
+</div>
+

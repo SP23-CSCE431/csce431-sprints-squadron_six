@@ -1,0 +1,21 @@
+<div id="<%= dom_id adminuser %>">
+<div class = "newEntry" style = "text-align: left; width: 25%;">
+  <p><b><center>SHOWING THIS USER</center></b></p>
+  <p>
+    <strong>Email:</strong>
+    <%= adminuser.email %>
+  </p>
+
+  <p>
+    <strong>Admin?</strong>
+    <%= adminuser.isaadmin %>
+  </p>
+  <br><br>
+  <div style = "margin-left: auto; margin-right: auto; text-align: center;">
+    <%= link_to "Edit", edit_adminuser_path(@adminuser), class: "show-btn"%>
+    <br><br>
+    <%= isadmin ? (button_to "Delete", @course, method: :delete, class: "show-btn", style: "font-size: 12px;") : nil%>
+  </div>
+
+</div>
+</div>

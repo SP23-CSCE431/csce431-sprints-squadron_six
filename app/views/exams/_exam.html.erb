@@ -1,26 +1,25 @@
 <div id="<%= dom_id exam %>">
-<br></br>
 <div class = "newEntry" style = "text-align: left; width: 25%;">
   <p><b><center>SHOWING THIS EXAM</center></b></p>
   <br></br>
   <p>
-    <strong>Exam date:</strong>
+    <strong>Exam Date:</strong>
     <%= exam.exam_date %>
   </p>
 
   <p>
-    <strong>Exam grade:</strong>
+    <strong>Exam Grade:</strong>
     <%= exam.exam_grade %>
   </p>
 
   <p>
     <strong>Course:</strong>
-    <%= exam.course_id %>
+    <%= exam.course.course_name %>
   </p>
   <br></br>
   <div style = "margin-left: auto; margin-right: auto; text-align: center;">
-    <%= button_to "EDIT", edit_exam_path(@exam), method: :get, class: "show-btn", style: "margin-bottom: 10px; font-size: 12px;" %>
-    <%= button_to "DELETE", @exam, method: :delete, class: "show-btn", style: "font-size: 12px;" %>
+    <%= button_to "Edit", edit_exam_path(@exam), method: :get, class: "show-btn", style: "margin-bottom: 10px; font-size: 12px;" %>
+    <%= button_to "Delete", @exam, method: :delete, class: "show-btn", style: "font-size: 12px;" %>
   </div>
 </div>
 </div>

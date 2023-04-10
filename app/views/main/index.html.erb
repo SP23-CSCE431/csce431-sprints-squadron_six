@@ -1,18 +1,6 @@
 
-<br></br>
-<h1>Main Page for Squadron Six</h1>
-
-
-
-
-<% if current_authuser %>
-<h2><%= current_authuser.email %></h2>
-<%= image_tag(current_authuser.avatar_url) %>
-<%# <%= link_to "Edit Account", edit_authuser_registration_path %>
-<div class="oauth">
-  <%= button_to "Logout", destroy_authuser_session_path, data: {turbo: "false"}, method: :delete %>
-  <% else %>
-    <h2><%= link_to "Login", new_authuser_session_path %></h2>
-  <%# <%= link_to "Create Account", new_authuser_registration_path %>
-  <% end %>
-</div>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+</head>

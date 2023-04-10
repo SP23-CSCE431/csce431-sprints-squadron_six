@@ -1,11 +1,12 @@
-<br></br>
-<h1>Editing Company</h1>
+<div class="const">
+  <h1>Editing Company</h1>
+</div>
 
 <%= render "form", company: @company %>
 
 <br>
 
 <div class = "newRecord">
-  <%= link_to "Show this Company", @company, style: "color: white;" %> |
-  <%= link_to "Back to Companies", companies_path, style: "color: white;" %>
+  <%= link_to "Show this Company", @company, class: "new-and-back-btn" %>
+  <%= link_to "Back to Companies", companies_path, class: "new-and-back-btn" %>
 </div>
