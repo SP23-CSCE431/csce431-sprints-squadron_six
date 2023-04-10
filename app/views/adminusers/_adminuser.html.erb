@@ -12,7 +12,8 @@
   </p>
   <br><br>
   <div style = "margin-left: auto; margin-right: auto; text-align: center;">
-    <%= isadmin ? ( button_to "Edit", edit_adminuser_path(@adminuser)) : nil%>
+    <%= link_to "Edit", edit_adminuser_path(@adminuser), class: "new-and-back-btn"%>
+    <br><br>
     <%= isadmin ? (button_to "Delete", @course, method: :delete, class: "show-btn", style: "font-size: 12px;") : nil%>
   </div>
 
