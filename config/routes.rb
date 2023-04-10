@@ -17,9 +17,20 @@ Rails.application.routes.draw do
   resources :alumnis
   resources :courses
   resources :companies
-  resources :users
+  resources :users do
+    collection do
+      post :update_points
+    end
+  end
+
   resources :adminusers
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   get 'main', to: 'main#index'
+  get 'alumni_help', to: 'alumnis#alumni_help'
+  get 'admin_help', to: 'adminusers#admin_help'
+  get 'company_help', to: 'companies#company_help'
+  get 'course_help', to: 'courses#course_help'
+  get 'exam_help', to: 'exams#exam_help'
+  get 'performance_help', to: 'performances#performance_help'
 end

@@ -13,10 +13,11 @@
 
 <div class = "newEntry">
   <div>
-    <%= form.label :name, style: "display: block" %>
+    <%= form.label "Name: ", style: "display: block" %>
     <%= form.text_field :course_name, id: "text-field-vals"  %>
+    <%= form.label "Example Format: CSCE222 ", style: "display: block" %>
   </div>
-
+<br>
   <div>
     <%= form.label :hours, style: "display: block" %>
     <%= form.number_field :course_hours, id: "text-field-vals" %>
@@ -26,5 +27,4 @@
     <%= form.submit %>
   </div>
 </div>
-
 <% end %>

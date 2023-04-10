@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <br><br><br><br>
+  <head>
+    <title>Exam Help</title>
+  </head>
+  <body>
+    <h1>Exams Help Page</h1>
+
+    <h2>General functions</h2>
+    <p>
+      By clicking on the Exams page on the navigation bar, you are able to see a calendar that displays your personal exams that you entered into the system on their dates.
+    </p>
+    <p>
+      You can see more detailed information about an exam if you click on the exam on the calendar.
+    </p>
+    <p>
+      You can go back to the Exam calendar at any time by clicking on "Back to Exams" button.
+    </p>
+    <p>
+      To add a new exam to the calendar, click on the "New Exam" button. You will be presented with a form where you can enter a date, exam grade(enter TBD if it is in the future), and select a course from the existing list of courses to create a new exam and add it to the calendar. Your email only appears as a way to associate the exam with you.
+    </p>
+    <p>
+      To edit an exisitng exam, click on the exam then click on the "Edit" button. This allows you to modify any values regarding the exam.
+    </p>
+    <p>
+      To delete an exisitng exam, click on the exam then click on the "Delete" button.
+    </p>
+
+    <% if isadmin%>
+    <h2>Admin functions</h2>
+    <p>
+      Aside from the personal calendar, you can click on the "View Squadron 6 Exams" button to open up a calendar that shows the exams of every user on their relative dates.
+    </p>
+    <%end%>
+
+    <h2>Contact Us</h2>
+    <p>
+      If you have any questions or concerns about using the exam tracker, please contact us at <a href="mailto:ansleythomp@tamu.edu">ansleythomp@tamu.edu</a>.
+    </p>
+  </body>
+</html>
+<div class = "newRecord">
+  <%= button_to "Back to Exams", exams_path, method: :get, class: "new-and-back-btn"%>
+</div>

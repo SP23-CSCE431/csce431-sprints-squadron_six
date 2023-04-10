@@ -1,7 +1,8 @@
 <%= form_with(model: adminuser) do |form| %>
   <% if adminuser.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(adminuser.errors.count, "error") %> prohibited this adminuser from being saved:</h2>
+      <h2><%= pluralize(adminuser.errors.count, "error") %> prohibited this admin user from being saved:</h2>
+
 
       <ul>
         <% adminuser.errors.each do |error| %>
@@ -11,17 +12,19 @@
     </div>
   <% end %>
 
+<div class = "newEntry">
   <div>
     <%= form.label :email, style: "display: block" %>
     <%= form.text_field :email %>
   </div>
 
   <div>
-    <%= form.label :isaadmin, style: "display: block" %>
+    <%= form.label :Give_Admin_privileges, style: "display: block" %>
     <%= form.check_box :isaadmin %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit @adminuser.new_record? ? "Create User" : "Update User" %>
   </div>
+</div>
 <% end %>

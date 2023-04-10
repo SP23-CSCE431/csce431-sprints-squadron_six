@@ -4,9 +4,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
 </head>
 
-<p style="color: green"><%= notice %></p>
+<p style="notice"><%= notice %></p>
+
+<div class="const">
+  <h1>View Exam</h1>
+</div>
 
 <%= render @exam %>
+
 
 <div class = "newRecord">
   <%= button_to "Back to Exams", exams_path, method: :get, class: "new-and-back-btn"%>

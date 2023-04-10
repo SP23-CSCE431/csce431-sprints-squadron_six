@@ -4,14 +4,16 @@
 <div class="const">
   <h1>Alumni</h1>
 </div>
-
+<br>
 <div id="alumnis">
 <!-- search function-->
 <!-- currently accepts only the first name of the alumni and takes you to the editing page-->
 <center>
-  <%= form_tag(alumnis_path, method: :get) do %>
-    <%= text_field_tag(:search, params[:search], placeholder: 'Search for an alumni by name', class: 'text-field-tag')%> <%= submit_tag ("Search"), style: "height: 30px" %></p>
-  <% end %>
+  <div class="search">
+    <%= form_tag(alumnis_path, method: :get) do %>
+    <%= text_field_tag(:search, params[:search], placeholder: 'Search for an alumni by name', class: 'searchbar')%> <%= submit_tag ("Search"), class: "submit" %>
+    <% end %>
+  </div>
 </center>
 <br></br>
 <table>
@@ -26,7 +28,7 @@
       <td><%= alumni.company.company_name %></td>
       <td><%= alumni.user.user_fname %>&nbsp<%= alumni.user.user_lname %></td>
       <td><%= alumni.user.user_grad_year %></td>
-      <td><%= link_to "Details about this Alumni", alumni %></td>
+      <td><%= button_to "SHOW", alumni, method: :get, class: "show-btn" %></td>
       <% end %>
     </tr>
 </table>
@@ -36,4 +38,5 @@
   <% if isadmin%>
     <%= button_to "New Alumni", new_alumni_path, method: :get, class: "new-and-back-btn" %>
   <%end%>
+  <%= link_to 'Help', '/alumni_help', class: "new-and-back-btn" %>
 </div>

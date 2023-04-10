@@ -2,7 +2,7 @@
 <%= stylesheet_link_tag('application') %>
 
 <div class="const">
-  <h1>Profile</h1>
+  <h1>Directory</h1>
 </div>
 
 <div id="users">
@@ -11,8 +11,8 @@
     <th><strong>First Name</strong></th>
     <th><strong>Last Name</strong></th>
     <th><strong>Email</strong></th>
-    <th><strong>Password</strong></th>
-    <th><strong>Role</strong></th>
+    <%# <th><strong>Password</strong></th> %>
+    <%# <th><strong>Role</strong></th> %>
     <th><strong>Grad Year</strong></th>
     <th><strong>Points</strong></th>
     <th></th>
@@ -22,9 +22,11 @@
       <td><%= user.user_fname %></td>
       <td><%= user.user_lname %></td>
       <td><%= user.user_email %></td>
-      <td><%= user.user_password %></td>
-      <td><%= user.user_role %></td>
+
+      <%# <><%= user.user_password %> 
+      <%# <><%= user.user_role %>
       <td><%= user.user_grad_year %></td>
+
       <td><%= user.user_points %></td>
       <td><%= button_to "SHOW", user, method: :get, class: "show-btn" %></td>
       <% end %>
@@ -34,7 +36,7 @@
 
 <div class = "newRecord">
   <% if isadmin%> 
-    <%= button_to "New User", new_user_path, method: :get, class: "new-and-back-btn"%>
+    <%= button_to "New Entry", new_user_path, method: :get, class: "new-and-back-btn"%>
   <%end%> 
   
 </div>
