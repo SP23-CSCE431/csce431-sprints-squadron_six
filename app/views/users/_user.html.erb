@@ -1,8 +1,6 @@
 <div id="<%= dom_id user %>">
-<br></br>
 <div class = "newEntry" style = "text-align: left; width: 25%;">
   <p><b><center>SHOWING THIS USER</center></b></p>
-  <br></br>
   <p>
     <strong>First Name:</strong>
     <%= user.user_fname %>
@@ -18,10 +16,10 @@
     <%= user.user_email %>
   </p>
 
-  <p>
+  <%# <p>
     <strong>Password:</strong>
     <%= user.user_password %>
-  </p>
+  <%# </p> %>
 
   <p>
     <strong>Role:</strong>
@@ -37,10 +35,9 @@
     <strong>Points:</strong>
     <%= user.user_points %>
   </p>
-  <br></br>
   <div style = "margin-left: auto; margin-right: auto; text-align: center;">
     <%= button_to "Edit", edit_user_path(@user), method: :get, class: "show-btn", style: "margin-bottom: 10px; font-size: 12px;" %>
-    <% if isadmin%>
+    <% if isadmin && (current_authuser.email != @user.user_email)%> 
       <%= button_to "Delete", @user, method: :delete, class: "show-btn", style: "font-size: 12px;" %>
     <%end%>
   </div>

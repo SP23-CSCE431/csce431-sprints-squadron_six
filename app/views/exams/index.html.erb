@@ -4,13 +4,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
 </head>
 
-<p class="notice"><%= notice %></p>
 <%= stylesheet_link_tag('application') %>
 <%= stylesheet_link_tag('calendar') %>
 
 <div class="const">
   <h1>Exams</h1>
+  <center><p class="notice"><%= notice %></p></center>
 </div>
+<p class="notice"><%= notice %></p>
 
 <% if !isadmin %>
   <div id="calendar">
@@ -93,4 +94,9 @@
       }
     }
   </script>
+
+
 <% end %>
+<div class = "newRecord">
+  <%= link_to 'Help', '/exam_help', class: "new-and-back-btn" %>
+</div>

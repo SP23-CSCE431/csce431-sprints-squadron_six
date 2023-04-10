@@ -1,6 +1,26 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[show edit update destroy]
 
+  def update_points
+    @performances = Performance.all
+    @users = User.all
+
+    # Clearing all users of current points
+    @users.each do |curr_user|
+      curr_user.user_points = 0
+      curr_user.save
+    end
+
+    # Re-adding all points using current performance submissions
+    @performances.each do |performance|
+      curr_user = User.find(performance.user_id)
+      curr_user.user_points += performance.performance_points
+      curr_user.save
+    end
+
+    redirect_to performances_path
+  end
+
   # GET /users or /users.json
   def index
     @users = User.all
@@ -50,6 +70,7 @@ class UsersController < ApplicationController
   # DELETE /users/1 or /users/1.json
   def destroy
     return unless isadmin
+    return unless different_user?(@user)
 
     @user.destroy
 
@@ -68,7 +89,7 @@ class UsersController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def user_params
-    params.require(:user).permit(:user_fname, :user_lname, :user_email, :user_password, :user_role, :user_grad_year,
+    params.require(:user).permit(:user_fname, :user_lname, :user_email, :user_role, :user_grad_year,
                                  :user_points)
   end
 end

@@ -108,6 +108,8 @@ GEM
     diff-lcs (1.5.0)
     docile (1.4.0)
     erubi (1.12.0)
+    faker (3.1.1)
+      i18n (>= 1.8.11, < 2)
     faraday (2.7.4)
       faraday-net_http (>= 2.0, < 3.1)
       ruby2_keywords (>= 0.0.4)
@@ -350,8 +352,7 @@ DEPENDENCIES
   carrierwave (>= 3.0.0.beta, < 4.0)
   debug
   devise
-  ffi (~> 1.15, >= 1.15.5)
-  image_processing (>= 1.2)
+  faker
   importmap-rails
   jbuilder
   omniauth
@@ -365,7 +366,6 @@ DEPENDENCIES
   rspec-rails
   rspec-scaffold (~> 2.0.0.beta1)
   rubocop
-  ruby-vips (~> 2.1, >= 2.1.4)
   selenium-webdriver
   shoulda-matchers
   simple_calendar (~> 2.4)

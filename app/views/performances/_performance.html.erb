@@ -8,12 +8,18 @@
 
   <p>
     <strong>Exam:</strong>
-    <%= performance.exam_id %>
+    <%= Exam.find(performance.exam_id).exam_date %>
   </p>
 
   <p>
     <strong>User:</strong>
-    <%= performance.user_id %>
+    <%= User.find(performance.user_id).user_lname %>
   </p>
+  <br></br>
+  <div style = "margin-left: auto; margin-right: auto; text-align: center;">
+    <%= button_to "Edit", edit_performance_path(@performance), method: :get, class: "show-btn", style: "margin-bottom: 10px; font-size: 12px;" %>
+    <%= button_to "Delete", @course, method: :delete, class: "show-btn", style: "font-size: 12px;" %>
+  </div>
 
+</div>
 </div>
