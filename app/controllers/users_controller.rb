@@ -50,6 +50,7 @@ class UsersController < ApplicationController
   # DELETE /users/1 or /users/1.json
   def destroy
     return unless isadmin
+    return unless different_user?(@user)
 
     @user.destroy
 

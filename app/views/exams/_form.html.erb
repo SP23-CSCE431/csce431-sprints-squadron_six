@@ -39,9 +39,6 @@
       <%= form.label :course_id, id:'course_id', style: "display: block" %>
       <!--making course selection from a list of valid courses inputted into the course entity-->
       <%= form.collection_select :course_id, Course.order(:course_name), :id, :course_name, include_blank: false%>   
-       <%= button_to "Don't see your course? Click here to create it first!", new_course_path, method: :get, class: "new-and-back-btn"%>
-
- 
  
     </div>
     <br>

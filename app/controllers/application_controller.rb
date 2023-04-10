@@ -7,6 +7,10 @@ class ApplicationController < ActionController::Base
     @isadmin = current_authuser.admin
   end
 
+  def different_user?(user)
+    current_authuser.email != user.user_email
+  end
+
   def user_info
     @user_email = current_authuser.email
   end
