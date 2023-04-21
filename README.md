@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Application Description
+This project is a web application for Squadron Six in the Corp of Cadets at Texas A&M University. It includes a user interface to view and edit profiles, an alumni tracker, and an exam schedule tracker. Administrators have special functionalities to add users, promote admin, and special view capabilities.
 
 ## Requirements
 
