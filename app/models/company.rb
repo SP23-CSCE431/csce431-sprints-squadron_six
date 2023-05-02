@@ -13,7 +13,7 @@ class Company < ApplicationRecord
     validate :unique_name_and_location
 
     def unique_name_and_location
-        if Company.where("company_name ILIKE ? AND company_location ILIKE ?", company_name, company_location).exists?
+        if Company.where("company_name ILIKE ? AND company_location ILIKE ?", company_name, company_location).where.not(id: self.id).exists?
             errors.add(:base, "A company with that name and location already exists")
         end
     end
