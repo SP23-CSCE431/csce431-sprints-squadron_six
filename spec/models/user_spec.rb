@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe User, type: :model do
+RSpec.describe(User, type: :model) do
   # subject {
   #     described_class.new(user_fname: "Anything",
   #                        user_lname: "Something",

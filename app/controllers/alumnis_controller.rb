@@ -30,14 +30,15 @@ class AlumnisController < ApplicationController
     respond_to do |format|
       if @alumni.save
         format.html do
-          redirect_to alumni_url(@alumni),
+          redirect_to(alumni_url(@alumni),
                       notice: 'Alumni was successfully created.'
+                     )
         end
-        format.json { render :show, status: :created, location: @alumni }
+        format.json { render(:show, status: :created, location: @alumni) }
       else
-        format.html { render :new, status: :unprocessable_entity }
+        format.html { render(:new, status: :unprocessable_entity) }
         format.json do
-          render json: @alumni.errors, status: :unprocessable_entity
+          render(json: @alumni.errors, status: :unprocessable_entity)
         end
       end
     end
@@ -50,14 +51,15 @@ class AlumnisController < ApplicationController
     respond_to do |format|
       if @alumni.update(alumni_params)
         format.html do
-          redirect_to alumni_url(@alumni),
+          redirect_to(alumni_url(@alumni),
                       notice: 'Alumni was successfully updated.'
+                     )
         end
-        format.json { render :show, status: :ok, location: @alumni }
+        format.json { render(:show, status: :ok, location: @alumni) }
       else
-        format.html { render :edit, status: :unprocessable_entity }
+        format.html { render(:edit, status: :unprocessable_entity) }
         format.json do
-          render json: @alumni.errors, status: :unprocessable_entity
+          render(json: @alumni.errors, status: :unprocessable_entity)
         end
       end
     end
@@ -71,9 +73,9 @@ class AlumnisController < ApplicationController
 
     respond_to do |format|
       format.html do
-        redirect_to alumnis_url, notice: 'Alumni was successfully destroyed.'
+        redirect_to(alumnis_url, notice: 'Alumni was successfully destroyed.')
       end
-      format.json { head :no_content }
+      format.json { head(:no_content) }
     end
   end
 

@@ -1,23 +1,23 @@
 # integration tests for alumnis
 require 'rails_helper'
 # require 'test_helper'
-RSpec.describe 'Creating an Alumni', type: :feature do
+RSpec.describe('Creating an Alumni', type: :feature) do
   # sunny day
   before(:all) do
     Rails.application.load_seed # or load your custom seed file
   end
   before do
     OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
-                                                                         provider: 'google_oauth2',
-                                                                         uid: '123456',
-                                                                         info: {
-                                                                           email: 'ivanattexas@tamu.edu',
-                                                                           name: 'Ivan Martinez',
-                                                                           first_name: 'Ivan',
-                                                                           last_name: 'Martinez',
-                                                                           image: 'https://lh3.googleusercontent.com/a/AGNmyxZ9w0R3_loFhlk46VAFMyqvC2ZqrZgHuPYnlaAH=s96-c'
-                                                                         }
-                                                                       })
+      provider: 'google_oauth2',
+      uid: '123456',
+      info: {
+        email: 'ivanattexas@tamu.edu',
+        name: 'Ivan Martinez',
+        first_name: 'Ivan',
+        last_name: 'Martinez',
+        image: 'https://lh3.googleusercontent.com/a/AGNmyxZ9w0R3_loFhlk46VAFMyqvC2ZqrZgHuPYnlaAH=s96-c'
+      }
+    })
     visit new_authuser_session_path
     click_button 'Sign in with Google'
   end
@@ -33,7 +33,7 @@ RSpec.describe 'Creating an Alumni', type: :feature do
     select 'Ivan Martinez', from: 'alumni[user_id]'
     select 'HP', from: 'alumni[company_id]'
     click_on 'Create Alumni'
-    expect(page).to have_content('successfully created')
+    expect(page).to(have_content('successfully created'))
   end
 
   # rainy days where there does not exist a company that could be added to the alumni
@@ -43,7 +43,7 @@ RSpec.describe 'Creating an Alumni', type: :feature do
     visit new_alumni_path
     select 'Ivan Martinez', from: 'alumni[user_id]'
     click_on 'Create Alumni'
-    expect(page).to have_content('Company must exist')
+    expect(page).to(have_content('Company must exist'))
   end
   # rainy days where there does not exist a User that could be added to the alumni (removed due to change in structure, this will not happen)
 
@@ -59,7 +59,7 @@ RSpec.describe 'Creating an Alumni', type: :feature do
     click_on 'SHOW'
     click_on 'Edit'
     select 'Apple', from: 'alumni[company_id]'
-    expect(page).to have_content('Apple')
+    expect(page).to(have_content('Apple'))
   end
   # rainy day, there can not be a rainy day for modifying an alumni because there will have to be at least one company for alumni and there is nothing you can do to give a drop down menu invalid input.
   # sunny day
@@ -73,7 +73,7 @@ RSpec.describe 'Creating an Alumni', type: :feature do
     visit alumnis_path
     click_on 'SHOW'
     click_on 'Delete'
-    expect(page).to have_content('Alumni was successfully destroyed.')
+    expect(page).to(have_content('Alumni was successfully destroyed.'))
   end
   # scenario 'delete alumni' do
   # visit new_alumni_path
@@ -89,7 +89,7 @@ RSpec.describe 'Creating an Alumni', type: :feature do
     visit alumnis_path
     fill_in 'Search for an alumni by name', with: 'Martinez'
     click_on 'Search'
-    expect(page).to have_content('Martinez')
+    expect(page).to(have_content('Martinez'))
   end
 
   scenario 'Search alumni rainy day' do
@@ -102,17 +102,17 @@ RSpec.describe 'Creating an Alumni', type: :feature do
     visit alumnis_path
     fill_in 'Search for an alumni by name', with: 'Martinezaaaa'
     click_on 'Search'
-    expect(page).to_not have_content('Martinez')
+    expect(page).to_not(have_content('Martinez'))
   end
   scenario 'Navigate to help page' do
     visit alumnis_path
     click_on 'Help'
-    expect(page).to have_content('Alumni Tracker Help Page')
+    expect(page).to(have_content('Alumni Tracker Help Page'))
   end
   scenario 'Navigate back from help page' do
     visit alumnis_path
     click_on 'Help'
     click_on 'Back to Alumnis'
-    expect(page).to have_content('New Alumni')
+    expect(page).to(have_content('New Alumni'))
   end
 end

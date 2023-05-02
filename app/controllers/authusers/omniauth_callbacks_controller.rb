@@ -24,15 +24,16 @@ class Authusers::OmniauthCallbacksController < Devise::OmniauthCallbacksControll
     if authuser.present? && adminuser.present?
       # if authuser.present?
       sign_out_all_scopes
-      flash[:success] = t 'devise.omniauth_callbacks.success', kind: 'Google'
+      flash[:success] = t('devise.omniauth_callbacks.success', kind: 'Google')
       # redirect_to new_authuser_session_path unless adminuser
 
-      sign_in_and_redirect authuser, event: :authentication
+      sign_in_and_redirect(authuser, event: :authentication)
     else
-      flash[:alert] = t 'devise.omniauth_callbacks.failure',
+      flash[:alert] = t('devise.omniauth_callbacks.failure',
                         kind: 'Google',
                         reason: "#{auth.info.email} is not authorized."
-      redirect_to new_authuser_session_path
+                       )
+      redirect_to(new_authuser_session_path)
     end
 
     # @authuser = Authuser.from_omniauth(request.env["omniauth.auth"])

@@ -1,11 +1,11 @@
 require 'rails_helper'
 
-RSpec.describe Performance, type: :model do
+RSpec.describe(Performance, type: :model) do
   describe 'relationship' do
-    it { should belong_to :user }
+    it { should belong_to(:user) }
   end
 
   describe 'relationship' do
-    it { should belong_to :exam }
+    it { should belong_to(:exam) }
   end
 end

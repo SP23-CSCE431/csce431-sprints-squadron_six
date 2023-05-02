@@ -3,7 +3,7 @@ class AdminusersController < ApplicationController
   def checkaccess
     return if isadmin
 
-    redirect_to new_authuser_session_path, alert: 'You are not authorized to access this page.'
+    redirect_to(new_authuser_session_path, alert: 'You are not authorized to access this page.')
 
     # rest of the action code
   end
@@ -33,11 +33,11 @@ class AdminusersController < ApplicationController
 
     respond_to do |format|
       if @adminuser.save
-        format.html { redirect_to adminuser_url(@adminuser), notice: 'Adminuser was successfully created.' }
-        format.json { render :show, status: :created, location: @adminuser }
+        format.html { redirect_to(adminuser_url(@adminuser), notice: 'Adminuser was successfully created.') }
+        format.json { render(:show, status: :created, location: @adminuser) }
       else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @adminuser.errors, status: :unprocessable_entity }
+        format.html { render(:new, status: :unprocessable_entity) }
+        format.json { render(json: @adminuser.errors, status: :unprocessable_entity) }
       end
     end
   end
@@ -48,11 +48,11 @@ class AdminusersController < ApplicationController
 
     respond_to do |format|
       if @adminuser.update(adminuser_params)
-        format.html { redirect_to adminuser_url(@adminuser), notice: 'Adminuser was successfully updated.' }
-        format.json { render :show, status: :ok, location: @adminuser }
+        format.html { redirect_to(adminuser_url(@adminuser), notice: 'Adminuser was successfully updated.') }
+        format.json { render(:show, status: :ok, location: @adminuser) }
       else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @adminuser.errors, status: :unprocessable_entity }
+        format.html { render(:edit, status: :unprocessable_entity) }
+        format.json { render(json: @adminuser.errors, status: :unprocessable_entity) }
       end
     end
   end
@@ -72,8 +72,8 @@ class AdminusersController < ApplicationController
     @adminuser.destroy
 
     respond_to do |format|
-      format.html { redirect_to adminusers_url, notice: 'Adminuser was successfully destroyed.' }
-      format.json { head :no_content }
+      format.html { redirect_to(adminusers_url, notice: 'Adminuser was successfully destroyed.') }
+      format.json { head(:no_content) }
     end
   end
 
