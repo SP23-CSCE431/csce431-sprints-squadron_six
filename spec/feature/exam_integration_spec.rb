@@ -9,27 +9,27 @@ RSpec.describe 'Creating an Exam', type: :feature do
   end
   before do
     OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
-     provider: 'google_oauth2',
-     uid: '123456',
-     info: {
-       email: 'ivanattexas@tamu.edu',
-       name: 'Ivan Martinez',
-       first_name: 'Ivan',
-       last_name: 'Martinez',
-       image: 'https://lh3.googleusercontent.com/a/AGNmyxZ9w0R3_loFhlk46VAFMyqvC2ZqrZgHuPYnlaAH=s96-c'
-     }
-   })
+                                                                         provider: 'google_oauth2',
+                                                                         uid: '123456',
+                                                                         info: {
+                                                                           email: 'ivanattexas@tamu.edu',
+                                                                           name: 'Ivan Martinez',
+                                                                           first_name: 'Ivan',
+                                                                           last_name: 'Martinez',
+                                                                           image: 'https://lh3.googleusercontent.com/a/AGNmyxZ9w0R3_loFhlk46VAFMyqvC2ZqrZgHuPYnlaAH=s96-c'
+                                                                         }
+                                                                       })
     visit new_authuser_session_path
     click_button 'Sign in with Google'
   end
 
   # sunny day
   scenario 'valid inputs' do
-    Course.create(course_name:"CSCE431", course_hours:3)
+    Course.create(course_name: 'CSCE431', course_hours: 3)
     visit new_exam_path
-    fill_in "exam[exam_date]", with: Date.today + 1.week
-    fill_in "exam[exam_grade]", with: 'A'
-    select "CSCE431", :from =>"exam[course_id]"
+    fill_in 'exam[exam_date]', with: Date.today + 1.week
+    fill_in 'exam[exam_grade]', with: 'A'
+    select 'CSCE431', from: 'exam[course_id]'
     click_on 'Create Exam'
     expect(page).to have_content('Edit')
   end
@@ -37,14 +37,13 @@ RSpec.describe 'Creating an Exam', type: :feature do
   # rainy days: no date
   # can't select no course anymore, so no testing for that case
   scenario 'invalid inputs: no date' do
-    Course.create(course_name:"CSCE431", course_hours:3)
+    Course.create(course_name: 'CSCE431', course_hours: 3)
     visit new_exam_path
-    fill_in "exam[exam_date]", with: nil
-    select "CSCE431", :from =>"exam[course_id]"
+    fill_in 'exam[exam_date]', with: nil
+    select 'CSCE431', from: 'exam[course_id]'
     click_on 'Create Exam'
     expect(page).to have_content('1 error prohibited')
   end
-
 end
 
 RSpec.describe 'Editing an Exam', type: :feature do
@@ -53,16 +52,16 @@ RSpec.describe 'Editing an Exam', type: :feature do
   end
   before do
     OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
-     provider: 'google_oauth2',
-     uid: '123456',
-     info: {
-       email: 'ivanattexas@tamu.edu',
-       name: 'Ivan Martinez',
-       first_name: 'Ivan',
-       last_name: 'Martinez',
-       image: 'https://lh3.googleusercontent.com/a/AGNmyxZ9w0R3_loFhlk46VAFMyqvC2ZqrZgHuPYnlaAH=s96-c'
-     }
-   })
+                                                                         provider: 'google_oauth2',
+                                                                         uid: '123456',
+                                                                         info: {
+                                                                           email: 'ivanattexas@tamu.edu',
+                                                                           name: 'Ivan Martinez',
+                                                                           first_name: 'Ivan',
+                                                                           last_name: 'Martinez',
+                                                                           image: 'https://lh3.googleusercontent.com/a/AGNmyxZ9w0R3_loFhlk46VAFMyqvC2ZqrZgHuPYnlaAH=s96-c'
+                                                                         }
+                                                                       })
     visit new_authuser_session_path
 
     click_button 'Sign in with Google'
@@ -70,14 +69,14 @@ RSpec.describe 'Editing an Exam', type: :feature do
 
   # sunny day
   scenario 'valid inputs' do
-    Course.create(course_name:"CSCE431", course_hours:3)
+    Course.create(course_name: 'CSCE431', course_hours: 3)
     visit new_exam_path
-    select "CSCE431", :from =>"exam[course_id]"
-    fill_in "exam[exam_date]", with: Date.today + 1.week
-    fill_in "exam[exam_grade]", with: nil
+    select 'CSCE431', from: 'exam[course_id]'
+    fill_in 'exam[exam_date]', with: Date.today + 1.week
+    fill_in 'exam[exam_grade]', with: nil
     click_on 'Create Exam'
     click_on 'Edit'
-    fill_in "exam[exam_grade]", with: 'A'
+    fill_in 'exam[exam_grade]', with: 'A'
     click_on 'Update Exam'
     expect(page).to have_content('A')
   end
@@ -86,18 +85,17 @@ RSpec.describe 'Editing an Exam', type: :feature do
   # can't select the null option for course, so no course isn't a test
 
   scenario 'invalid inputs: no date' do
-    Course.create(course_name:"CSCE431", course_hours:3)
+    Course.create(course_name: 'CSCE431', course_hours: 3)
     visit new_exam_path
-    select "CSCE431", :from =>"exam[course_id]"
-    fill_in "exam[exam_date]", with: Date.today + 1.week
-    fill_in "exam[exam_grade]", with: nil
+    select 'CSCE431', from: 'exam[course_id]'
+    fill_in 'exam[exam_date]', with: Date.today + 1.week
+    fill_in 'exam[exam_grade]', with: nil
     click_on 'Create Exam'
     click_on 'Edit'
-    fill_in "exam[exam_date]", with: nil
+    fill_in 'exam[exam_date]', with: nil
     click_on 'Update Exam'
     expect(page).to have_content('1 error prohibited')
   end
-
 end
 
 RSpec.describe 'Deleting an Exam', type: :feature do
@@ -106,27 +104,27 @@ RSpec.describe 'Deleting an Exam', type: :feature do
   end
   before do
     OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
-     provider: 'google_oauth2',
-     uid: '123456',
-     info: {
-       email: 'ivanattexas@tamu.edu',
-       name: 'Ivan Martinez',
-       first_name: 'Ivan',
-       last_name: 'Martinez',
-       image: 'https://lh3.googleusercontent.com/a/AGNmyxZ9w0R3_loFhlk46VAFMyqvC2ZqrZgHuPYnlaAH=s96-c'
-     }
-   })
+                                                                         provider: 'google_oauth2',
+                                                                         uid: '123456',
+                                                                         info: {
+                                                                           email: 'ivanattexas@tamu.edu',
+                                                                           name: 'Ivan Martinez',
+                                                                           first_name: 'Ivan',
+                                                                           last_name: 'Martinez',
+                                                                           image: 'https://lh3.googleusercontent.com/a/AGNmyxZ9w0R3_loFhlk46VAFMyqvC2ZqrZgHuPYnlaAH=s96-c'
+                                                                         }
+                                                                       })
     visit new_authuser_session_path
 
     click_button 'Sign in with Google'
   end
 
   scenario 'valid inputs' do
-    Course.create(course_name:"CSCE431", course_hours:3)
+    Course.create(course_name: 'CSCE431', course_hours: 3)
     visit new_exam_path
-    select "CSCE431", :from =>"exam[course_id]"
-    fill_in "exam[exam_date]", with: Date.today + 1.week
-    fill_in "exam[exam_grade]", with: nil
+    select 'CSCE431', from: 'exam[course_id]'
+    fill_in 'exam[exam_date]', with: Date.today + 1.week
+    fill_in 'exam[exam_grade]', with: nil
     click_on 'Create Exam'
     click_on 'Delete'
     expect(page).to have_content('Exam was successfully destroyed.')
@@ -134,37 +132,36 @@ RSpec.describe 'Deleting an Exam', type: :feature do
   # exam deletion does not cause errors/there's not a wrong way to do it
 end
 
-  # viewing exam calendar: user
-  # sunny day: displays all exams for a user, if user has no exams, blank calendar
-  # rainy day: user can see exams from other user
+# viewing exam calendar: user
+# sunny day: displays all exams for a user, if user has no exams, blank calendar
+# rainy day: user can see exams from other user
 
-RSpec.describe "Viewing Exam Calendar", type: :feature do
+RSpec.describe 'Viewing Exam Calendar', type: :feature do
   before(:all) do
     Rails.application.load_seed # or load your custom seed file
   end
   before do
     OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
-     provider: 'google_oauth2',
-     uid: '123456',
-     info: {
-       email: 'ivanattexas@tamu.edu',
-       name: 'Ivan Martinez',
-       first_name: 'Ivan',
-       last_name: 'Martinez',
-       image: 'https://lh3.googleusercontent.com/a/AGNmyxZ9w0R3_loFhlk46VAFMyqvC2ZqrZgHuPYnlaAH=s96-c'
-     }
-   })
+                                                                         provider: 'google_oauth2',
+                                                                         uid: '123456',
+                                                                         info: {
+                                                                           email: 'ivanattexas@tamu.edu',
+                                                                           name: 'Ivan Martinez',
+                                                                           first_name: 'Ivan',
+                                                                           last_name: 'Martinez',
+                                                                           image: 'https://lh3.googleusercontent.com/a/AGNmyxZ9w0R3_loFhlk46VAFMyqvC2ZqrZgHuPYnlaAH=s96-c'
+                                                                         }
+                                                                       })
     visit new_authuser_session_path
     click_button 'Sign in with Google'
-
   end
 
   scenario 'user, valid inputs' do
-    Course.create(course_name:"CSCE431", course_hours:3)
+    Course.create(course_name: 'CSCE431', course_hours: 3)
     visit new_exam_path
-    select "CSCE431", :from =>"exam[course_id]"
-    fill_in "exam[exam_date]", with: Date.today + 1.week
-    fill_in "exam[exam_grade]", with: nil
+    select 'CSCE431', from: 'exam[course_id]'
+    fill_in 'exam[exam_date]', with: Date.today + 1.week
+    fill_in 'exam[exam_grade]', with: nil
     click_on 'Create Exam'
     visit exams_path
     expect(page).to have_content('CSCE431')
@@ -176,9 +173,7 @@ RSpec.describe "Viewing Exam Calendar", type: :feature do
     expect(page).to_not have_content('CSCE431')
   end
 
-
   # viewing exam calendar: admin
   # sunny day: displays all exams for the squad, if no exams, blank calendar
   # rainy day: displays only admin exams
-
 end

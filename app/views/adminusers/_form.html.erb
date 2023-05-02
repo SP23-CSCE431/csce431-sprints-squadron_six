@@ -19,12 +19,12 @@
   </div>
 
   <div>
-    <%= form.label :isaadmin, style: "display: block" %>
+    <%= form.label :Give_Admin_privileges, style: "display: block" %>
     <%= form.check_box :isaadmin %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit @adminuser.new_record? ? "Create User" : "Update User" %>
   </div>
 </div>
 <% end %>
