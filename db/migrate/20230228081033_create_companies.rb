@@ -1,6 +1,6 @@
 class CreateCompanies < ActiveRecord::Migration[7.0]
   def change
-    create_table :companies do |t|
+    create_table :companies, if_not_exists: true do |t|
       t.string :company_name
       t.string :company_location
       t.string :company_industry
